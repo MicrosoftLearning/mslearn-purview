@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5193ce75-7908-a8f0-9f28-4310dc38b890",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667165,
+    "updateTime":  1652152667165,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.DENMARK.PASSPORT.NUMBER",
+    "description":  "Denmark Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Denmark Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

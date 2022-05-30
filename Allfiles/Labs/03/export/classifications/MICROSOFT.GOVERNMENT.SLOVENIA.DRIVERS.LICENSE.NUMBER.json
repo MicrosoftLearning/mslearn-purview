@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "3c8bbfec-9a51-b58a-300d-607a5582b652",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667193,
+    "updateTime":  1652152667193,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVENIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Slovenia Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovenia Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

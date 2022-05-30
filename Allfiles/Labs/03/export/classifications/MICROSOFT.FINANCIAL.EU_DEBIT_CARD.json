@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "7635af55-8ae2-f8f9-c02e-0e36be0bbb3d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667026,
+    "updateTime":  1652152667026,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.EU_DEBIT_CARD",
+    "description":  "EU Debit Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU Debit Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6ee55baa-9210-c7ce-acb0-7fc9a993a37e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667029,
+    "updateTime":  1652152667029,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.PORTUGAL.CITIZEN_CARD_NUMBER",
+    "description":  "Portugal Citizen Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Portugal Citizen Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "38b0c0d6-f095-f093-7e1f-05019d60ada0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667066,
+    "updateTime":  1652152667066,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.INDONESIA.IDENTITY_CARD_NUMBER",
+    "description":  "Indonesia Identity Card (KTP) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Indonesia Identity Card (KTP) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

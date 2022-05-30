@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "00566c33-9227-b4a0-0f13-2596ac2c1063",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667050,
+    "updateTime":  1652152667050,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.ZIP_CODE",
+    "description":  "U.S. Zip Codes",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Zip Codes"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

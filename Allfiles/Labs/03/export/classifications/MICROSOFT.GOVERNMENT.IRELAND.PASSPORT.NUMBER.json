@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a6b11668-6d90-15ad-0d34-8ba98e49a15f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667168,
+    "updateTime":  1652152667168,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.IRELAND.PASSPORT.NUMBER",
+    "description":  "Ireland Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ireland Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

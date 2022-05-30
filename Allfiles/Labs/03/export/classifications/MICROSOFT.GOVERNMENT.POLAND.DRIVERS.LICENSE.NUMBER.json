@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "bcde8536-5066-5e4d-7062-fe7e058b5ee8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667190,
+    "updateTime":  1652152667190,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLAND.DRIVERS.LICENSE.NUMBER",
+    "description":  "Poland Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Poland Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ce406361-6923-cb68-2999-20cdb8a0390c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666914,
+    "updateTime":  1652152666914,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.EU.PHONE_NUMBER",
+    "description":  "EU Phone Number (Deprecated)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU Phone Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

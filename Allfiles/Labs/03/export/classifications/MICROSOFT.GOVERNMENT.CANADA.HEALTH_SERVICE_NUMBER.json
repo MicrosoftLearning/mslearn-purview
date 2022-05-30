@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "25e1d9b5-3e29-5a37-435f-f384562a85c4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667023,
+    "updateTime":  1652152667023,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CANADA.HEALTH_SERVICE_NUMBER",
+    "description":  "Canada Health Service Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Canada Health Service Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "9ba3d81f-fe12-4ab5-fc37-33a015db517f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667103,
+    "updateTime":  1652152667103,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRALIA.BUSINESS.NUMBER",
+    "description":  "Australia Business Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Business Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

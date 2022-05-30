@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1d2f24f2-647a-6b49-a02f-fe4833048ccb",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667178,
+    "updateTime":  1652152667178,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BULGARIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Bulgaria Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Bulgaria Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

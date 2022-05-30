@@ -1,0 +1,20 @@
+{
+    "id":  "/subscriptions/34a8ddf8-ebee-475d-97d3-494d34c800b7/resourceGroups/scanning-prod-eastus/providers/Microsoft.Purview/accounts/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4/integrationruntimes/IntegrationRuntime-mAf",
+    "name":  "IntegrationRuntime-mAf",
+    "type":  "Microsoft.Purview/accounts/integrationruntimes",
+    "properties":  {
+                       "description":  "IntegrationRuntime-mAf",
+                       "type":  "Managed",
+                       "typeProperties":  {
+                                              "computeProperties":  {
+                                                                        "location":  "AutoResolve"
+                                                                    }
+                                          },
+                       "managedVirtualNetwork":  {
+                                                     "referenceName":  "default",
+                                                     "type":  "ManagedVirtualNetworkReference",
+                                                     "id":  "274a867c-0de4-4f9a-b92d-037e4ba1f4b9"
+                                                 }
+                   },
+    "etag":  "71010ce0-0000-0100-0000-627a30d80000"
+}

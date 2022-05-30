@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "2505c667-26de-a104-a678-ff55849ba689",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666916,
+    "updateTime":  1652152666916,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.US.ABA_ROUTING_NUMBER",
+    "description":  "ABA Routing Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "ABA Routing Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e626e540-718b-5305-599d-bce0452417a9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667179,
+    "updateTime":  1652152667179,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CYPRUS.DRIVERS.LICENSE.NUMBER",
+    "description":  "Cyprus Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Cyprus Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

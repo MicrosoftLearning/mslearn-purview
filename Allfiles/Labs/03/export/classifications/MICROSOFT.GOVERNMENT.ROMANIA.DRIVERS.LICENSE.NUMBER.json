@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d1ab5c06-b783-6c48-99b3-733a7de462a6",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667191,
+    "updateTime":  1652152667191,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ROMANIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Romania Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Romania Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

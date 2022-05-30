@@ -1,0 +1,9 @@
+{
+    "id":  "/subscriptions/34a8ddf8-ebee-475d-97d3-494d34c800b7/resourceGroups/scanning-prod-eastus/providers/Microsoft.Purview/accounts/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4/integrationruntimes/IntegrationRuntime-VPb",
+    "name":  "IntegrationRuntime-VPb",
+    "type":  "Microsoft.Purview/accounts/integrationruntimes",
+    "properties":  {
+                       "type":  "SelfHosted"
+                   },
+    "etag":  "96018294-0000-0100-0000-627b9f480000"
+}

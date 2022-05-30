@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b3cf0d8c-2385-813c-41af-f0d2819d44ee",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667071,
+    "updateTime":  1652152667071,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.JAPAN.SOCIAL_INSURANCE_NUMBER",
+    "description":  "Japan Social Insurance Number (SIN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Social Insurance Number (SIN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

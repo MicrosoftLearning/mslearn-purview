@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b83d36be-5b43-2f1f-30a1-18821ffce9bf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667058,
+    "updateTime":  1652152667058,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.DENMARK.PERSONAL_ID_NUMBER",
+    "description":  "Denmark Personal Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Denmark Personal Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

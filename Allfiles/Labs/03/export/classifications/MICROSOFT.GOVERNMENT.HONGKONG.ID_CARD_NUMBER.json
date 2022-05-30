@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5aa45f93-aea7-cea8-e640-8718da4d666c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667027,
+    "updateTime":  1652152667027,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HONGKONG.ID_CARD_NUMBER",
+    "description":  "Hong Kong Identity Card (HKID) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hong Kong Identity Card (HKID) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

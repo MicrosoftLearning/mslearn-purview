@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ff46e2c4-dd3d-d98f-bcbd-5dad3130d8b5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667082,
+    "updateTime":  1652152667082,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.ETHNIC_GROUP",
+    "description":  "Ethnic Group",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ethnic Group"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

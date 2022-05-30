@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "098be883-210b-6248-ea1e-f0ef139be763",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667169,
+    "updateTime":  1652152667169,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LITHUANIA.PASSPORT.NUMBER",
+    "description":  "Lithuania Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Lithuania Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

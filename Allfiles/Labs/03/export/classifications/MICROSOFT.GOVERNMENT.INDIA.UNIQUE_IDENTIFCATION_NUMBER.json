@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "12982639-e114-8d69-992c-f11fbd45e6f8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667066,
+    "updateTime":  1652152667066,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.INDIA.UNIQUE_IDENTIFCATION_NUMBER",
+    "description":  "India Unique Identification (Aadhaar) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "India Unique Identification (Aadhaar) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

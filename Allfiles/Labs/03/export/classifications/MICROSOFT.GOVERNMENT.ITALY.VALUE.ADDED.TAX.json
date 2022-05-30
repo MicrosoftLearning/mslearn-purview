@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "35c330af-8d45-a09c-ad9c-c3d682444cfc",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667105,
+    "updateTime":  1652152667105,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ITALY.VALUE.ADDED.TAX",
+    "description":  "Italy Value Added Tax",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Italy Value Added Tax"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

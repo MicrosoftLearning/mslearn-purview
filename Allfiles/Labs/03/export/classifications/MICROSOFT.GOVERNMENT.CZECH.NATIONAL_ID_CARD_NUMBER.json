@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "0aa591c5-062c-72cf-6e28-11c31eb57fe5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667058,
+    "updateTime":  1652152667058,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CZECH.NATIONAL_ID_CARD_NUMBER",
+    "description":  "Czech National Identity Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Czech National Identity Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "13251819-762b-157c-cf0e-9adbd79dcf27",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667073,
+    "updateTime":  1652152667073,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.PHILIPPINES.UNIFIED_MULTIPURPOSE_ID_NUMBER",
+    "description":  "Philippines Unified Multi-Purpose ID number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Philippines Unified Multi-Purpose ID number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

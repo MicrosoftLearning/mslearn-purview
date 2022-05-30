@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "dc3a2a90-2d35-773f-f565-5b38beb8a26a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667016,
+    "updateTime":  1652152667016,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.SOCIAL_SECURITY_NUMBER",
+    "description":  "U.S. Social Security Number (SSN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Social Security Number (SSN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

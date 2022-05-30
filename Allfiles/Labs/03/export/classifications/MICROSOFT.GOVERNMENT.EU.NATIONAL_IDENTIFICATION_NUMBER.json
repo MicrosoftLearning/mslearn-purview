@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6065f417-2213-85a8-5fc4-088be1752748",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666913,
+    "updateTime":  1652152666913,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.EU.NATIONAL_IDENTIFICATION_NUMBER",
+    "description":  "EU National Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU National Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "89a77add-9720-f5e9-c4be-ba2712380eaa",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667171,
+    "updateTime":  1652152667171,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.MALTA.PASSPORT.NUMBER",
+    "description":  "Malta Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Malta Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

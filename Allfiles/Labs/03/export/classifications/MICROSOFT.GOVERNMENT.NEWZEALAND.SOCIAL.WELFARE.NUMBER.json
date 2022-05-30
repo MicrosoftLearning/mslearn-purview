@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5062245f-09b8-76ac-4c17-fb6dd9ba8ce5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667158,
+    "updateTime":  1652152667158,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NEWZEALAND.SOCIAL.WELFARE.NUMBER",
+    "description":  "New Zealand Social Welfare Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "New Zealand Social Welfare Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

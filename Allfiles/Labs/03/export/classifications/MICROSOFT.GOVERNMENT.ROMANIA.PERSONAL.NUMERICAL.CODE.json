@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a883af1c-15dd-7b5c-205c-d82f9bc3d5ec",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667096,
+    "updateTime":  1652152667096,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ROMANIA.PERSONAL.NUMERICAL.CODE",
+    "description":  "Romania Personal Numerical Code (CNP)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Romania Personal Numerical Code (CNP)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

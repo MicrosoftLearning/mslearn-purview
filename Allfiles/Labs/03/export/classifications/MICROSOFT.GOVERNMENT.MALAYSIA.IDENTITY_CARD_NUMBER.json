@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a0404319-6222-bc07-e860-5c0ccb8b3d75",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667072,
+    "updateTime":  1652152667072,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.MALAYSIA.IDENTITY_CARD_NUMBER",
+    "description":  "Malaysia ID Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Malaysia ID Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

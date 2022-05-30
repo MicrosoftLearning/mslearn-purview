@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e30989ab-dd56-a406-7284-a824ac88bb7d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667089,
+    "updateTime":  1652152667089,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARY.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Hungary Tax identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungary Tax identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

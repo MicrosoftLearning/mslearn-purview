@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "8eefbcb8-20d1-adfd-8987-8d84537e3f84",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667076,
+    "updateTime":  1652152667076,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SWEDEN.NATIONAL_ID_NUMBER",
+    "description":  "Sweden National ID",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Sweden National ID"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

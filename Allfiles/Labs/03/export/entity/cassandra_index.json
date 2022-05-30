@@ -1,0 +1,70 @@
+{
+    "category":  "ENTITY",
+    "guid":  "8dd3d6c7-e7fe-6591-88c2-00ec919f6b95",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671300,
+    "updateTime":  1652152671300,
+    "version":  1,
+    "name":  "cassandra_index",
+    "description":  "cassandra_index",
+    "typeVersion":  "1.0",
+    "serviceType":  "Cassandra",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"cassandra://(?\u003cCluster\u003e[^/]+)/(?\u003cKeyspace\u003e[^/]+)/(?\u003cTable\u003e[^/]+)/(?\u003cIndex\u003e[^/]+)$\",\"qualifiedNameSample\":\"cassandra://192.168.56.51/myKeyspace/myTable/myIndex\",\"isContainer\":false,\"friendlyName\":\"Cassandra Index\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"cassandra_table_secondary_indexes\"],\"relevantAttributes\":[]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "table",
+                                          "typeName":  "cassandra_table",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "cassandra_table_secondary_indexes",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "table_column",
+                                          "typeName":  "cassandra_table_column",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "cassandra_index_table_column",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

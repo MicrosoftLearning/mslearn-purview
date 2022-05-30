@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "0dfed740-d63a-b1c5-3242-e381fbe72e84",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667102,
+    "updateTime":  1652152667102,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NEW.ZEALAND.INLAND.REVENUE.NUMBER",
+    "description":  "New Zealand Inland Revenue Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "New Zealand Inland Revenue Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

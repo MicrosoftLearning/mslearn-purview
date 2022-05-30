@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "03130d0e-b686-429f-e1de-fd2f65b8ce4c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667159,
+    "updateTime":  1652152667159,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARIAN.SOCIAL.SECURITY.NUMBER",
+    "description":  "Hungarian Social Security Number (TAJ)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungarian Social Security Number (TAJ)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

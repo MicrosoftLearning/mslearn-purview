@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "441c4eee-a72b-2709-d071-4a923b5735f4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667095,
+    "updateTime":  1652152667095,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.PORTUGAL.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Portugal Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Portugal Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

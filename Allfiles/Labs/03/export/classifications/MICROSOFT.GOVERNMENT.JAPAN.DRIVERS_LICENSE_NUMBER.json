@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "df45dbde-7759-0657-f450-767968383c46",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667069,
+    "updateTime":  1652152667069,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.JAPAN.DRIVERS_LICENSE_NUMBER",
+    "description":  "Japan Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

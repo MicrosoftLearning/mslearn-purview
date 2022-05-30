@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "2964b129-c0ac-c222-184f-26ffea2c6559",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667093,
+    "updateTime":  1652152667093,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.MALTA.TAX.ID.NUMBER",
+    "description":  "Malta Tax ID Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Malta Tax ID Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

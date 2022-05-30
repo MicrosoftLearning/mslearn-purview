@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "20132034-2721-f82e-2a10-6f8e13328bad",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667073,
+    "updateTime":  1652152667073,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NEWZEALAND.MINISTRY_OF_HEALTH_NUMBER",
+    "description":  "New Zealand Ministry of Health Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "New Zealand Ministry of Health Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

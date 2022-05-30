@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "eb134ad1-eb76-0795-b4b3-49e8d43c8f11",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667187,
+    "updateTime":  1652152667187,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LUXEMBOURG.DRIVERS.LICENSE.NUMBER",
+    "description":  "Luxembourg Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Luxembourg Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

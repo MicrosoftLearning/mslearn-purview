@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6704f399-97d8-91dd-d177-e2e5340a3b61",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666917,
+    "updateTime":  1652152666917,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER",
+    "description":  "Credit Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Credit Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "28647a43-2da2-0baa-6973-64825422e09a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667087,
+    "updateTime":  1652152667087,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GERMANY.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Germany Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Germany Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

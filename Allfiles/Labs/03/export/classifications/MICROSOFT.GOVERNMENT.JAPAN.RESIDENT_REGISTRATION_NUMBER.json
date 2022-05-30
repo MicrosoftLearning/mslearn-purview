@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "21fbe155-808e-c256-676b-5b55aa0aca3a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667070,
+    "updateTime":  1652152667070,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.JAPAN.RESIDENT_REGISTRATION_NUMBER",
+    "description":  "Japan Resident Registration Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Resident Registration Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

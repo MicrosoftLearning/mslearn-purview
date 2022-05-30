@@ -1,0 +1,93 @@
+{
+    "sku":  {
+                "name":  "Standard",
+                "capacity":  1
+            },
+    "properties":  {
+                       "cloudConnectors":  {
+                                               "awsExternalId":  "c814de6b-e80e-4fa1-b83c-6320b3945eb4"
+                                           },
+                       "friendlyName":  "main-OtijT",
+                       "createdBy":  "chris@solliance.net",
+                       "createdByObjectId":  "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                       "createdAt":  "2022-05-09T15:33:39.399898Z",
+                       "endpoints":  {
+                                         "catalog":  "https://main-OtijT.purview.azure.com/catalog",
+                                         "scan":  "https://main-OtijT.purview.azure.com/scan",
+                                         "guardian":  "https://main-OtijT.purview.azure.com/guardian"
+                                     },
+                       "provisioningState":  "Succeeded",
+                       "privateEndpointConnections":  [
+                                                          {
+                                                              "properties":  {
+                                                                                 "provisioningState":  "Succeeded",
+                                                                                 "privateEndpoint":  {
+                                                                                                         "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Network/privateEndpoints/account"
+                                                                                                     },
+                                                                                 "privateLinkServiceConnectionState":  {
+                                                                                                                           "status":  "Approved",
+                                                                                                                           "actionsRequired":  "None"
+                                                                                                                       }
+                                                                             },
+                                                              "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Purview/accounts/main-OtijT/privateEndpointConnections/account-c2774400-8195-4938-9f33-3e37589455ad",
+                                                              "name":  "account-c2774400-8195-4938-9f33-3e37589455ad",
+                                                              "type":  "Microsoft.Purview/accounts/privateEndpointConnections"
+                                                          },
+                                                          {
+                                                              "properties":  {
+                                                                                 "provisioningState":  "Succeeded",
+                                                                                 "privateEndpoint":  {
+                                                                                                         "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Network/privateEndpoints/portal"
+                                                                                                     },
+                                                                                 "privateLinkServiceConnectionState":  {
+                                                                                                                           "status":  "Approved",
+                                                                                                                           "actionsRequired":  "None"
+                                                                                                                       }
+                                                                             },
+                                                              "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Purview/accounts/main-OtijT/privateEndpointConnections/portal-db1549b8-bfd6-48ac-b593-b05e0f39ab7c",
+                                                              "name":  "portal-db1549b8-bfd6-48ac-b593-b05e0f39ab7c",
+                                                              "type":  "Microsoft.Purview/accounts/privateEndpointConnections"
+                                                          },
+                                                          {
+                                                              "properties":  {
+                                                                                 "provisioningState":  "Succeeded",
+                                                                                 "privateEndpoint":  {
+                                                                                                         "id":  "/subscriptions/b4d246ca-c348-46ce-9c50-5d9996a3f10f/resourceGroups/vnet-b4d246ca-eastus-13-rg/providers/Microsoft.Network/privateEndpoints/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4.main-OtijT-account"
+                                                                                                     },
+                                                                                 "privateLinkServiceConnectionState":  {
+                                                                                                                           "status":  "Pending",
+                                                                                                                           "description":  "Requested by DataFactory:purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4, Name:main-OtijT-account",
+                                                                                                                           "actionsRequired":  "None"
+                                                                                                                       }
+                                                                             },
+                                                              "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Purview/accounts/main-OtijT/privateEndpointConnections/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4.main-OtijT-account-aa9b5ebc-0232-46bd-93c0-b46f1b21a0f4",
+                                                              "name":  "purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4.main-OtijT-account-aa9b5ebc-0232-46bd-93c0-b46f1b21a0f4",
+                                                              "type":  "Microsoft.Purview/accounts/privateEndpointConnections"
+                                                          }
+                                                      ],
+                       "managedResources":  {
+                                                "resourceGroup":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/managed-rg-qhtkrbj",
+                                                "storageAccount":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/managed-rg-qhtkrbj/providers/Microsoft.Storage/storageAccounts/scaneastuscoehhwx",
+                                                "eventHubNamespace":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/managed-rg-qhtkrbj/providers/Microsoft.EventHub/namespaces/Atlas-b0cd2089-212b-4be6-a7b0-ebcd65f88802"
+                                            },
+                       "publicNetworkAccess":  "Enabled",
+                       "managedResourceGroupName":  "managed-rg-qhtkrbj"
+                   },
+    "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Purview/accounts/main-OtijT",
+    "name":  "main-OtijT",
+    "type":  "Microsoft.Purview/accounts",
+    "location":  "eastus",
+    "identity":  {
+                     "type":  "SystemAssigned",
+                     "principalId":  "33bd95f8-8be3-44c9-984a-8732037396bb",
+                     "tenantId":  "d280491c-b27a-41bf-9623-21b60cf430b3"
+                 },
+    "systemData":  {
+                       "createdBy":  "chris@solliance.net",
+                       "createdByType":  "User",
+                       "createdAt":  "2022-05-09T15:33:39.399898Z",
+                       "lastModifiedBy":  "chris@solliance.net",
+                       "lastModifiedByType":  "User",
+                       "lastModifiedAt":  "2022-05-09T15:33:39.399898Z"
+                   }
+}

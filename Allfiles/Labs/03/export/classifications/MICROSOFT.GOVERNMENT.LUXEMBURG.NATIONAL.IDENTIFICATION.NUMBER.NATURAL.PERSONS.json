@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5c204db0-e2f8-e25a-fb4d-dbd15a69289a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667091,
+    "updateTime":  1652152667091,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LUXEMBURG.NATIONAL.IDENTIFICATION.NUMBER.NATURAL.PERSONS",
+    "description":  "Luxemburg National Identification Number - natural persons",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Luxemburg National Identification Number - natural persons"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

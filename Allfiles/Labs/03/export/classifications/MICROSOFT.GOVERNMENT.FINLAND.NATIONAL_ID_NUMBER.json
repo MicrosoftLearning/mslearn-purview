@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "c63c885e-a3e7-9683-4e9a-68fca66b6527",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667056,
+    "updateTime":  1652152667056,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FINLAND.NATIONAL_ID_NUMBER",
+    "description":  "Finland National ID",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Finland National ID"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

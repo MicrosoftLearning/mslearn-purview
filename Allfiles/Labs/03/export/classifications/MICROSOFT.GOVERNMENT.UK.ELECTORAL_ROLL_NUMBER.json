@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "bfca2d9f-a1e2-c08b-997f-b06f119fdb78",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667014,
+    "updateTime":  1652152667014,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UK.ELECTORAL_ROLL_NUMBER",
+    "description":  "U.K. Electoral Roll Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. Electoral Roll Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

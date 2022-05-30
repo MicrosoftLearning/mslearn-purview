@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a64128be-e241-c363-b6b8-b2c8e748681d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667083,
+    "updateTime":  1652152667083,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.IDENTITY.CARD",
+    "description":  "Austria Identity Card",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Identity Card"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

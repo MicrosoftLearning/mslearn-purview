@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "f68a3b88-d97e-38db-cd2a-f52b11b359bc",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667150,
+    "updateTime":  1652152667150,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BELGIUM.VALUE.ADDED.TAX.NUMBER",
+    "description":  "Belgium Value Added Tax Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Belgium Value Added Tax Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

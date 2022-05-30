@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b8d3ad80-1c89-7400-4684-b474cd3c704c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667089,
+    "updateTime":  1652152667089,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.ITALY.FISCAL.CODE",
+    "description":  "Italy Fiscal Code",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Italy Fiscal Code"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

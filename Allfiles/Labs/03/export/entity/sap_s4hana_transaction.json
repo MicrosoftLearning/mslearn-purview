@@ -1,0 +1,93 @@
+{
+    "category":  "ENTITY",
+    "guid":  "ea4ca294-e1a5-0825-aa40-48800757caa0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152698972,
+    "updateTime":  1652152698972,
+    "version":  1,
+    "name":  "sap_s4hana_transaction",
+    "description":  "sap_s4hana_transaction",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP S4HANA",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "package",
+                                          "typeName":  "sap_s4hana_package",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_s4hana_package_transactions",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "function_group",
+                                          "typeName":  "sap_s4hana_function_group",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_s4hana_transaction_function_group",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "program",
+                                          "typeName":  "sap_s4hana_program",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_s4hana_transaction_program",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "class",
+                                          "typeName":  "array\u003csap_s4hana_class\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_s4hana_transaction_class",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

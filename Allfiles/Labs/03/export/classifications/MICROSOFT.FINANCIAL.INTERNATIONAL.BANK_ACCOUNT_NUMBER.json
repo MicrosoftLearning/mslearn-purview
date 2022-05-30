@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d15dbcbe-1e39-c172-1796-478e02858714",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667067,
+    "updateTime":  1652152667067,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.INTERNATIONAL.BANK_ACCOUNT_NUMBER",
+    "description":  "International Banking Account Number (IBAN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "International Banking Account Number (IBAN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

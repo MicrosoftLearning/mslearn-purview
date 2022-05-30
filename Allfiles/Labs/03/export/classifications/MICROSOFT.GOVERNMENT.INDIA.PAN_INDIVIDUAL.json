@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "77e3dcf2-ce27-8bdc-14db-32e231fe7dd0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667054,
+    "updateTime":  1652152667054,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.INDIA.PAN_INDIVIDUAL",
+    "description":  "India Permanent Account Number (PAN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "India Permanent Account Number (PAN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

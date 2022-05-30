@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "9299ff5d-663a-7e23-024a-bc4b454111b4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667186,
+    "updateTime":  1652152667186,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LATVIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Latvia Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Latvia Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

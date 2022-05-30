@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "4fbdda10-634b-fe4a-995a-462cfe16de91",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667190,
+    "updateTime":  1652152667190,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.PORTUGAL.DRIVERS.LICENSE.NUMBER",
+    "description":  "Portugal Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Portugal Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

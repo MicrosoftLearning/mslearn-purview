@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "73443cfa-ca4b-efd0-f3ca-229117fce9c7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667075,
+    "updateTime":  1652152667075,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SINGAPORE.NATIONAL_REGISTRATION_IDENTITY_CARD_NUMBER",
+    "description":  "Singapore National Registration Identity Card (NRIC) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Singapore National Registration Identity Card (NRIC) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

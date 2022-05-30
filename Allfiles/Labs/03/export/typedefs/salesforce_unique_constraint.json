@@ -1,0 +1,97 @@
+{
+    "category":  "ENTITY",
+    "guid":  "fc619847-9cfb-c05f-1957-da50535dd0c9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679508,
+    "updateTime":  1652152679508,
+    "version":  1,
+    "name":  "salesforce_unique_constraint",
+    "description":  "salesforce_unique_constraint",
+    "typeVersion":  "1.0",
+    "serviceType":  "Salesforce",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"salesforce://organizations/(?\u003cOrganization\u003e[^/]+)/objects/(?\u003cObject\u003e[^/]+)/uniqueConstraints/(?\u003cUniqueConstraint\u003e[^/]+)$\",\"qualifiedNameSample\":\"salesforce://organizations/00DJ0000003Q47bMAC/objects/ABCcc__c/uniqueConstraints/Id\",\"isContainer\":false,\"friendlyName\":\"Salesforce Unique Constraint\",\"search\":{\"relevantSearch\":{\"relevantAttributes\":[],\"relevantRelationships\":[\"salesforce_object_unique_constraints\"]},\"searchBehavior\":\"RelevantSearch\"}}",
+                    "schemaAttributes":  "[\"dataType\"]"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "foreign_keys",
+                                          "typeName":  "array\u003csalesforce_foreign_key\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "salesforce_foreign_key_primary_key_constraint",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "fields",
+                                          "typeName":  "array\u003csalesforce_field\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "salesforce_unique_constraint_fields",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "object",
+                                          "typeName":  "salesforce_object",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "salesforce_object_primary_key_constraint",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "object",
+                                          "typeName":  "salesforce_object",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "salesforce_object_unique_constraints",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

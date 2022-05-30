@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1293fe57-b6e7-38c5-2455-906e2e8ec409",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667074,
+    "updateTime":  1652152667074,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SAUDIARABIA.NATIONAL_ID_NUMBER",
+    "description":  "Saudi Arabia National ID",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Saudi Arabia National ID"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

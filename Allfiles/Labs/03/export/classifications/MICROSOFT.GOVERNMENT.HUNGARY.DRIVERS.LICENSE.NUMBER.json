@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "92ad126e-0d7b-0620-b1b6-7f94227994db",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667184,
+    "updateTime":  1652152667184,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARY.DRIVERS.LICENSE.NUMBER",
+    "description":  "Hungary Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungary Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

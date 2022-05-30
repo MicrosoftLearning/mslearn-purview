@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "786f1e4c-adfe-fb96-1d4a-878b7699f38d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667105,
+    "updateTime":  1652152667105,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GERMANY.VALUE.ADDED.TAX.NUMBER",
+    "description":  "Germany Value Added Tax Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Germany Value Added Tax Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

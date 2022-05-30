@@ -1,0 +1,63 @@
+{
+    "properties":  {
+                       "scanningRule":  {
+                                            "fileExtensions":  [
+                                                                   "JSON",
+                                                                   "PSV",
+                                                                   "SSV",
+                                                                   "TSV",
+                                                                   "TXT",
+                                                                   "XML",
+                                                                   "PARQUET",
+                                                                   "AVRO",
+                                                                   "ORC",
+                                                                   "Documents",
+                                                                   "GZ",
+                                                                   "CSV",
+                                                                   "DOC",
+                                                                   "DOCM",
+                                                                   "DOCX",
+                                                                   "DOT",
+                                                                   "ODP",
+                                                                   "ODS",
+                                                                   "ODT",
+                                                                   "PDF",
+                                                                   "POT",
+                                                                   "PPS",
+                                                                   "PPSX",
+                                                                   "PPT",
+                                                                   "PPTM",
+                                                                   "PPTX",
+                                                                   "XLC",
+                                                                   "XLS",
+                                                                   "XLSB",
+                                                                   "XLSM",
+                                                                   "XLSX",
+                                                                   "XLT"
+                                                               ],
+                                            "customFileExtensions":  null
+                                        },
+                       "createdAt":  "2022-05-10T09:30:40.8022245Z",
+                       "collection":  null,
+                       "description":  "BlobStorage_Custom",
+                       "excludedSystemClassifications":  [
+
+                                                         ],
+                       "includedCustomClassificationRuleNames":  [
+
+                                                                 ],
+                       "temporaryResourceFilters":  [
+                                                        {
+                                                            "resourceFilterPattern":  "(_SUCCESS|_started_\\d*|_committed_\\d*|_committed_vacuum\\d*)$",
+                                                            "ingestTemporaryResource":  true
+                                                        }
+                                                    ],
+                       "lastModifiedAt":  "2022-05-10T09:30:40.8022264Z"
+                   },
+    "kind":  "AzureStorage",
+    "scanRulesetType":  "Custom",
+    "status":  "Enabled",
+    "version":  1,
+    "id":  "scanrulesets/BlobStorage_Custom",
+    "name":  "BlobStorage_Custom"
+}

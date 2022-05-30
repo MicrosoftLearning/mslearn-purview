@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "3399d7c4-8e78-493a-b09d-af896d716297",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667025,
+    "updateTime":  1652152667025,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.DATE_OF_BIRTH",
+    "description":  "Date of Birth",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Date of Birth"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

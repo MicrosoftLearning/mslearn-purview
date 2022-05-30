@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "7d5f89dc-89a0-79fc-f169-ff3c9de32565",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667156,
+    "updateTime":  1652152667156,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.RUSSIAN.PASSPORT.NUMBER.DOMESTIC",
+    "description":  "Russian Passport Number Domestic",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Russian Passport Number Domestic"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

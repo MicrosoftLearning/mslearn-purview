@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1a34afdc-0e92-742e-0e24-d987baa97f2d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667154,
+    "updateTime":  1652152667154,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UKRAINE.PASSPORT.INTERNATIONAL",
+    "description":  "Ukraine Passport International",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ukraine Passport International"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

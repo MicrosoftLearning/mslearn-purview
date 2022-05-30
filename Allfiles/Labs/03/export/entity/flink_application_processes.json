@@ -1,0 +1,29 @@
+{
+    "category":  "ENTITY",
+    "guid":  "75fc2707-ad32-6000-4766-cd800e5d5b27",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671685,
+    "updateTime":  1652152671685,
+    "version":  1,
+    "name":  "flink_application_processes",
+    "description":  "flink_application_processes",
+    "typeVersion":  "1.0",
+    "serviceType":  "flink",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

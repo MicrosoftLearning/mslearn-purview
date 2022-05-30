@@ -1,0 +1,48 @@
+{
+    "category":  "ENTITY",
+    "guid":  "5ffa4565-74f2-f2d0-32bb-48d774a8a712",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679249,
+    "updateTime":  1652152679249,
+    "version":  1,
+    "name":  "oracle_synonym_source",
+    "description":  "oracle_synonym_source",
+    "typeVersion":  "1.0",
+    "serviceType":  "Oracle",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "oracle_function",
+                     "oracle_package",
+                     "oracle_synonym",
+                     "oracle_stored_procedure",
+                     "oracle_table",
+                     "oracle_type",
+                     "oracle_view",
+                     "oracle_sequence"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003coracle_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

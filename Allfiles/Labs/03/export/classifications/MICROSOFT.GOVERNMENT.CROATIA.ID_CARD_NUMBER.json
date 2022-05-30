@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "54f9711b-18e2-ef88-2878-5d6708aeac35",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667059,
+    "updateTime":  1652152667059,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CROATIA.ID_CARD_NUMBER",
+    "description":  "Croatia Identity Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Croatia Identity Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

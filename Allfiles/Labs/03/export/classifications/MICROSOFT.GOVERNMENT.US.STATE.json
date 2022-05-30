@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ee6e068c-0b84-2813-2cb3-24c189b90be2",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667018,
+    "updateTime":  1652152667018,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.STATE",
+    "description":  "U.S. State Name",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. State Name"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "09f675b7-5e36-3164-ab87-ca43e42908ae",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667080,
+    "updateTime":  1652152667080,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLAND.IDENTITY_CARD",
+    "description":  "Poland Identity Card",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Poland Identity Card"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

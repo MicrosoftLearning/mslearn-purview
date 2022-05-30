@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "25487a38-0131-1981-323a-7f652884448d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667169,
+    "updateTime":  1652152667169,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LATVIA.PASSPORT.NUMBER",
+    "description":  "Latvia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Latvia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

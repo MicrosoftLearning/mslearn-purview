@@ -1,0 +1,30 @@
+{
+    "category":  "ENTITY",
+    "guid":  "8e320e45-0c25-d79a-de68-a0f2e9156b58",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682416,
+    "updateTime":  1652152682416,
+    "version":  1,
+    "name":  "azure_blob_object",
+    "description":  "azure_blob_object",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Blob Storage",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "azure_blob_resource_set",
+                     "azure_blob_path"
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

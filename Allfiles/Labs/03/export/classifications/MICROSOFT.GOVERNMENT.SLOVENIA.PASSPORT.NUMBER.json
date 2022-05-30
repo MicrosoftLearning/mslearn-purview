@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b99b58e3-23b3-e5b3-3af7-3f907fc6e5cf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667175,
+    "updateTime":  1652152667175,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVENIA.PASSPORT.NUMBER",
+    "description":  "Slovenia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovenia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

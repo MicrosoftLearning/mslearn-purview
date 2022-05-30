@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a9fa2bb7-344f-db78-65f4-dcb9d55a8227",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667080,
+    "updateTime":  1652152667080,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLAND.PESEL_NUMBER",
+    "description":  "Poland National ID (PESEL)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Poland National ID (PESEL)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

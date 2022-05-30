@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "c6c48e5f-7c5f-a359-dee6-a6eff2ccd9a6",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667104,
+    "updateTime":  1652152667104,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.VALUE.ADDED.TAX",
+    "description":  "Austria Value Added Tax",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Value Added Tax"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

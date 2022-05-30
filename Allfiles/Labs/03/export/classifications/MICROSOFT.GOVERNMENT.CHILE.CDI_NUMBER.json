@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "60934519-16ce-a954-1ec4-944bbe67c5ee",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667060,
+    "updateTime":  1652152667060,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CHILE.CDI_NUMBER",
+    "description":  "Chile Identity Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Chile Identity Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

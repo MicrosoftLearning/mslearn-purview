@@ -1,0 +1,150 @@
+{
+    "name":  "policy_main-OtijT",
+    "id":  "5739f387-93ee-4e94-aadf-46a632213e95",
+    "version":  2,
+    "properties":  {
+                       "description":  "",
+                       "decisionRules":  [
+                                             {
+                                                 "kind":  "decisionrule",
+                                                 "effect":  "Permit",
+                                                 "dnfCondition":  [
+                                                                      [
+                                                                          {
+                                                                              "attributeName":  "resource.purview.collection",
+                                                                              "attributeValueIncludes":  "main-otijt"
+                                                                          },
+                                                                          {
+                                                                              "fromRule":  "permission:main-otijt",
+                                                                              "attributeName":  "derived.purview.permission",
+                                                                              "attributeValueIncludes":  "permission:main-otijt"
+                                                                          }
+                                                                      ]
+                                                                  ]
+                                             }
+                                         ],
+                       "attributeRules":  [
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "purviewmetadatarole_builtin_collection-administrator:main-otijt",
+                                                  "name":  "purviewmetadatarole_builtin_collection-administrator:main-otijt",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "attributeName":  "principal.microsoft.id",
+                                                                               "attributeValueIncludedIn":  [
+                                                                                                                "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                                                                                                                "e2dcc9f3-ca51-4926-9415-cb23f1666585"
+                                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator",
+                                                                               "attributeName":  "derived.purview.role",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              },
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "purviewmetadatarole_builtin_purview-reader:main-otijt",
+                                                  "name":  "purviewmetadatarole_builtin_purview-reader:main-otijt",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "attributeName":  "principal.microsoft.id",
+                                                                               "attributeValueIncludedIn":  [
+                                                                                                                "c1c8abcf-aa1f-443b-aa47-93df8879d9b2"
+                                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_purview-reader",
+                                                                               "attributeName":  "derived.purview.role",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_purview-reader"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              },
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "purviewmetadatarole_builtin_data-curator:main-otijt",
+                                                  "name":  "purviewmetadatarole_builtin_data-curator:main-otijt",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "attributeName":  "principal.microsoft.id",
+                                                                               "attributeValueIncludedIn":  [
+                                                                                                                "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                                                                                                                "d11a9726-11c9-486c-ae60-42ea27240109"
+                                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_data-curator",
+                                                                               "attributeName":  "derived.purview.role",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_data-curator"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              },
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "purviewmetadatarole_builtin_data-source-administrator:main-otijt",
+                                                  "name":  "purviewmetadatarole_builtin_data-source-administrator:main-otijt",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "attributeName":  "principal.microsoft.id",
+                                                                               "attributeValueIncludedIn":  [
+                                                                                                                "c1c8abcf-aa1f-443b-aa47-93df8879d9b2"
+                                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_data-source-administrator",
+                                                                               "attributeName":  "derived.purview.role",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_data-source-administrator"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              },
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "permission:main-otijt",
+                                                  "name":  "permission:main-otijt",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator:main-otijt"
+                                                                           }
+                                                                       ],
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_purview-reader:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_purview-reader:main-otijt"
+                                                                           }
+                                                                       ],
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_data-curator:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_data-curator:main-otijt"
+                                                                           }
+                                                                       ],
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_data-source-administrator:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_data-source-administrator:main-otijt"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              }
+                                          ],
+                       "collection":  {
+                                          "type":  "CollectionReference",
+                                          "referenceName":  "main-otijt"
+                                      }
+                   }
+}

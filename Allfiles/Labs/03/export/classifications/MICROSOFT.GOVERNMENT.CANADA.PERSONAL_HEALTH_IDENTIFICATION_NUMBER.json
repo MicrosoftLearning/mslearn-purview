@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e5e12c91-228c-175a-eb4a-0d5ce48e11fb",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667024,
+    "updateTime":  1652152667024,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CANADA.PERSONAL_HEALTH_IDENTIFICATION_NUMBER",
+    "description":  "Canada Personal Health Identification Number (PHIN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Canada Personal Health Identification Number (PHIN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

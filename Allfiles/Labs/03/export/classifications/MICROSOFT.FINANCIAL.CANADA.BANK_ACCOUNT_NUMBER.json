@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "37b344f4-abec-8d30-58c6-6952afd9c445",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667022,
+    "updateTime":  1652152667022,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.CANADA.BANK_ACCOUNT_NUMBER",
+    "description":  "Canada Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Canada Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

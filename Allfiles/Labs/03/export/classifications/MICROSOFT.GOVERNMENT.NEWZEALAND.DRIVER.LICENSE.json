@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "38660059-bb0d-37c4-e371-32b2cd03f496",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667157,
+    "updateTime":  1652152667157,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NEWZEALAND.DRIVER.LICENSE",
+    "description":  "New Zealand Driver License",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "New Zealand Driver License"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "3d023bc1-58ff-1cd6-9aee-87857bcf57fd",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667195,
+    "updateTime":  1652152667195,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SWEDEN.DRIVERS.LICENSE.NUMBER",
+    "description":  "Sweden Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Sweden Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

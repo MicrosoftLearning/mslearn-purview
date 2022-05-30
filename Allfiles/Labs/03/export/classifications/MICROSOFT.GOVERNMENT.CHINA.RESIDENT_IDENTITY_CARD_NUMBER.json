@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "9a98b4bf-2a35-9916-7265-e7ba0d7f9225",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667025,
+    "updateTime":  1652152667025,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CHINA.RESIDENT_IDENTITY_CARD_NUMBER",
+    "description":  "China Resident Identity Card (PRC) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "China Resident Identity Card (PRC) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

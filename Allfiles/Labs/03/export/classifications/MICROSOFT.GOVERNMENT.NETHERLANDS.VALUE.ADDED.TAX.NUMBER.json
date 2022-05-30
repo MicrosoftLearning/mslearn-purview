@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "630e90f0-8740-7c05-db0b-5be0cdef91aa",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667106,
+    "updateTime":  1652152667106,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NETHERLANDS.VALUE.ADDED.TAX.NUMBER",
+    "description":  "Netherlands Value Added Tax Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Netherlands Value Added Tax Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,49 @@
+{
+    "category":  "ENTITY",
+    "guid":  "55ca7fc4-fd2c-a5d4-c107-ff81d0f9d79e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666713,
+    "updateTime":  1652152666713,
+    "version":  1,
+    "name":  "__ADCResourceSetConfig",
+    "description":  "__ADCResourceSetConfig",
+    "typeVersion":  "1.0",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "qualifiedName",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  true,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "configJson",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "__internal"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

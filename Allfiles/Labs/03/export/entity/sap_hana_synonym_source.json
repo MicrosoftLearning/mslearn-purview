@@ -1,0 +1,46 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f080d41b-9e96-fc0a-4d74-b43a91bcc238",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700276,
+    "updateTime":  1652152700276,
+    "version":  1,
+    "name":  "sap_hana_synonym_source",
+    "description":  "sap_hana_synonym_source",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP HANA",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "sap_hana_table",
+                     "sap_hana_view",
+                     "sap_hana_stored_procedure",
+                     "sap_hana_function",
+                     "sap_hana_sequence",
+                     "sap_hana_synonym"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003csap_hana_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_hana_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

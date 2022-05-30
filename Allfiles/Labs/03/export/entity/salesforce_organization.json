@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "709eb981-5eab-89c5-ccce-d81cfeeb9cc7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679507,
+    "updateTime":  1652152679507,
+    "version":  1,
+    "name":  "salesforce_organization",
+    "description":  "salesforce_organization",
+    "typeVersion":  "1.0",
+    "serviceType":  "Salesforce",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"salesforce://organizations/(?\u003cOrganization\u003e[^/]+)$\",\"qualifiedNameSample\":\"salesforce://organizations/00DJ0000003Q47bMAC\",\"friendlyName\":\"Salesforce Organization\",\"isContainer\":true,\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"browse\":{\"browseHierarchy\":[{\"componentName\":\"Organization\",\"entityTypeName\":\"salesforce_organization\",\"isPath\":false,\"isRequired\":true}],\"source\":\"QualifiedName\"},\"taxonomy\":{\"assetTaxonomy\":[\"Organization\"],\"source\":\"QualifiedName\"}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "objects",
+                                          "typeName":  "array\u003csalesforce_object\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "salesforce_organization_objects",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

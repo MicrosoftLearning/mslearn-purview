@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ca69781b-bb1b-ed20-6c9d-bb475b419380",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667098,
+    "updateTime":  1652152667098,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SPAIN.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Spain Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Spain Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

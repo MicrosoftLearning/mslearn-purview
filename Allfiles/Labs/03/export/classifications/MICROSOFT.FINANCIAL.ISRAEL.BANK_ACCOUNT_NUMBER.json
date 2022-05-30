@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ed97fca6-d12c-c6ba-4abd-5cbe12f92498",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667068,
+    "updateTime":  1652152667068,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.ISRAEL.BANK_ACCOUNT_NUMBER",
+    "description":  "Israel Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Israel Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

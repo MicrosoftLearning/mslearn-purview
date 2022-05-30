@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "09d0559b-337e-58d5-b5b2-26193b1b16ce",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667094,
+    "updateTime":  1652152667094,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NETHERLANDS.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Netherlands Tax Identificatin Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Netherlands Tax Identificatin Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

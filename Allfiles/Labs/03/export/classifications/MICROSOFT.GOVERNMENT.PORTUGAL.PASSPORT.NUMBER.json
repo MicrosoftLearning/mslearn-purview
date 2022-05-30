@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "0a9e4de9-611f-3ac6-b136-4ca412de21f4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667172,
+    "updateTime":  1652152667172,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.PORTUGAL.PASSPORT.NUMBER",
+    "description":  "Portugal Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Portugal Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "639f0d8c-fe41-9d02-a8ba-300452ce1515",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667189,
+    "updateTime":  1652152667189,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NETHERLANDS.DRIVERS.LICENSE.NUMBER",
+    "description":  "Netherlands Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Netherlands Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,45 @@
+{
+    "category":  "ENTITY",
+    "guid":  "4352acc1-6f2e-4f7d-54d8-8ae86b1480c0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703094,
+    "updateTime":  1652152703094,
+    "version":  1,
+    "name":  "erwin_synonym_source",
+    "description":  "erwin_synonym_source",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "erwin_view",
+                     "erwin_entity",
+                     "erwin_stored_procedure",
+                     "erwin_synonym",
+                     "erwin_sequence"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003cerwin_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "64f7f83e-bf21-f754-f9ac-5482b54ba2f3",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667090,
+    "updateTime":  1652152667090,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LITHUANIA.PERSONAL.CODE",
+    "description":  "Lithuania Personal Code (Asmens kodas)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Lithuania Personal Code (Asmens kodas)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

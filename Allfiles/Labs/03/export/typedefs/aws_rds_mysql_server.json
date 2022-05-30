@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e3113481-36ac-9d50-2929-69dc81028cf8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152689162,
+    "updateTime":  1652152689162,
+    "version":  1,
+    "name":  "aws_rds_mysql_server",
+    "description":  "aws_rds_mysql_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "Amazon RDS Database (MySQL)",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"mysql://(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"mysql://testdb-mysql.aaaaaaaaaaaa.us-east-2.rds.amazonaws.com\",\"isContainer\":true,\"friendlyName\":\"Amazon RDS Server (MySQL)\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\"],\"customizeTaxonomyFields\":{\"Server\":\"AWS_RDS_MySQL/Server\",\"Database\":\"AWS_RDS_MySQL/Database\"}},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"aws_rds_mysql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "aws_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003caws_rds_mysql_db\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "aws_rds_mysql_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

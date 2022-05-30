@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b11df4db-2e84-e448-271a-9354d2093104",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667166,
+    "updateTime":  1652152667166,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ESTONIA.PASSPORT.NUMBER",
+    "description":  "Estonia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Estonia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

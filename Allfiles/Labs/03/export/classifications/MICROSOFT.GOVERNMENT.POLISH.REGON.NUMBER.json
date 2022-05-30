@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "40b7118a-9137-7c3e-c468-775132ce954b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667103,
+    "updateTime":  1652152667103,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLISH.REGON.NUMBER",
+    "description":  "Polish REGON Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Polish REGON Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

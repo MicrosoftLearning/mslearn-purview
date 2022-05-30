@@ -1,0 +1,37 @@
+{
+    "category":  "ENTITY",
+    "guid":  "7fb59bad-ab03-5641-7b95-7d2d78d1283d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666297,
+    "updateTime":  1652152667932,
+    "version":  2,
+    "name":  "__internal",
+    "description":  "__internal",
+    "typeVersion":  "1.1",
+    "serviceType":  "atlas_core",
+    "lastModifiedTS":  "2",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "AtlasGlossary",
+                     "__ExportImportAuditEntry",
+                     "__ADCResourceSetConfig",
+                     "AtlasGlossaryTerm",
+                     "__AtlasAuditEntry",
+                     "__AtlasUserSavedSearch",
+                     "AtlasGlossaryCategory",
+                     "__AtlasUserProfile",
+                     "__ADCClassificationRule"
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

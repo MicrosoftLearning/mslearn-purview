@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "14845081-86fe-4e80-a0fb-4897dd37dbec",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667017,
+    "updateTime":  1652152667017,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.US.BANK_ACCOUNT_NUMBER",
+    "description":  "U.S. Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

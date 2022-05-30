@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "46b001f5-a4ce-0497-8177-7b13916bb6fa",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667018,
+    "updateTime":  1652152667018,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.US.PHONE_NUMBER",
+    "description":  "U.S. Phone Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Phone Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

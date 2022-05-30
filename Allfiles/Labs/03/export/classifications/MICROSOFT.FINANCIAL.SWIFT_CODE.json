@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "24c58f73-7a36-75ff-73d8-d7dde497bca9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667031,
+    "updateTime":  1652152667049,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.SWIFT_CODE",
+    "description":  "SWIFT Code",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "SWIFT Code"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

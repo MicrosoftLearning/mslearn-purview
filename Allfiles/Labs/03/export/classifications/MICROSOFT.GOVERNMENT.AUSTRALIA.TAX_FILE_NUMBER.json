@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "0c249a76-2b74-e75c-8575-1cb2ed820c6e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667062,
+    "updateTime":  1652152667062,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRALIA.TAX_FILE_NUMBER",
+    "description":  "Australia Tax File Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Tax File Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

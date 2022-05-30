@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "890cf153-0b72-cf63-92ca-4aa41c4d846a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667075,
+    "updateTime":  1652152667075,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SOUTHAFRICA.IDENTIFICATION_NUMBER",
+    "description":  "South Africa Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "South Africa Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

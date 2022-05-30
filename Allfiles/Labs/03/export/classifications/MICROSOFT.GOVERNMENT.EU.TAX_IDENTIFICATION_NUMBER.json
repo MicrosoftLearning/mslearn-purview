@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6f99c0d4-7b52-19c4-525f-c3627b12361e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666915,
+    "updateTime":  1652152666915,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.EU.TAX_IDENTIFICATION_NUMBER",
+    "description":  "EU Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

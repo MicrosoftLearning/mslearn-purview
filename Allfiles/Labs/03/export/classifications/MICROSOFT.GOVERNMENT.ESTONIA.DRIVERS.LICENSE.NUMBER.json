@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e8dab790-c4e9-6061-f0d3-689a09e84ab1",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667181,
+    "updateTime":  1652152667181,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ESTONIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Estonia Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Estonia Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "2ca9fdaa-cf9a-d9eb-5b7a-042e0130f159",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667100,
+    "updateTime":  1652152667100,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRALIA.COMPANY.NUMBER",
+    "description":  "Australia Company Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Company Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

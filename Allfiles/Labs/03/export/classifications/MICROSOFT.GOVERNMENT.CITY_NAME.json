@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "c86fc3df-7985-6114-f187-9c5eca581bdf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667081,
+    "updateTime":  1652152667081,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CITY_NAME",
+    "description":  "World Cities",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "World Cities"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

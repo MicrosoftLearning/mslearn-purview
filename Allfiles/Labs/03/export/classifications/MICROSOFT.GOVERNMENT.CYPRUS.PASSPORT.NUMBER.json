@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "aa4881a4-5b6b-f05b-e672-48d369f82bb3",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667164,
+    "updateTime":  1652152667164,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CYPRUS.PASSPORT.NUMBER",
+    "description":  "Cyprus Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Cyprus Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

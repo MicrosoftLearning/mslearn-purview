@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "29f49d8f-377c-0112-928d-2b78cd3a840b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667086,
+    "updateTime":  1652152667086,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.TAX.IDENTIFICATION.NUMBER",
+    "description":  "France Tax Identification Number (numéro SPI.)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France Tax Identification Number (numéro SPI.)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,84 @@
+{
+    "category":  "ENTITY",
+    "guid":  "dcad83e6-0c44-51b3-7cf7-607806475996",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152686105,
+    "updateTime":  1652152686105,
+    "version":  1,
+    "name":  "azure_synapse_dataflow_operation",
+    "description":  "azure_synapse_dataflow_operation",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Synapse Analytics",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"lineage:.+#/subscriptions/[^/]+/resourceGroups/[^/]+/providers/Microsoft.Synapse/workspaces/(?\u003cWorkspace\u003e[^/]+)/pipelines/(?\u003cPipeline\u003e[^/]+)/activities/(?\u003cActivity\u003e[^/]+)$\",\"qualifiedNameSample\":\"lineage:https://testblob.blob.core.windows.net/testcontainer/1.txt#/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Synapse/workspaces/testsynapse/pipelines/pipeline1/activities/dataflow1\",\"isContainer\":false,\"parallel\":{\"enableParallel\":true,\"splitByRelationships\":[\"azure_synapse_activity_operations\"]},\"search\":{\"searchBehavior\":\"NoSearch\"}}",
+                    "defaultRenderedLineage":  "activity"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "azure_synapse_operation"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "activity",
+                                          "typeName":  "azure_synapse_activity",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "azure_synapse_activity_operations",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

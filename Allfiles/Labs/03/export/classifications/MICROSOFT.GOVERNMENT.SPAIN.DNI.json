@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "4d124f7b-5fea-5a60-f9fa-319068a547bd",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667098,
+    "updateTime":  1652152667098,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SPAIN.DNI",
+    "description":  "Spain DNI",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Spain DNI"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

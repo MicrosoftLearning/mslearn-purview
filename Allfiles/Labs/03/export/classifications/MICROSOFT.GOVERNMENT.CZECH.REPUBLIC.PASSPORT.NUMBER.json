@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d22181ac-31d6-71d7-de8e-a37aaee85378",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667164,
+    "updateTime":  1652152667164,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CZECH.REPUBLIC.PASSPORT.NUMBER",
+    "description":  "Czech Republic Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Czech Republic Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

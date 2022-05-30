@@ -1,0 +1,42 @@
+{
+    "category":  "ENTITY",
+    "guid":  "bb2c32f9-1f49-4e00-9894-19f4f25caf63",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700954,
+    "updateTime":  1652152700954,
+    "version":  1,
+    "name":  "sap_bw_provider_dimension",
+    "description":  "sap_bw_provider_dimension",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP BW",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "sap_bw_dimension",
+                     "sap_bw_time_dimension"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "info_provider",
+                                          "typeName":  "sap_bw_provider_cube",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_bw_provider_cube_dimensions",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

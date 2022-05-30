@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "7bb2f885-25b4-baca-fd0f-952dfa9b5fef",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667014,
+    "updateTime":  1652152667014,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UK.NATIONAL_HEALTH_SERVICE_NUMBER",
+    "description":  "U.K. National Health Service Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. National Health Service Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

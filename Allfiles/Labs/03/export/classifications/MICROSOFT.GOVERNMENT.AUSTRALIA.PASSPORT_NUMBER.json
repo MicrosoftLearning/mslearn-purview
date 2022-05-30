@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "cfbdbd57-82c7-e1ab-0a57-8a62de4e04c1",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667063,
+    "updateTime":  1652152667063,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRALIA.PASSPORT_NUMBER",
+    "description":  "Australia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

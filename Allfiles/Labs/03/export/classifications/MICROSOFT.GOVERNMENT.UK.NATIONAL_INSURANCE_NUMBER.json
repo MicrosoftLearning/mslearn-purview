@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "579d7048-16ef-8aad-18d5-e0818ba633a4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667015,
+    "updateTime":  1652152667015,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UK.NATIONAL_INSURANCE_NUMBER",
+    "description":  "U.K. National Insurance Number (NINO)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. National Insurance Number (NINO)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "59a22a7f-0f23-daf7-59ff-a1e3688450c0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667179,
+    "updateTime":  1652152667179,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CROATIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Croatia Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Croatia Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6584ee9d-cb4a-79dc-c3fb-cb945c9cf15d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667074,
+    "updateTime":  1652152667074,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLAND.PASSPORT_NUMBER",
+    "description":  "Poland Passport",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Poland Passport"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

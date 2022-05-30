@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "11b366b2-d3ac-d055-1134-5af2cbad0444",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667029,
+    "updateTime":  1652152667029,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SPAIN.SOCIAL_SECURITY_NUMBER",
+    "description":  "Spain Social Security Number (SSN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Spain Social Security Number (SSN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

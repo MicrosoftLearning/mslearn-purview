@@ -1,0 +1,41 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e9861c89-4a13-c501-6f71-492f3e8f2b59",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152688126,
+    "updateTime":  1652152688126,
+    "version":  1,
+    "name":  "aws_s3_v2_contained",
+    "description":  "Atlas Type representing a Contained Types in an S3 Object Store",
+    "typeVersion":  "1.0",
+    "serviceType":  "aws",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "aws_s3_v2_object"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "container",
+                                          "typeName":  "aws_s3_v2_container",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "aws_s3_v2_container_contained",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

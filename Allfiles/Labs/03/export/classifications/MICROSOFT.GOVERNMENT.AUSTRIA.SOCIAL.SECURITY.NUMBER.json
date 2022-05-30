@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "43d28cbf-f6d8-00d0-63b7-b27805177da5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667160,
+    "updateTime":  1652152667160,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.SOCIAL.SECURITY.NUMBER",
+    "description":  "Austria Social Security Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Social Security Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}
