@@ -2,10 +2,12 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-
+        "suffix": {
+            "type": "String"
+          }
     },
     "variables": {
-        "uniqueSuffix": "[uniqueString(resourceGroup().id)]"
+        "uniqueSuffix": "[parameters('suffix')]"
     },
     "resources": [
         {

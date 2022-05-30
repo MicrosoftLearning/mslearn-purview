@@ -1,20 +1,21 @@
 #include common
-. MicrosoftPurview.ps1
+. ./MicrosoftPurview.ps1
 
-[Reflection.Assembly]::LoadWithPartialName("Newtonsoft.Json.dll”);
-
-$profilePath = $env:USERPROFILE;
-$exportPath = "$profilePath\OneDrive\My Scripts\Microsoft";
-$exportPath = "C:\github\solliancenet\LP_AZ_microsoft-purview\Allfiles\Labs\03\export"
-
-cd $exportPath;
+$labPath = "$home/msftpurview/Allfiles/Labs/03";
+$exportPath = "$labPath/export";
 
 $suffix = GetSuffix;
 
+Connect-AzAccount -UseDeviceAuthentication;
+
+Select-AzSubscription "{SUBSCRIPTION_NAME}"
+
 $purviewName = "main$suffix";
 $apiVersion = "2022-02-01-preview";
-$subscriptionId = "{SUBSCRIPTION_ID}";
-$resourceGroupName = "{RESOURCE_GROUP_NAME}";
+$resourceGroupName = "msftpurview-$suffix";
+$subscriptionId = (Get-AzContext).Subscription.Id
+$tenantId = (Get-AzContext).Tenant.Id
+$global:logindomain = (Get-AzContext).Tenant.Id;
 
 $rooturl = "https://$purviewName.purview.azure.com";
 

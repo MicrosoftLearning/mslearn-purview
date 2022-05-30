@@ -2,6 +2,62 @@
 
 #https://atlas.apache.org/api/v2/index.html
 
+function Check-HttpRedirect($uri)
+{
+    $httpReq = [system.net.HttpWebRequest]::Create($uri)
+    $httpReq.Accept = "text/html, application/xhtml+xml, */*"
+    $httpReq.method = "GET"   
+    $httpReq.AllowAutoRedirect = $false;
+    
+    #use them all...
+    #[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls11 -bor [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Ssl3 -bor [System.Net.SecurityProtocolType]::Tls;
+
+    $global:httpCode = -1;
+    
+    $response = "";            
+
+    try
+    {
+        $res = $httpReq.GetResponse();
+
+        $statusCode = $res.StatusCode.ToString();
+        $global:httpCode = [int]$res.StatusCode;
+        $cookieC = $res.Cookies;
+        $resHeaders = $res.Headers;  
+        $global:rescontentLength = $res.ContentLength;
+        $global:location = $null;
+                                
+        try
+        {
+            $global:location = $res.Headers["Location"].ToString();
+            return $global:location;
+        }
+        catch
+        {
+        }
+
+        return $null;
+
+    }
+    catch
+    {
+        $res2 = $_.Exception.InnerException.Response;
+        $global:httpCode = $_.Exception.InnerException.HResult;
+        $global:httperror = $_.exception.message;
+
+        try
+        {
+            $global:location = $res2.Headers["Location"].ToString();
+            return $global:location;
+        }
+        catch
+        {
+        }
+    } 
+
+    return $null;
+}
+
 function ExportObjects()
 {
     $global:headers = @{
@@ -921,6 +977,6 @@ function GetSuffix()
         $suffix = -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_});
     }
 
-    return $suffix;
+    return $suffix.tolower();
 }
 

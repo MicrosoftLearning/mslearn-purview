@@ -1,22 +1,32 @@
 #include common
-. MicrosoftPurview.ps1
+. ./MicrosoftPurview.ps1
+
+$labPath = "$home/msftpurview/Allfiles/Labs/03";
+$exportPath = "$labPath/export";
 
 $location = "eastus";
 $suffix = GetSuffix;
-$accountName = "main-$suffix";
+$accountName = "main$suffix";
 $rsGroupName = "msftpurview-$suffix";
+
+Connect-AzAccount -UseDeviceAuthentication
 
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
 $global:logindomain = (Get-AzContext).Tenant.Id;
 
 #create the resource group
-New-AzResourceGroup -Name $rsGroupName -Location $location;
+New-AzResourceGroup -Name $rsGroupName -Location $location -force;
 
 #run the deployment...
 $templatesFile = "template.json"
 $parametersFile = "parameters.json"
-New-AzResourceGroupDeployment -ResourceGroupName $rsGroupName -TemplateFile $templatesFile -TemplateParameterFile "$parametersFile";
+
+$content = Get-Content -Path $parametersFile -raw;
+$content = $content.Replace("GET-SUFFIX",$suffix);
+$content | Set-Content -Path "$($parametersFile).json";
+
+New-AzResourceGroupDeployment -ResourceGroupName $rsGroupName -TemplateFile $templatesFile -TemplateParameterFile "$($parametersFile).json";
 
 if ([System.Environment]::OSVersion.Platform -eq "Unix")
 {
@@ -29,11 +39,17 @@ if ([System.Environment]::OSVersion.Platform -eq "Unix")
 
         Invoke-WebRequest $azCopyLink -OutFile "azCopy.tar.gz"
         tar -xf "azCopy.tar.gz"
-        $azCopyCommand = (Get-ChildItem -Path ".\" -Recurse azcopy).Directory.FullName
-        cd $azCopyCommand
-        chmod +x azcopy
-        cd ..
-        $azCopyCommand += "\azcopy"
+        $azCopyCommand = (Get-ChildItem -Path "$labPath" -Recurse azcopy).Directory.FullName
+
+        if ($azCopyCommand.Count)
+        {
+                $azCopyCommand = $azCopyCommand[0]
+        }
+        
+        cd $azCopyCommand;
+        chmod +x azcopy;
+        cd $labPath;
+        $azCopyCommand += "\azcopy";
 }
 else
 {
@@ -57,6 +73,8 @@ $dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/
 $dataLakeStorageBlobUrl = "https://"+ $dataLakeAccountName + ".blob.core.windows.net/"
 $dataLakeStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $rsGroupName -AccountName $dataLakeAccountName)[0].Value
 $dataLakeContext = New-AzStorageContext -StorageAccountName $dataLakeAccountName -StorageAccountKey $dataLakeStorageAccountKey
+
+$wwiContainer = New-AzStorageContainer -Permission Container -name "wwi-02" -context $dataLakeContext;
 $destinationSasKey = New-AzStorageContainerSASToken -Container "wwi-02" -Context $dataLakeContext -Permission rwdl
 
 Write-Information "Copying single files from the public data account..."
@@ -79,6 +97,10 @@ foreach ($singleFile in $singleFiles.Keys) {
 $userName = ((az ad signed-in-user show) | ConvertFrom-JSON).UserPrincipalName
 $user = Get-AzADUser -UserPrincipalName $username
 $objectId = $user.id;
+
+#get tokens
+$global:mgmtToken = GetToken "https://management.azure.com" "mgmt";
+$global:token = GetToken "https://purview.azure.net" "purview";
 
 #ensure collection admin present
 AddRootCollectionAdmin $objectId;
