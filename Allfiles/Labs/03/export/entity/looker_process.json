@@ -1,0 +1,91 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f25583f8-cf4e-d7d8-77e9-5fe4513170ef",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152702287,
+    "updateTime":  1652152702287,
+    "version":  1,
+    "name":  "looker_process",
+    "description":  "looker_process",
+    "typeVersion":  "1.0",
+    "serviceType":  "Looker",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"searchBehavior\":\"NoSearch\"}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "query",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "columnMapping",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

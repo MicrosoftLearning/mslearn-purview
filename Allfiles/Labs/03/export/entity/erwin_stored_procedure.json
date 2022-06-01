@@ -1,0 +1,186 @@
+{
+    "category":  "ENTITY",
+    "guid":  "947eac5c-cb87-9861-b3eb-3db8e8195e28",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703081,
+    "updateTime":  1652152703081,
+    "version":  1,
+    "name":  "erwin_stored_procedure",
+    "description":  "erwin_stored_procedure",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"},{\"isRequired\":false,\"isPath\":true,\"entityTypeName\":\"erwin_library\",\"componentName\":\"Library\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_model\",\"componentName\":\"Model\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_stored_procedure\",\"componentName\":\"StoredProcedure\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)/(?\u003cCatalog\u003e[^/]+)((/(?\u003cLibrary\u003e[^/]+))*)/(?\u003cModel\u003e[^/]+)/(?\u003cModelId\u003e[^/]+)/(?\u003cStoredProcedure\u003e[^/]+)$\",\"compact\":{\"isHostForCompact\":true,\"relationshipsToCompact\":[\"erwin_stored_procedure_parameters\"]},\"parallel\":{\"splitByRelationships\":[\"erwin_model_storedprocedures\"],\"enableParallel\":true},\"isContainer\":false,\"qualifiedNameSample\":\"erwin://localhost:18170/MartServer/MyCatalog/PublicationSystemSample/{799A0437-D91A-4CC5-998A-7C23E2130F39}+00000001/{F826904D-331D-4943-9A25-154FAA75DC8A}+00000000\",\"friendlyName\":\"Erwin Stored Procedure\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "comment",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "physicalName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "generate",
+                              "typeName":  "boolean",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Process",
+                       "erwin_synonym_source"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "view",
+                                          "typeName":  "erwin_view",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_view_storedprocedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003cerwin_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "erwinschema",
+                                          "typeName":  "erwin_schema",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_schema_storedprocedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "model",
+                                          "typeName":  "erwin_model",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_model_storedprocedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "parameters",
+                                          "typeName":  "array\u003cerwin_parameter\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_stored_procedure_parameters",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "entity",
+                                          "typeName":  "erwin_entity",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_entity_storedprocedures",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

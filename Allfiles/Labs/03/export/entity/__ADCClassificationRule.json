@@ -1,0 +1,49 @@
+{
+    "category":  "ENTITY",
+    "guid":  "658797af-129f-8c01-7e70-96c4f07d05a2",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666714,
+    "updateTime":  1652152666714,
+    "version":  1,
+    "name":  "__ADCClassificationRule",
+    "description":  "__ADCClassificationRule",
+    "typeVersion":  "1.0",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "qualifiedName",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  true,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "configJson",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "__internal"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

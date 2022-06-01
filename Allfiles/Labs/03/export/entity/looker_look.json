@@ -1,0 +1,149 @@
+{
+    "category":  "ENTITY",
+    "guid":  "387a7e20-8454-8671-05ad-ad885e176ec2",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152702270,
+    "updateTime":  1652152702270,
+    "version":  1,
+    "name":  "looker_look",
+    "description":  "looker_look",
+    "typeVersion":  "1.0",
+    "serviceType":  "Looker",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Server\",\"Folder\",\"Dashboard\",\"Project\",\"Model\",\"Look\"],\"customizeTaxonomyMapping\":{\"Server\":\"looker_server\",\"Folder\":\"looker_folder\",\"Dashboard\":\"looker_dashboard\",\"Project\":\"looker_project\",\"Model\":\"looker_model\",\"Look\":\"looker_look\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"looker_server\",\"componentName\":\"Server\"},{\"isRequired\":true,\"isPath\":true,\"entityTypeName\":\"looker_folder\",\"componentName\":\"Folder\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"looker_look\",\"componentName\":\"Look\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"looker://(?\u003cServer\u003e[^/]+)/looks/(?\u003cLook\u003e[^/]+)$\",\"isContainer\":true,\"qualifiedNameSample\":\"looker://azurepurviewinternal.cloud.looker.com/looks/mylook\",\"friendlyName\":\"Looker Look\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "creationTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "author",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "modificationTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "modifier",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "layout",
+                                          "typeName":  "looker_layout",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_look_layout",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "folder",
+                                          "typeName":  "looker_folder",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "looker_folder_items_looks",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "folders",
+                                          "typeName":  "array\u003clooker_folder\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "looker_folder_lookreferenced",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "query",
+                                          "typeName":  "looker_query",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_look_query",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

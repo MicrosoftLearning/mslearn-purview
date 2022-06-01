@@ -1,0 +1,93 @@
+{
+    "category":  "ENTITY",
+    "guid":  "ceb6aaa3-ed2b-0a39-94be-461585571110",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152690670,
+    "updateTime":  1652152690670,
+    "version":  1,
+    "name":  "snowflake_pipe",
+    "description":  "snowflake_pipe",
+    "typeVersion":  "1.0",
+    "serviceType":  "Snowflake",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"snowflake://(?\u003cServer\u003e[^/]+)/databases/(?\u003cDatabase\u003e[^/]+)/schemas/(?\u003cSchema\u003e[^/]+)/pipes/(?\u003cPipe\u003e[^/]+)$\",\"qualifiedNameSample\":\"snowflake://192.168.56.51/databases/SAMPLE/schemas/TESTDB/pipes/COPYDATA\",\"isContainer\":false,\"friendlyName\":\"Snowflake Pipe\",\"parallel\":{\"enableParallel\":true,\"splitByRelationships\":[\"snowflake_schema_pipes\"]},\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"snowflake_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"snowflake_database\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"},{\"entityTypeName\":\"snowflake_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"},{\"entityTypeName\":\"snowflake_pipe\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Pipe\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "modifiedTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schema",
+                                          "typeName":  "snowflake_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "snowflake_schema_pipes",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

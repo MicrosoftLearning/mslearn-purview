@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ebc0fff7-2966-1bfb-9eda-bdf566910c87",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667086,
+    "updateTime":  1652152667086,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ESTONIA.PERSONAL.IDENTIFICATION.CODE",
+    "description":  "Estonia Personal identification code (isikukood)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Estonia Personal identification code (isikukood)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

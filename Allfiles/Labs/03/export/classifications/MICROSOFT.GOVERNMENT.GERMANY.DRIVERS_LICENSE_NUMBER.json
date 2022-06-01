@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "fb9897d0-a1c7-42f4-1f54-5dcd73a19865",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667020,
+    "updateTime":  1652152667020,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GERMANY.DRIVERS_LICENSE_NUMBER",
+    "description":  "German Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "German Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

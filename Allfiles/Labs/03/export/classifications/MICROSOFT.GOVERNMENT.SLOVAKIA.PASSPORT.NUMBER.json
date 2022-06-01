@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "61ad9765-96fa-71df-ecc2-48783edace24",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667174,
+    "updateTime":  1652152667174,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVAKIA.PASSPORT.NUMBER",
+    "description":  "Slovakia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovakia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

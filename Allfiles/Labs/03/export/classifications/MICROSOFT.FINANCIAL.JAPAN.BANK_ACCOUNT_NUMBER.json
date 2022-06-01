@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "470ea05f-762a-391e-e442-fd4ed12c47af",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667069,
+    "updateTime":  1652152667069,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.JAPAN.BANK_ACCOUNT_NUMBER",
+    "description":  "Japan Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,93 @@
+{
+    "category":  "ENTITY",
+    "guid":  "fa9ee372-0442-47d9-c15a-b82bc048ee9f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152699584,
+    "updateTime":  1652152699584,
+    "version":  1,
+    "name":  "sap_ecc_program",
+    "description":  "sap_ecc_program",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP ECC",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "dependencies_tables",
+                                          "typeName":  "array\u003csap_ecc_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_program_dependencies_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "package",
+                                          "typeName":  "sap_ecc_package",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_package_programs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dependencies_views",
+                                          "typeName":  "array\u003csap_ecc_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_program_dependencies_views",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "transaction",
+                                          "typeName":  "sap_ecc_transaction",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_transaction_program",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

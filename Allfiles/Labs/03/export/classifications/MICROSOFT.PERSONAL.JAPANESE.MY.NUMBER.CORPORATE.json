@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d9ee751f-7c9f-7668-a7b2-d6b688d274a6",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667151,
+    "updateTime":  1652152667151,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.JAPANESE.MY.NUMBER.CORPORATE",
+    "description":  "Japanese My Number – Corporate",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japanese My Number – Corporate"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

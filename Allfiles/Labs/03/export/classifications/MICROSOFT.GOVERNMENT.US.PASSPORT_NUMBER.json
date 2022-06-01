@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "4a684257-805b-755d-59ad-5e05aff3800d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667017,
+    "updateTime":  1652152667017,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.PASSPORT_NUMBER",
+    "description":  "U.S. Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

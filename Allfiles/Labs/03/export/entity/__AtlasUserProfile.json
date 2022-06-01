@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f9b8c4f4-d3f8-0b74-901a-373b679580fc",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666306,
+    "updateTime":  1652152668288,
+    "version":  2,
+    "name":  "__AtlasUserProfile",
+    "description":  "__AtlasUserProfile",
+    "typeVersion":  "1.1",
+    "serviceType":  "atlas_core",
+    "lastModifiedTS":  "2",
+    "attributeDefs":  [
+                          {
+                              "name":  "name",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  true,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "fullName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "savedSearches",
+                              "typeName":  "array\u003c__AtlasUserSavedSearch\u003e",
+                              "isOptional":  true,
+                              "cardinality":  "SET",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  2147483647,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false,
+                              "constraints":  [
+                                                  {
+                                                      "type":  "ownedRef"
+                                                  }
+                                              ]
+                          }
+                      ],
+    "superTypes":  [
+                       "__internal"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "savedSearches",
+                                          "typeName":  "array\u003c__AtlasUserSavedSearch\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "__AtlasUserProfile_savedsearches",
+                                          "isLegacyAttribute":  true
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

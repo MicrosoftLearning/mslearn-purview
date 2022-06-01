@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "55f0d849-22ce-f621-4a50-2561e23fdd05",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667057,
+    "updateTime":  1652152667057,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.DRUG_ENFORCEMENT_AGENCY_NUMBER",
+    "description":  "Drug Enforcement Agency (DEA) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Drug Enforcement Agency (DEA) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

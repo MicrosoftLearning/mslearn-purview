@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "8be9b6fc-9bb4-d209-7a2a-e310ab37321f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667183,
+    "updateTime":  1652152667183,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GREECE.DRIVERS.LICENSE.NUMBER",
+    "description":  "Greece Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Greece Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

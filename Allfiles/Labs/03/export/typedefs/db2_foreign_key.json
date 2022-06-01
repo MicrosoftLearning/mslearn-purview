@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e52c1b38-f3b8-3226-fe89-f7a24ba73f54",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152680216,
+    "updateTime":  1652152680216,
+    "version":  1,
+    "name":  "db2_foreign_key",
+    "description":  "db2_foreign_key",
+    "typeVersion":  "1.0",
+    "serviceType":  "DB2",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"db2://servers/(?\u003cServer\u003e[^/]+)/databases/(?\u003cDatabase\u003e[^/]+)/schemas/(?\u003cSchema\u003e[^/]+)/tables/(?\u003cTable\u003e[^/]+)/foreignKeys/(?\u003cKey\u003e[^/]+)$\",\"qualifiedNameSample\":\"db2://servers/137.117.162.225:50000/databases/NORTHWD2/schemas/DB2ADMIN/tables/ACT/foreignKeys/RPAA\",\"isContainer\":false,\"friendlyName\":\"Db2 Foreign Key\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"db2_table_foreign_keys\"],\"relevantAttributes\":[]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "unique_constraints",
+                                          "typeName":  "array\u003cdb2_unique_constraint\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "db2_foreign_key_unique_constraints",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "table_columns",
+                                          "typeName":  "array\u003cdb2_table_column\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "db2_foreign_key_table_columns",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "table",
+                                          "typeName":  "db2_table",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "db2_table_foreign_keys",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

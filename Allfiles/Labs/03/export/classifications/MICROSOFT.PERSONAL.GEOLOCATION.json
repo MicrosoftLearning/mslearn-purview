@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "106897d2-0283-c18f-148d-f958659fce53",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666918,
+    "updateTime":  1652152666918,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.GEOLOCATION",
+    "description":  "Geolocation (Lat/Lon)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Geolocation (Lat/Lon)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

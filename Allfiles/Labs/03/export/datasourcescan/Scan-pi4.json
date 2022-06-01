@@ -1,0 +1,16 @@
+{
+    "properties":  {
+                       "scanRulesetName":  "AzureStorage",
+                       "scanRulesetType":  "System",
+                       "collection":  {
+                                          "lastModifiedAt":  "2022-05-10T09:29:01.9205534Z",
+                                          "referenceName":  "main-otijt",
+                                          "type":  "CollectionReference"
+                                      },
+                       "createdAt":  "2022-05-10T09:29:01.9205534Z",
+                       "lastModifiedAt":  "2022-05-10T09:29:01.9205534Z"
+                   },
+    "kind":  "AzureStorageMsi",
+    "id":  "datasources/AzureBlob-pn4/scans/Scan-pi4",
+    "name":  "Scan-pi4"
+}

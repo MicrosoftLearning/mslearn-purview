@@ -1,0 +1,80 @@
+{
+    "category":  "ENTITY",
+    "guid":  "d886132c-8cdc-35b5-6915-27df76ba53a9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703062,
+    "updateTime":  1652152703062,
+    "version":  1,
+    "name":  "erwin_mart",
+    "description":  "erwin_mart",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)/(?\u003cCatalog\u003e[^/]+)$\",\"isContainer\":true,\"qualifiedNameSample\":\"erwin://server:port/martserver/mart\",\"friendlyName\":\"Erwin Mart\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "models",
+                                          "typeName":  "array\u003cerwin_model\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_mart_models",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "libraries",
+                                          "typeName":  "array\u003cerwin_library\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_mart_libraries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,184 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f95296b7-ed2b-3146-3d08-3bac9512b745",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152696170,
+    "updateTime":  1652152696170,
+    "version":  1,
+    "name":  "powerbi_workspace",
+    "description":  "powerbi_workspace",
+    "typeVersion":  "1.0",
+    "serviceType":  "Power BI",
+    "options":  {
+                    "searchNameAttribute":  "displayName",
+                    "purviewEntityExtDef":  "{}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "isReadOnly",
+                              "typeName":  "boolean",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "isOnDedicatedCapacity",
+                              "typeName":  "boolean",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "type",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "state",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "dedicatedCapacityName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "powerbi_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "reports",
+                                          "typeName":  "array\u003cpowerbi_report\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_report_workspace",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dashboards",
+                                          "typeName":  "array\u003cpowerbi_dashboard\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_dashboard_workspace",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dataflows",
+                                          "typeName":  "array\u003cpowerbi_dataflow\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_dataflow_workspace",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "capacity",
+                                          "typeName":  "powerbi_capacity",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "powerbi_workspace_capacity",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "pbidatasets",
+                                          "typeName":  "array\u003cpowerbi_dataset\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_dataset_workspace",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

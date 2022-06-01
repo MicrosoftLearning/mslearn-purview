@@ -1,0 +1,101 @@
+{
+    "category":  "ENTITY",
+    "guid":  "5fdd8cf3-674e-e8de-c563-79c9b22ba84b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671494,
+    "updateTime":  1652152671494,
+    "version":  1,
+    "name":  "spark_application",
+    "description":  "spark_application",
+    "typeVersion":  "1.0",
+    "serviceType":  "spark",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "currentUser",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "remoteUser",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "processes",
+                                          "typeName":  "array\u003cspark_process\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "spark_application_processes",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

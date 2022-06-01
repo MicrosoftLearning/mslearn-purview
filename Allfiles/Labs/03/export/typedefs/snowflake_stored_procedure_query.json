@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "c8119768-c901-8725-59d5-047d7d71b17e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152690682,
+    "updateTime":  1652152690682,
+    "version":  1,
+    "name":  "snowflake_stored_procedure_query",
+    "description":  "snowflake_stored_procedure_query",
+    "typeVersion":  "1.0",
+    "serviceType":  "Snowflake",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"snowflake://(?\u003cServer\u003e[^/]+)/databases/(?\u003cDatabase\u003e[^/]+)/schemas/(?\u003cSchema\u003e[^/]+)/storedProcedures/(?\u003cStoredProcedure\u003e[^/]+)/queries/(?\u003cQuery\u003e[^/]+)$\",\"qualifiedNameSample\":\"snowflake://192.168.56.51/databases/SAMPLE/schemas/TESTDB/storedProcedures/INSERT_PROC_1/queries/123\",\"isContainer\":false,\"friendlyName\":\"Snowflake Stored Procedure Query\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"snowflake_stored_procedure_stored_procedure_queries\"],\"relevantAttributes\":[\"query\"]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "snowflake_query"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "stored_procedure",
+                                          "typeName":  "snowflake_stored_procedure",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "snowflake_stored_procedure_stored_procedure_queries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

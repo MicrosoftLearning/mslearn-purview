@@ -1,0 +1,14 @@
+{
+    "name":  "main-OtijT",
+    "friendlyName":  "main-OtijT",
+    "description":  "The root collection.",
+    "systemData":  {
+                       "createdBy":  "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                       "createdByType":  "User",
+                       "createdAt":  "2022-05-09T15:33:39.399898Z",
+                       "lastModifiedBy":  "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                       "lastModifiedByType":  "User",
+                       "lastModifiedAt":  "2022-05-09T15:33:39.399898Z"
+                   },
+    "collectionProvisioningState":  "Succeeded"
+}

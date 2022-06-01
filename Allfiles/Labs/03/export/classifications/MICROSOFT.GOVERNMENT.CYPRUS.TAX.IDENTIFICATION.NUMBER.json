@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "17326f5e-4c91-24f9-ffed-2a76ae49de9a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667085,
+    "updateTime":  1652152667085,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CYPRUS.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Cyprus Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Cyprus Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

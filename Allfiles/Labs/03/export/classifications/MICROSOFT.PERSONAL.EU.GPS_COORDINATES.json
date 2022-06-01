@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "77bd4881-e3b2-f1eb-2091-205fcab6f8b7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666912,
+    "updateTime":  1652152666912,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.EU.GPS_COORDINATES",
+    "description":  "EU GPS Coordinates (Deprecated)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU GPS Coordinates"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "93886c76-3773-9f8b-12f0-3ebe463e5148",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667070,
+    "updateTime":  1652152667070,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.JAPAN.PASSPORT_NUMBER",
+    "description":  "Japan Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

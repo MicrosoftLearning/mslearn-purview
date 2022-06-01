@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "491ae6b5-8d31-8ee7-270c-d28ee5912ade",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152680221,
+    "updateTime":  1652152680221,
+    "version":  1,
+    "name":  "db2_server",
+    "description":  "db2_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "DB2",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"db2://servers/(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"db2://servers/137.117.162.225:50000\",\"isContainer\":true,\"friendlyName\":\"Db2 Server\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"db2_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003cdb2_database\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "db2_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

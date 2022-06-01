@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "3a42ae95-5596-0472-8300-eebbfd78a1a0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667166,
+    "updateTime":  1652152667166,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GREECE.PASSPORT.NUMBER",
+    "description":  "Greece Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Greece Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

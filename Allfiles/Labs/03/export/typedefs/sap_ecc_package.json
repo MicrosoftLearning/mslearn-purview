@@ -1,0 +1,268 @@
+{
+    "category":  "ENTITY",
+    "guid":  "4a6b589f-c411-9ea3-f99c-5e35bf882dfa",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152699583,
+    "updateTime":  1652152699583,
+    "version":  1,
+    "name":  "sap_ecc_package",
+    "description":  "sap_ecc_package",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP ECC",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "package",
+                                          "typeName":  "sap_ecc_package",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_package_packages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "instance",
+                                          "typeName":  "sap_ecc_instance",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_instance_packages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "classes",
+                                          "typeName":  "array\u003csap_ecc_class\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_classes",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "application_component",
+                                          "typeName":  "sap_ecc_application_component",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_application_component_packages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "domains",
+                                          "typeName":  "array\u003csap_ecc_domain\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_domains",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "packages",
+                                          "typeName":  "array\u003csap_ecc_package\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_packages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "transactions",
+                                          "typeName":  "array\u003csap_ecc_transaction\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_transactions",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "subpackages",
+                                          "typeName":  "array\u003csap_ecc_package\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_package_subpackages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "ofsubpackages",
+                                          "typeName":  "array\u003csap_ecc_package\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_ecc_package_subpackages",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "tables",
+                                          "typeName":  "array\u003csap_ecc_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "data_elements",
+                                          "typeName":  "array\u003csap_ecc_data_element\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_data_elements",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "programs",
+                                          "typeName":  "array\u003csap_ecc_program\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_programs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "views",
+                                          "typeName":  "array\u003csap_ecc_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_views",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "function_groups",
+                                          "typeName":  "array\u003csap_ecc_function_group\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_ecc_package_function_groups",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "675eafa5-36ee-c4f6-14e5-c597ad210290",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667153,
+    "updateTime":  1652152667153,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UKRAINE.PASSPORT.DOMESTIC",
+    "description":  "Ukraine Passport Domestic",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ukraine Passport Domestic"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

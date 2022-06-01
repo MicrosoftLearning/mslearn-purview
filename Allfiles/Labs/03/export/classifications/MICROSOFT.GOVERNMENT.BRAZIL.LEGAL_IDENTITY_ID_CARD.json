@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "46046f86-12b1-09f2-0bf9-a0bea716ce98",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666916,
+    "updateTime":  1652152666916,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BRAZIL.LEGAL_IDENTITY_ID_CARD",
+    "description":  "Brazil Legal Entity Number (CNPJ)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Brazil Legal Entity Number (CNPJ)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

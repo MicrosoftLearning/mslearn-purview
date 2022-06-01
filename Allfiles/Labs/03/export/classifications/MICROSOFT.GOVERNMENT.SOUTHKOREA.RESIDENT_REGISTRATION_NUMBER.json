@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "69261424-8141-c9ed-8f7c-1600e8ee1b84",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667075,
+    "updateTime":  1652152667075,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SOUTHKOREA.RESIDENT_REGISTRATION_NUMBER",
+    "description":  "South Korea Resident Registration Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "South Korea Resident Registration Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

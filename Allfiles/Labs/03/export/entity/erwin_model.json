@@ -1,0 +1,365 @@
+{
+    "category":  "ENTITY",
+    "guid":  "3aea063b-9559-7e42-3107-bc8515b7d123",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703075,
+    "updateTime":  1652152703075,
+    "version":  1,
+    "name":  "erwin_model",
+    "description":  "erwin_model",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"},{\"isRequired\":false,\"isPath\":true,\"entityTypeName\":\"erwin_library\",\"componentName\":\"Library\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_model\",\"componentName\":\"Model\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)((/(?\u003cLibrary\u003e[^/]+))*)/(?\u003cModel\u003e[^/]+)/(?\u003cModelId\u003e[^/]+)$\",\"isContainer\":true,\"qualifiedNameSample\":\"erwin://localhost:18170/MartServer/Mart/mymodel/{000-000}+000\",\"friendlyName\":\"Erwin Model\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "author",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "designLevel",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "targetDatabase",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "modelName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "validationrules",
+                                          "typeName":  "array\u003cerwin_validation_rule\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_validationrules",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "mart",
+                                          "typeName":  "erwin_mart",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_mart_models",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "domains",
+                                          "typeName":  "array\u003cerwin_domain\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_domains",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "sequences",
+                                          "typeName":  "array\u003cerwin_sequence\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_sequences",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "er_diagrams",
+                                          "typeName":  "array\u003cerwin_er_diagram\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_er_diagrams",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "view_relationships",
+                                          "typeName":  "array\u003cerwin_view_relationship\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_view_relationships",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "relationships",
+                                          "typeName":  "array\u003cerwin_relationship\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_relationships",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "default_values",
+                                          "typeName":  "array\u003cerwin_default_value\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_default_values",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "user_defined_properties",
+                                          "typeName":  "array\u003cerwin_user_defined_property\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_user_defined_properties",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "library",
+                                          "typeName":  "erwin_library",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_library_models",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "subtype_relationships",
+                                          "typeName":  "array\u003cerwin_subtype_relationship\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_subtype_relationships",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "entities",
+                                          "typeName":  "array\u003cerwin_entity\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_entities",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "schemas",
+                                          "typeName":  "array\u003cerwin_schema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "storedprocedures",
+                                          "typeName":  "array\u003cerwin_stored_procedure\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_storedprocedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "subjectareas",
+                                          "typeName":  "array\u003cerwin_subject_area\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_subjectareas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "views",
+                                          "typeName":  "array\u003cerwin_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "erwin_model_views",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

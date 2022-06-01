@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "15ab1c61-c735-e115-e78e-31189e5dc98c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667159,
+    "updateTime":  1652152667159,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GREECE.SOCIAL.SECURITY.NUMBER",
+    "description":  "Greece Social Security Number (AMKA)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Greece Social Security Number (AMKA)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

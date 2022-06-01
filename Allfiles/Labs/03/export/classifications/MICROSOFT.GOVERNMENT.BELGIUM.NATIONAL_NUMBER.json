@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "332fe12e-0158-bd71-d345-86994a10b669",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667062,
+    "updateTime":  1652152667062,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BELGIUM.NATIONAL_NUMBER",
+    "description":  "Belgium National Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Belgium National Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "56e942f2-946d-49ac-4ea6-41b34c03e735",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667063,
+    "updateTime":  1652152667063,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRALIA.MEDICAL_ACCOUNT_NUMBER",
+    "description":  "Australia Medical Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Medical Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

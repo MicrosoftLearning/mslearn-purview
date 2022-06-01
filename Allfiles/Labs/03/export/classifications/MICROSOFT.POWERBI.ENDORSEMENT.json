@@ -1,0 +1,45 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "16b0bce1-247e-e7cf-411d-496c63e104ac",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152696167,
+    "updateTime":  1652152696167,
+    "version":  1,
+    "name":  "MICROSOFT.POWERBI.ENDORSEMENT",
+    "description":  "MICROSOFT.POWERBI.ENDORSEMENT",
+    "typeVersion":  "1.0",
+    "attributeDefs":  [
+                          {
+                              "name":  "endorsement",
+                              "typeName":  "powerbi_endorsement_status",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "certifiedBy",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

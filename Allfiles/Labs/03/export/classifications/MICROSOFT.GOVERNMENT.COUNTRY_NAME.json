@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "430f15dd-0f80-1c39-c42a-554c906581f9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667025,
+    "updateTime":  1652152667025,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.COUNTRY_NAME",
+    "description":  "Country/Region",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Country/Region"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

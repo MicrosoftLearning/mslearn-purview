@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "f8d07568-5140-6da4-b585-af76ccd6a3aa",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667077,
+    "updateTime":  1652152667077,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.TAIWAN.RESIDENT_CERTIFICATE",
+    "description":  "Taiwan Resident Certificate (ARC/TARC)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Taiwan Resident Certificate (ARC/TARC)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

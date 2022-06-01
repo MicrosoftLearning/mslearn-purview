@@ -1,0 +1,69 @@
+{
+    "category":  "ENTITY",
+    "guid":  "ca06e0e8-b430-fca4-e951-6cebc7f8b361",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152683592,
+    "updateTime":  1652152683592,
+    "version":  1,
+    "name":  "azure_data_factory",
+    "description":  "azure_data_factory",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Data Factory",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "version",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "azure_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "pipelines",
+                                          "typeName":  "array\u003cadf_pipeline\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "adf_pipeline_dataFactory",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

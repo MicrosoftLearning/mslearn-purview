@@ -1,0 +1,54 @@
+{
+    "category":  "ENTITY",
+    "guid":  "2bb6f924-60c7-a0f4-baf1-3bc0a27bd99e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152670005,
+    "updateTime":  1652152670005,
+    "version":  1,
+    "name":  "hive_db_ddl",
+    "description":  "hive_db_ddl",
+    "typeVersion":  "1.0",
+    "serviceType":  "hive",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "ddl"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "db",
+                                          "typeName":  "hive_db",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "hive_db_ddl_queries",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a7b5eb9c-14ec-aed9-6eab-25b66fa24768",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666918,
+    "updateTime":  1652152666918,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.IPADDRESS",
+    "description":  "Personal IP Address",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Personal IP Address"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

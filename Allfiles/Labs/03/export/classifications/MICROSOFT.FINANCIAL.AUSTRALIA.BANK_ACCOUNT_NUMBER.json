@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "438f7792-ffdb-b6f2-3287-8687478c22b7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667064,
+    "updateTime":  1652152667064,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.AUSTRALIA.BANK_ACCOUNT_NUMBER",
+    "description":  "Australia Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Australia Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

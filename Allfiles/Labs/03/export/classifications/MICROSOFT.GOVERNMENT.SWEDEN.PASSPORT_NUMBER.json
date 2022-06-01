@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5ed77320-e6fa-1424-39ea-6ecac01619c8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667030,
+    "updateTime":  1652152667030,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SWEDEN.PASSPORT_NUMBER",
+    "description":  "Sweden Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Sweden Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

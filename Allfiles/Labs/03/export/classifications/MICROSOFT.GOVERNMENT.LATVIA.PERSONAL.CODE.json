@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e39d8c8c-9df9-35b9-db5d-46cf9079051a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667090,
+    "updateTime":  1652152667090,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LATVIA.PERSONAL.CODE",
+    "description":  "Latvia Personal Code (Personas kods or PIC)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Latvia Personal Code (Personas kods or PIC)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

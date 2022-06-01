@@ -1,0 +1,48 @@
+{
+    "category":  "ENTITY",
+    "guid":  "8094417b-2eac-dabf-785c-6add618fadd5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700951,
+    "updateTime":  1652152700951,
+    "version":  1,
+    "name":  "sap_bw_object_type",
+    "description":  "sap_bw_object_type",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP BW",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "sap_bw_key_figure",
+                     "sap_bw_field",
+                     "sap_bw_navigation_attribute",
+                     "sap_bw_currency",
+                     "sap_bw_characteristic",
+                     "sap_bw_data_packet_characteristic",
+                     "sap_bw_unit_of_measurement",
+                     "sap_bw_time_characteristic"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "info_object",
+                                          "typeName":  "sap_bw_info_object",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_bw_info_object_object_types",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,70 @@
+{
+    "category":  "ENTITY",
+    "guid":  "5e30847d-3d8a-c6f1-6c28-b20baffc03eb",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152686090,
+    "updateTime":  1652152686090,
+    "version":  1,
+    "name":  "azure_synapse_sql_schema",
+    "description":  "interface for dedicated and serverless sql schema, not expect to have real entity instance",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Synapse Analytics",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "schemaId",
+                              "typeName":  "int",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "azure_synapse_serverless_sql_schema",
+                     "azure_synapse_dedicated_sql_schema"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "tables",
+                                          "typeName":  "array\u003cazure_synapse_sql_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_synapse_sql_schema_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "db",
+                                          "typeName":  "azure_synapse_sql_db",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "azure_synapse_sql_db_schemas",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

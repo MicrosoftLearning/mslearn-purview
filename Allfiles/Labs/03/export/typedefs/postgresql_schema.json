@@ -1,0 +1,93 @@
+{
+    "category":  "ENTITY",
+    "guid":  "d6d34636-9a18-a938-746c-692aa327b9fd",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679991,
+    "updateTime":  1652152679991,
+    "version":  1,
+    "name":  "postgresql_schema",
+    "description":  "postgresql_schema",
+    "typeVersion":  "1.0",
+    "serviceType":  "PostgreSQL",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"postgresql://servers/(?\u003cServer\u003e[^/]+:[^/]+)/dbs/(?\u003cDatabase\u003e[^/]+)/schemas/(?\u003cSchema\u003e[^/]+)$\",\"qualifiedNameSample\":\"postgresql://servers/40.90.170.245:5432/dbs/mititestdb/schemas/mitischema\",\"isContainer\":true,\"friendlyName\":\"PostgreSQL Database\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"postgresql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"postgresql_db\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"},{\"entityTypeName\":\"postgresql_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "tables",
+                                          "typeName":  "array\u003cpostgresql_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "postgresql_schema_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "db",
+                                          "typeName":  "postgresql_db",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "postgresql_db_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "views",
+                                          "typeName":  "array\u003cpostgresql_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "postgresql_schema_views",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

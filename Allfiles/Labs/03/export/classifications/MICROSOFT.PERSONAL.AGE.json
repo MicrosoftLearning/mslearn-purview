@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e902fd4a-4387-4b0f-eb82-9d0681100027",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667021,
+    "updateTime":  1652152667021,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.AGE",
+    "description":  "Age of an individual",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Age of an individual"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

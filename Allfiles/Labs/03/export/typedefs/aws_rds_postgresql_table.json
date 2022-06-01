@@ -1,0 +1,188 @@
+{
+    "category":  "ENTITY",
+    "guid":  "3e3ed45e-7845-3bcc-3ae8-ca4f0f127d0b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152689913,
+    "updateTime":  1652152689913,
+    "version":  1,
+    "name":  "aws_rds_postgresql_table",
+    "description":  "aws_rds_postgresql_table",
+    "typeVersion":  "1.0",
+    "serviceType":  "Amazon RDS Database (PostgreSQL)",
+    "options":  {
+                    "schemaElementsAttribute":  "columns",
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"postgresql://(?\u003cServer\u003e[^/]+)/(?\u003cDatabase\u003e[^/]+)/(?\u003cSchema\u003e[^/]+)/(?\u003cTable\u003e[^/]+)$\",\"qualifiedNameSample\":\"postgresql://testdb-postgresql.aaaaaaaaaaaa.us-east-2.rds.amazonaws.com/AdventureWork/SalesLT/Address\",\"isContainer\":false,\"friendlyName\":\"Amazon RDS Table (PostgreSQL)\",\"parallel\":{\"enableParallel\":true,\"splitByRelationships\":[\"aws_rds_postgresql_schema_tables\"]},\"compact\":{\"isHostForCompact\":true,\"relationshipsToCompact\":[\"aws_rds_postgresql_table_columns\"]},\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"],\"customizeTaxonomyFields\":{\"Server\":\"AWS_RDS_PostgreSQL/Server\",\"Database\":\"AWS_RDS_PostgreSQL/Database\",\"Schema\":\"AWS_RDS_PostgreSQL/Schema\"}},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"aws_rds_postgresql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"aws_rds_postgresql_db\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"},{\"entityTypeName\":\"aws_rds_postgresql_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"},{\"entityTypeName\":\"aws_rds_postgresql_table\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Table\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "ownerName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "tableType",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "DataSet"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schema",
+                                          "typeName":  "array\u003cavro_schema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "avro_schema_associatedEntities",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputToProcesses",
+                                          "typeName":  "array\u003cProcess\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "pipeline",
+                                          "typeName":  "spark_ml_pipeline",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "spark_ml_pipeline_dataset",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dbSchema",
+                                          "typeName":  "aws_rds_postgresql_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "aws_rds_postgresql_schema_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "columns",
+                                          "typeName":  "array\u003caws_rds_postgresql_table_column\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "aws_rds_postgresql_table_columns",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "model",
+                                          "typeName":  "spark_ml_model",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "spark_ml_model_dataset",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "attachedSchema",
+                                          "typeName":  "array\u003cschema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_attached_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "outputFromProcesses",
+                                          "typeName":  "array\u003cProcess\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "tabular_schema",
+                                          "typeName":  "tabular_schema",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "tabular_schema_datasets",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

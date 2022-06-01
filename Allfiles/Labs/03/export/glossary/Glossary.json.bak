@@ -1,0 +1,18 @@
+{
+    "guid":  "ee59520e-548e-4520-8624-8617fe9cb258",
+    "qualifiedName":  "Glossary",
+    "name":  "Glossary",
+    "lastModifiedTS":  "1",
+    "terms":  [
+                  {
+                      "termGuid":  "87558a27-b6fd-4c7a-a1d8-5b02737a12ba",
+                      "relationGuid":  "fedc0023-4b26-4962-8533-69dc8be6ac81",
+                      "displayText":  "Test"
+                  },
+                  {
+                      "termGuid":  "4ddfb28b-8ccc-43dd-8678-b96dfea65499",
+                      "relationGuid":  "6ba2445a-b654-41cd-bb79-30d0b0851185",
+                      "displayText":  "Solliance"
+                  }
+              ]
+}

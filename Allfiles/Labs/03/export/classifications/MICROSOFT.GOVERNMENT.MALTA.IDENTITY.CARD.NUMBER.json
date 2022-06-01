@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "991ea320-09da-1bcc-4491-56952f62ea95",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667093,
+    "updateTime":  1652152667093,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.MALTA.IDENTITY.CARD.NUMBER",
+    "description":  "Malta Identity Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Malta Identity Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

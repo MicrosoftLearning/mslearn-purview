@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "263fe6c6-1456-2291-2f0a-549bffe49242",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667084,
+    "updateTime":  1652152667084,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BULGARIA.UNIFORM.CIVIL.NUMBER",
+    "description":  "Bulgaria Uniform Civil Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Bulgaria Uniform Civil Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

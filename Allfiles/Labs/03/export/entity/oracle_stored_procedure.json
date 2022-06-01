@@ -1,0 +1,174 @@
+{
+    "category":  "ENTITY",
+    "guid":  "eefc1c3e-e864-3f5a-ae3d-47bb2780f3b0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679242,
+    "updateTime":  1652152679242,
+    "version":  1,
+    "name":  "oracle_stored_procedure",
+    "description":  "oracle_stored_procedure",
+    "typeVersion":  "1.0",
+    "serviceType":  "Oracle",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"oracle://(?\u003cServer\u003e[^/]+)/(?\u003cSchema\u003e[^/]+)/((?\u003cPackage\u003e[^/]+)/)?(?\u003cStoredProcedure\u003e[^/]+)$\",\"qualifiedNameSample\":\"oracle://192.168.56.51/SCOTT/PACK/PACK_PROC1\",\"isContainer\":false,\"friendlyName\":\"Oracle Stored Procedure\",\"parallel\":{\"enableParallel\":true,\"splitByRelationships\":[\"oracle_package_stored_procedures\",\"oracle_schema_stored_procedures\"]},\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"oracle_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"oracle_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"},{\"entityTypeName\":\"oracle_package\",\"isPath\":false,\"isRequired\":false,\"componentName\":\"Package\"},{\"entityTypeName\":\"oracle_stored_procedure\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"StoredProcedure\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "modifiedTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "oracle_synonym_source",
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schema",
+                                          "typeName":  "oracle_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_schema_stored_procedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "stored_procedure_result_sets",
+                                          "typeName":  "array\u003coracle_stored_procedure_result_set\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "oracle_stored_procedure_stored_procedure_result_sets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003coracle_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "package",
+                                          "typeName":  "oracle_package",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_package_stored_procedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "stored_procedure_queries",
+                                          "typeName":  "array\u003coracle_stored_procedure_query\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "oracle_stored_procedure_stored_procedure_queries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "parameter_datasets",
+                                          "typeName":  "array\u003coracle_parameter_dataset\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "oracle_stored_procedure_parameter_datasets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

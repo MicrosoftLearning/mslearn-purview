@@ -1,0 +1,8 @@
+{
+    "properties":  {
+                       "baseUrl":  "https://mainacdt33qj4bc4k.vault.azure.net/",
+                       "description":  ""
+                   },
+    "id":  "/subscriptions/34a8ddf8-ebee-475d-97d3-494d34c800b7/resourceGroups/scanning-prod-eastus/providers/Microsoft.Purview/accounts/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4/linkedservices/test",
+    "name":  "test"
+}

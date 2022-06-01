@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "fd9e239c-5245-e465-3fb3-af36a0c4588b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667078,
+    "updateTime":  1652152667078,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.TURKEY.TURKISH_NATIONAL_IDENTIFICATION_NUMBER",
+    "description":  "Turkish National Identity",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Turkish National Identity"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

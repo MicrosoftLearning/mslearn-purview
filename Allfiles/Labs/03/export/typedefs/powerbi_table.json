@@ -1,0 +1,207 @@
+{
+    "category":  "ENTITY",
+    "guid":  "006cc077-c455-7d0f-42c3-92952837b018",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152696179,
+    "updateTime":  1652152696179,
+    "version":  1,
+    "name":  "powerbi_table",
+    "description":  "powerbi_table",
+    "typeVersion":  "1.0",
+    "serviceType":  "Power BI",
+    "options":  {
+                    "schemaElementsAttribute":  "columns",
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"https://app.powerbi.com/groups/(?\u003cWorkspaceId\u003e[^/]+)/datasets/(?\u003cDatasetId\u003e[^/]+)#(?\u003cTableName\u003e[^/]+)$\",\"qualifiedNameSample\":\"https://app.powerbi.com/groups/3b968a18-2e32-4969-b9d9-f722ad8c3d93/datasets/35ac45d5-d037-496e-aa4f-91f51039c59e#Sheet1\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"powerbi_table_dataset\"],\"relevantAttributes\":[]}},\"compact\":{\"isHostForCompact\":true,\"relationshipsToCompact\":[\"powerbi_column_table\"]}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "dataType",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "isHidden",
+                              "typeName":  "boolean",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "DataSet",
+                       "powerbi_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schema",
+                                          "typeName":  "array\u003cavro_schema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "avro_schema_associatedEntities",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputToProcesses",
+                                          "typeName":  "array\u003cProcess\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "pipeline",
+                                          "typeName":  "spark_ml_pipeline",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "spark_ml_pipeline_dataset",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "columns",
+                                          "typeName":  "array\u003cpowerbi_column\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_column_table",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "model",
+                                          "typeName":  "spark_ml_model",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "spark_ml_model_dataset",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "attachedSchema",
+                                          "typeName":  "array\u003cschema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_attached_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dataset",
+                                          "typeName":  "powerbi_dataset",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "powerbi_table_dataset",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "tableProcess",
+                                          "typeName":  "powerbi_table_process",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "powerbi_table_tableProcess",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "outputFromProcesses",
+                                          "typeName":  "array\u003cProcess\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "tabular_schema",
+                                          "typeName":  "tabular_schema",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "tabular_schema_datasets",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

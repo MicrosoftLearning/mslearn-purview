@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6bfbf207-99c4-f99c-bb59-8feea67be520",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667101,
+    "updateTime":  1652152667101,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SWISS.SSN.AHV.NUMBER",
+    "description":  "Swiss SSN AHV Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Swiss SSN AHV Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

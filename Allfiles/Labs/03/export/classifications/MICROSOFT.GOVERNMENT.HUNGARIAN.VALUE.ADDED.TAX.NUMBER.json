@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "da88cb0f-64c1-2875-842f-547bf6ce0d9c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667149,
+    "updateTime":  1652152667149,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARIAN.VALUE.ADDED.TAX.NUMBER",
+    "description":  "Hungarian Value Added Tax Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungarian Value Added Tax Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

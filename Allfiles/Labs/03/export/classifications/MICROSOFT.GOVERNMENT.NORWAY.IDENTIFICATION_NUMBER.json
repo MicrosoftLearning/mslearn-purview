@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "9b9234a8-c7c8-c4a7-53f6-2ff505d15344",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667079,
+    "updateTime":  1652152667079,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NORWAY.IDENTIFICATION_NUMBER",
+    "description":  "Norway Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Norway Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

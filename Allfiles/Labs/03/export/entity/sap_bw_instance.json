@@ -1,0 +1,152 @@
+{
+    "category":  "ENTITY",
+    "guid":  "1bfd12dc-532d-9d03-b603-cdeb7ed8c6b0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700941,
+    "updateTime":  1652152700941,
+    "version":  1,
+    "name":  "sap_bw_instance",
+    "description":  "sap_bw_instance",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP BW",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"sap_bw://(?\u003cInstance\u003e[^/]+_[^/]+_[^/]+_[^/]+)$\",\"qualifiedNameSample\":\"sap_bw://sapbw999_B74_80_800\",\"isContainer\":true,\"friendlyName\":\"SAP BW Instance\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Instance\",\"InfoArea\"],\"customizeTaxonomyMapping\":{\"Instance\":\"sap_bw_instance\",\"InfoArea\":\"sap_bw_info_area\"}},\"browse\":{\"source\":\"Hierarchy\"}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "query_views",
+                                          "typeName":  "array\u003csap_bw_query_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_query_views",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "info_set_queries",
+                                          "typeName":  "array\u003csap_bw_info_set_query\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_info_set_queries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "classic_info_sets",
+                                          "typeName":  "array\u003csap_bw_classic_info_set\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_classic_info_sets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "info_objects",
+                                          "typeName":  "array\u003csap_bw_info_object\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_info_objects",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "queries",
+                                          "typeName":  "array\u003csap_bw_query\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_queries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "info_areas",
+                                          "typeName":  "array\u003csap_bw_info_area\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_instance_info_areas",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

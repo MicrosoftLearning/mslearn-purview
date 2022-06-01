@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1129ac20-d697-6b72-a7fd-f8d0e87a7fdf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667194,
+    "updateTime":  1652152667194,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SPAIN.DRIVERS.LICENSE.NUMBER",
+    "description":  "Spain Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Spain Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

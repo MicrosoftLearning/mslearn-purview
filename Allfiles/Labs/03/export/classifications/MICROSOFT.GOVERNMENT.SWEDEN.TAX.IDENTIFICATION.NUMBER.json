@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "f153ed8c-7d80-73f2-7c7a-942d542bfe5c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667099,
+    "updateTime":  1652152667099,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SWEDEN.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Sweden Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Sweden Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

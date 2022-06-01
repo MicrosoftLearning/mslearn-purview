@@ -1,0 +1,141 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f7d4f75c-816a-3163-6aef-61814572c4a9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671133,
+    "updateTime":  1652152671133,
+    "version":  1,
+    "name":  "impala_process_execution",
+    "description":  "impala_process_execution",
+    "typeVersion":  "1.0",
+    "serviceType":  "impala",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "startTime",
+                              "typeName":  "date",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "endTime",
+                              "typeName":  "date",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "userName",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "queryText",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "queryGraph",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "queryId",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "queryPlan",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "hostName",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "ProcessExecution"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "process",
+                                          "typeName":  "impala_process",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "impala_process_process_executions",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

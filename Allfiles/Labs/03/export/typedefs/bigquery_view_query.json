@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "5a55d7e9-9651-508d-40f8-f4d93c173978",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152701681,
+    "updateTime":  1652152701681,
+    "version":  1,
+    "name":  "bigquery_view_query",
+    "description":  "bigquery_view_query",
+    "typeVersion":  "1.0",
+    "serviceType":  "Google BigQuery",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"bigquery://(?\u003cProject\u003e[^/]+)/(?\u003cDataset\u003e[^/]+)/(?\u003cView\u003e[^/]+)/(?\u003cQuery\u003e[^/]+)$\",\"qualifiedNameSample\":\"bigquery://sampleproject/sampledataset/sampleview/samplequery\",\"isContainer\":false,\"friendlyName\":\"Google BigQuery View Query\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"bigquery_view_view_query\"],\"relevantAttributes\":[\"query\"]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "bigquery_query"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "view",
+                                          "typeName":  "bigquery_view",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "bigquery_view_view_query",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

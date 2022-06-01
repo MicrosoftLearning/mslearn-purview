@@ -1,0 +1,56 @@
+{
+    "category":  "ENTITY",
+    "guid":  "7d6beebb-ea08-de1a-0f03-e0c22bfab1d4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682414,
+    "updateTime":  1652152682414,
+    "version":  1,
+    "name":  "azure_storage_service",
+    "description":  "azure_storage_service",
+    "typeVersion":  "1.0",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "azure_resource"
+                   ],
+    "subTypes":  [
+                     "azure_table_service",
+                     "azure_blob_service",
+                     "azure_datalake_gen2_service",
+                     "azure_file_service"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "account",
+                                          "typeName":  "azure_storage_account",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "storage_account_services",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

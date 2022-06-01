@@ -1,0 +1,106 @@
+{
+    "category":  "ENTITY",
+    "guid":  "fc349367-4686-1ece-c9cf-ed5459431cfd",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152686090,
+    "updateTime":  1652152686090,
+    "version":  1,
+    "name":  "azure_synapse_sql_table",
+    "description":  "interface for dedicated and serverless sql table, not expect to have real entity instance",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Synapse Analytics",
+    "options":  {
+                    "schemaElementsAttribute":  "columns"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "principalId",
+                              "typeName":  "int",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "objectType",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "createTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "modifiedTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "azure_synapse_serverless_sql_table",
+                     "azure_synapse_dedicated_sql_table"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "dbSchema",
+                                          "typeName":  "azure_synapse_sql_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "azure_synapse_sql_schema_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "columns",
+                                          "typeName":  "array\u003cazure_synapse_sql_column\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_synapse_sql_table_columns",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

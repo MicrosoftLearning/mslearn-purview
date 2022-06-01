@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e019ef56-5af6-ef4b-2426-d98f8d39bcf3",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667182,
+    "updateTime":  1652152667182,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FINLAND.DRIVERS.LICENSE.NUMBER",
+    "description":  "Finland Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Finland Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

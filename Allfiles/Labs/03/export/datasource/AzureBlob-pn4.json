@@ -1,0 +1,23 @@
+{
+    "properties":  {
+                       "endpoint":  "https://storageotijt.blob.core.windows.net/",
+                       "resourceGroup":  "msftpurview-000",
+                       "subscriptionId":  "e433f371-e5e9-4238-abc2-7c38aa596a18",
+                       "location":  "eastus",
+                       "resourceName":  "storageotijt",
+                       "resourceId":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.Storage/storageAccounts/storageotijt",
+                       "dataUseGovernance":  "Disabled",
+                       "createdAt":  "2022-05-09T18:02:15.2759365Z",
+                       "lastModifiedAt":  "2022-05-09T18:02:15.2759365Z",
+                       "parentCollection":  null,
+                       "collection":  {
+                                          "lastModifiedAt":  "2022-05-09T18:02:15.2759365Z",
+                                          "referenceName":  "main-otijt",
+                                          "type":  "CollectionReference"
+                                      },
+                       "dataSourceCollectionMovingState":  0
+                   },
+    "kind":  "AzureStorage",
+    "id":  "datasources/AzureBlob-pn4",
+    "name":  "AzureBlob-pn4"
+}

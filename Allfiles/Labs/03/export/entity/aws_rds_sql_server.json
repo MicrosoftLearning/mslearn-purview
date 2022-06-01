@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e29df599-39c4-a94b-f197-369b0dda072a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152688789,
+    "updateTime":  1652152688789,
+    "version":  1,
+    "name":  "aws_rds_sql_server",
+    "description":  "aws_rds_sql_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "Amazon RDS Database (SQL)",
+    "options":  {
+                    "purviewEntityExtDef":  "{}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "aws_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003caws_rds_sql_db\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "aws_rds_sql_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

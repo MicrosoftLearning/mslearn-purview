@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "d98824de-93db-749b-1bec-511c5d8bc2ba",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152670948,
+    "updateTime":  1652152675386,
+    "version":  2,
+    "name":  "storm_bolt",
+    "description":  "storm_bolt",
+    "typeVersion":  "1.1",
+    "serviceType":  "storm",
+    "lastModifiedTS":  "2",
+    "attributeDefs":  [
+                          {
+                              "name":  "inputs",
+                              "typeName":  "array\u003cstring\u003e",
+                              "isOptional":  false,
+                              "cardinality":  "LIST",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  2147483647,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "outputs",
+                              "typeName":  "array\u003cstring\u003e",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "storm_node"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "topolgies",
+                                          "typeName":  "array\u003cstorm_topology\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "storm_topology_nodes",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

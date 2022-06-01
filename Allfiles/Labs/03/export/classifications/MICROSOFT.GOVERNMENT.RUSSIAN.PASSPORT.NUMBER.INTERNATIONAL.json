@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "98f45c87-710e-2978-6079-37c0f69ea53d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667157,
+    "updateTime":  1652152667157,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.RUSSIAN.PASSPORT.NUMBER.INTERNATIONAL",
+    "description":  "Russian Passport Number International",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Russian Passport Number International"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

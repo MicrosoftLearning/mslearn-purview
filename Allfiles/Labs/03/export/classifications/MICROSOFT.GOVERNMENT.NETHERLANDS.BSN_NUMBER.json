@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "add71c88-6a0a-6ec5-f3f9-35bc9c90af4f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667079,
+    "updateTime":  1652152667079,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NETHERLANDS.BSN_NUMBER",
+    "description":  "Netherlands Citizen\u0027s Service (BSN) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Netherlands Citizen\u0027s Service (BSN) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

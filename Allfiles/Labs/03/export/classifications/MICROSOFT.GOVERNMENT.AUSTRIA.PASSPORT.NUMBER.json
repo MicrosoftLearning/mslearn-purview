@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "fedd2c57-92dc-6bf0-3830-8f225fb3dcbf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667160,
+    "updateTime":  1652152667160,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.PASSPORT.NUMBER",
+    "description":  "Austria Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

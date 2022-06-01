@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "6e450181-b5e3-3881-bdff-a7c43365dc73",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667170,
+    "updateTime":  1652152667170,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.LUXEMBOURG.PASSPORT.NUMBER",
+    "description":  "Luxembourg Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Luxembourg Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

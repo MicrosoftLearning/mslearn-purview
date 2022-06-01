@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "47cf9990-89df-21d3-c02a-94238c06bef8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667077,
+    "updateTime":  1652152667077,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.TAIWAN.PASSPORT_NUMBER",
+    "description":  "Taiwan Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Taiwan Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

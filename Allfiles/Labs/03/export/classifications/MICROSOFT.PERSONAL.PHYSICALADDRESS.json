@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5cef5354-b29c-7602-e41b-ac2e79317af9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667054,
+    "updateTime":  1652152667054,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.PHYSICALADDRESS",
+    "description":  "Person\u0027s Address",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Person\u0027s Address"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

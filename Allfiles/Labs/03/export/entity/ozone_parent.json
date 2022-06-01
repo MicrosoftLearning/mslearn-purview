@@ -1,0 +1,47 @@
+{
+    "category":  "ENTITY",
+    "guid":  "02bc7afb-96ab-bf3c-cf70-7f658a5b0774",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152689532,
+    "updateTime":  1652152689532,
+    "version":  1,
+    "name":  "ozone_parent",
+    "description":  "Atlas entity-type representing parent types (bucket, key) in Ozone",
+    "typeVersion":  "1.0",
+    "serviceType":  "ozone",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "ozone_bucket",
+                     "ozone_key"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "children",
+                                          "typeName":  "array\u003cozone_child\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "ozone_parent_children",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

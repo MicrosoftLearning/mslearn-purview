@@ -1,0 +1,49 @@
+{
+    "category":  "ENTITY",
+    "guid":  "53aa0497-4dbd-dbe9-4717-3af380783efc",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700952,
+    "updateTime":  1652152700952,
+    "version":  1,
+    "name":  "sap_bw_provider_cube",
+    "description":  "sap_bw_provider_cube",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP BW",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "sap_bw_aggregate_cube",
+                     "sap_bw_hybrid_provider",
+                     "sap_bw_multi_provider",
+                     "sap_bw_info_cube"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "dimensions",
+                                          "typeName":  "array\u003csap_bw_provider_dimension\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_bw_provider_cube_dimensions",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

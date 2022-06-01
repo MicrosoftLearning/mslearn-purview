@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "8aa81ade-e786-d86e-87db-b192556dab51",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667055,
+    "updateTime":  1652152667055,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GERMANY.PASSPORT_NUMBER",
+    "description":  "German Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "German Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

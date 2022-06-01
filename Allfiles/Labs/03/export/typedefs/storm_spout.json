@@ -1,0 +1,51 @@
+{
+    "category":  "ENTITY",
+    "guid":  "00a226dc-c0ce-6f7f-3fc7-619c106979d8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152670947,
+    "updateTime":  1652152675332,
+    "version":  2,
+    "name":  "storm_spout",
+    "description":  "storm_spout",
+    "typeVersion":  "1.1",
+    "serviceType":  "storm",
+    "lastModifiedTS":  "2",
+    "attributeDefs":  [
+                          {
+                              "name":  "outputs",
+                              "typeName":  "array\u003cstring\u003e",
+                              "isOptional":  false,
+                              "cardinality":  "LIST",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  2147483647,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "storm_node"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "topolgies",
+                                          "typeName":  "array\u003cstorm_topology\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "storm_topology_nodes",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

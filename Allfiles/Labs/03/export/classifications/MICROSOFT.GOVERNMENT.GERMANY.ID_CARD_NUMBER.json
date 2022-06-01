@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "7188f1ed-4135-d6ee-255b-93e2ffe59a9d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667020,
+    "updateTime":  1652152667020,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GERMANY.ID_CARD_NUMBER",
+    "description":  "Germany Identity Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Germany Identity Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

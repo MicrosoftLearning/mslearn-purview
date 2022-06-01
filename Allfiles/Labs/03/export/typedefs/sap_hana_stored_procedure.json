@@ -1,0 +1,143 @@
+{
+    "category":  "ENTITY",
+    "guid":  "19d4e195-37ec-85bd-a854-039f76c747c9",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700272,
+    "updateTime":  1652152700272,
+    "version":  1,
+    "name":  "sap_hana_stored_procedure",
+    "description":  "sap_hana_stored_procedure",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP HANA",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"sap_hana://(?\u003cServer\u003e[^/]+)/databases/(?\u003cDatabase\u003e[^/]+)/schemas/(?\u003cSchema\u003e[^/]+)/storedProcedures/(?\u003cStoredProcedure\u003e[^/]+)$\",\"qualifiedNameSample\":\"sap_hana://168.63.253.59/databases/hdb/schemas/system/storedProcedures/procedure\",\"isContainer\":false,\"friendlyName\":\"SapHana Stored Procedure\",\"parallel\":{\"enableParallel\":true,\"splitByRelationships\":[\"sap_hana_schema_stored_procedures\"]},\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"sap_hana_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"sap_hana_database\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"},{\"entityTypeName\":\"sap_hana_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"},{\"entityTypeName\":\"sap_hana_stored_procedure\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"StoredProcedure\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "modifiedTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "sap_hana_synonym_source",
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schema",
+                                          "typeName":  "sap_hana_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_hana_schema_stored_procedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "stored_procedure_result_sets",
+                                          "typeName":  "array\u003csap_hana_stored_procedure_result_set\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_hana_stored_procedure_stored_procedure_result_sets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003csap_hana_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "sap_hana_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "parameter_datasets",
+                                          "typeName":  "array\u003csap_hana_parameter_dataset\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_hana_stored_procedure_parameter_datasets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

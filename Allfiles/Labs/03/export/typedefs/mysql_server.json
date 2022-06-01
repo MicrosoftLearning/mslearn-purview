@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e38c5800-f55d-8161-5ce6-2e6df6c36991",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679743,
+    "updateTime":  1652152679743,
+    "version":  1,
+    "name":  "mysql_server",
+    "description":  "mysql_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "MySQL",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"mysql://servers/(?\u003cServer\u003e[^/]+:[^/]+)$\",\"qualifiedNameSample\":\"mysql://servers/20.190.193.208:3306\",\"isContainer\":true,\"friendlyName\":\"MySQLServer\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"mysql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003cmysql_db\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "mysql_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

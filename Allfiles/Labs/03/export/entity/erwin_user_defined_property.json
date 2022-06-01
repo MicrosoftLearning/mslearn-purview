@@ -1,0 +1,100 @@
+{
+    "category":  "ENTITY",
+    "guid":  "9559838d-62d9-9da1-6b95-662e1cb07777",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703087,
+    "updateTime":  1652152703087,
+    "version":  1,
+    "name":  "erwin_user_defined_property",
+    "description":  "erwin_user_defined_property",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"},{\"isRequired\":false,\"isPath\":true,\"entityTypeName\":\"erwin_library\",\"componentName\":\"Library\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_model\",\"componentName\":\"Model\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_user_defined_property\",\"componentName\":\"UserDefinedProperty\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)/(?\u003cCatalog\u003e[^/]+)((/(?\u003cLibrary\u003e[^/]+))*)/(?\u003cModel\u003e[^/]+)/(?\u003cModelId\u003e[^/]+)/(?\u003cUserDefinedProperty\u003e[^/]+)$\",\"parallel\":{\"splitByRelationships\":[\"erwin_model_user_defined_properties\"],\"enableParallel\":true},\"isContainer\":false,\"qualifiedNameSample\":\"erwin://localhost:18170/MartServer/MyCatalog/PublicationSystemSample/{799A0437-D91A-4CC5-998A-7C23E2130F39}+00000001/{2AFFEA6E-B87A-4F32-904D-02A061E900C5}+00000000\",\"friendlyName\":\"Erwin User Defined Property\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "scope",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "designLevel",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "type",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "defaultValue",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "model",
+                                          "typeName":  "erwin_model",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_model_user_defined_properties",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

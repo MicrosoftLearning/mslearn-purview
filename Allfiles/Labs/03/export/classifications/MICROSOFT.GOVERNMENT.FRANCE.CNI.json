@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "15f4cf24-8045-7f8d-cac7-ed9ab2303196",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667018,
+    "updateTime":  1652152667018,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.CNI",
+    "description":  "France National ID Card (CNI)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France National ID Card (CNI)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

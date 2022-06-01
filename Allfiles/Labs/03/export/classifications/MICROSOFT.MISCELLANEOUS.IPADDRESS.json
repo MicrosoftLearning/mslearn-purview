@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ef6bf9fe-af9a-511c-6933-325c34fc4423",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666915,
+    "updateTime":  1652152666915,
+    "version":  1,
+    "name":  "MICROSOFT.MISCELLANEOUS.IPADDRESS",
+    "description":  "IP Address",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "IP Address"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "7c3da8f2-772e-62ce-d803-db05a86bc34d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152704073,
+    "updateTime":  1652152704073,
+    "version":  1,
+    "name":  "mongodb_server",
+    "description":  "mongodb_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "MongoDB",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"mongodb://(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"mongodb://gettingstarted.kyuw2.azure.mongodb.net\",\"isContainer\":true,\"friendlyName\":\"MongoDB Server\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"mongodb_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003cmongodb_database\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "mongodb_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

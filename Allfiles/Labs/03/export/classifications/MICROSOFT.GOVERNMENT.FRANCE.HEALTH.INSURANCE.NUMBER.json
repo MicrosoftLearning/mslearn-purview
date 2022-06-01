@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a5e7cbf0-65d5-05f4-1c11-fd2ec813a677",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667155,
+    "updateTime":  1652152667155,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.HEALTH.INSURANCE.NUMBER",
+    "description":  "France Health Insurance Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France Health Insurance Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

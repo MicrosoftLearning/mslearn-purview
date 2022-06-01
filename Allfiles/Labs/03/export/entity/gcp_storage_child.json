@@ -1,0 +1,41 @@
+{
+    "category":  "ENTITY",
+    "guid":  "7e425d12-c699-70fc-3984-4801ea6590dd",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152690290,
+    "updateTime":  1652152690290,
+    "version":  1,
+    "name":  "gcp_storage_child",
+    "description":  "Atlas entity-type representing child types (virtual directory, blob) in Google Cloud Storage",
+    "typeVersion":  "1.0",
+    "serviceType":  "gcp",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "gcp_storage_object"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "parent",
+                                          "typeName":  "gcp_storage_parent",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "gcp_storage_parent_children",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a681a682-0fff-5a40-cb55-a8f66aeb6190",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667016,
+    "updateTime":  1652152667016,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.US.INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER",
+    "description":  "U.S. Individual Taxpayer Identification Number (ITIN)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.S. Individual Taxpayer Identification Number (ITIN)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

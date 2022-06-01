@@ -1,0 +1,30 @@
+{
+    "category":  "ENTITY",
+    "guid":  "75f8a5e1-094b-57c8-5fd6-fc7b65552e64",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152683359,
+    "updateTime":  1652152683359,
+    "version":  1,
+    "name":  "azure_datalake_gen2_object",
+    "description":  "azure_datalake_gen2_object",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Data Lake Storage Gen2",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "azure_datalake_gen2_path",
+                     "azure_datalake_gen2_resource_set"
+                 ],
+    "relationshipAttributeDefs":  [
+
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "2454b0f8-eb68-f566-7d57-3bfb8b34227a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667173,
+    "updateTime":  1652152667173,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ROMANIA.PASSPORT.NUMBER",
+    "description":  "Romania Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Romania Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

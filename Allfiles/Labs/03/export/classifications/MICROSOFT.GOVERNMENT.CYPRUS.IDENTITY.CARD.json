@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "8fdb52f2-b774-a48a-d19c-25f421ee1b2a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667085,
+    "updateTime":  1652152667085,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CYPRUS.IDENTITY.CARD",
+    "description":  "Cyprus Identity Card",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Cyprus Identity Card"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

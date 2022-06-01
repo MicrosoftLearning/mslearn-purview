@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a7a33e4d-754d-ccef-a07b-fdf445d8afa3",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667167,
+    "updateTime":  1652152667167,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARY.PASSPORT.NUMBER",
+    "description":  "Hungary Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungary Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d47fdd2c-371a-2377-8770-21a4ff67f603",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667150,
+    "updateTime":  1652152667150,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.VALUE.ADDED.TAX.NUMBER",
+    "description":  "France Value Added Tax Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France Value Added Tax Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

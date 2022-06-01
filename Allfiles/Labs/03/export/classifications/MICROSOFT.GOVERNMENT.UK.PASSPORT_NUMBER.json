@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "096785a0-1e7a-33c6-a269-7a5d9095ca8b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667015,
+    "updateTime":  1652152667015,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UK.PASSPORT_NUMBER",
+    "description":  "U.K. Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

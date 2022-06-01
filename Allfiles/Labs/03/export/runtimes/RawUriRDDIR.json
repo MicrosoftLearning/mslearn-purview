@@ -1,0 +1,25 @@
+{
+    "id":  "/subscriptions/34a8ddf8-ebee-475d-97d3-494d34c800b7/resourceGroups/scanning-prod-eastus/providers/Microsoft.Purview/accounts/purview-c814de6b-e80e-4fa1-b83c-6320b3945eb4/integrationruntimes/RawUriRDDIR",
+    "name":  "RawUriRDDIR",
+    "type":  "Microsoft.Purview/accounts/integrationruntimes",
+    "properties":  {
+                       "type":  "Managed",
+                       "typeProperties":  {
+                                              "computeProperties":  {
+                                                                        "dataFlowProperties":  {
+                                                                                                   "timeToLiveInMinutes":  10,
+                                                                                                   "computeType":  "@pipeline().parameters.runContext.computeType",
+                                                                                                   "coreCount":  "@int(pipeline().parameters.runContext.coreCount)"
+                                                                                               },
+                                                                        "sparkProperties":  {
+                                                                                                "billingSpec":  {
+                                                                                                                    "resourceId":  "@pipeline().parameters.runContext.billingResourceId",
+                                                                                                                    "enableBilling":  "@pipeline().parameters.runContext.enableBilling",
+                                                                                                                    "workflowType":  "@pipeline().parameters.runContext.billingWorkflowType"
+                                                                                                                }
+                                                                                            }
+                                                                    }
+                                          }
+                   },
+    "etag":  "3d0283af-0000-0100-0000-6282d0900000"
+}

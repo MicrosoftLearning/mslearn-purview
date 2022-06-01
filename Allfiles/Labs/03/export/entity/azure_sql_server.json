@@ -1,0 +1,79 @@
+{
+    "category":  "ENTITY",
+    "guid":  "9ff38d86-9152-8bfc-1660-053d7cf8bcaf",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682634,
+    "updateTime":  1652152682634,
+    "version":  1,
+    "name":  "azure_sql_server",
+    "description":  "azure_sql_server",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"mssql://(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"mssql://ads-demo-sql.database.windows.net\",\"isContainer\":true,\"friendlyName\":\"Azure SQL Server\",\"indexedAssetTypes\":[\"Azure SQL Database\",\"Azure SQL Data Warehouse\"],\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\"],\"customizeTaxonomyMapping\":{\"Server\":\"Azure_SQL_Server\"}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "azure_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003cazure_sql_db\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_sql_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dataWarehouses",
+                                          "typeName":  "array\u003cazure_sql_dw\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_sql_server_data_warehouses",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

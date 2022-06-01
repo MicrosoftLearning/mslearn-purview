@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1930a79f-9669-c3c8-f3f0-89716d576838",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667088,
+    "updateTime":  1652152667088,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.HUNGARY.PERSONAL.IDENTIFICATION.NUMBER",
+    "description":  "Hungary Personal Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Hungary Personal Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,116 @@
+{
+    "category":  "ENTITY",
+    "guid":  "de0aec3c-45f8-93d7-e46b-367a974e0333",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703084,
+    "updateTime":  1652152703084,
+    "version":  1,
+    "name":  "erwin_synonym",
+    "description":  "erwin_synonym",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"},{\"isRequired\":false,\"isPath\":true,\"entityTypeName\":\"erwin_library\",\"componentName\":\"Library\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_model\",\"componentName\":\"Model\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_synonym\",\"componentName\":\"Synonym\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)/(?\u003cCatalog\u003e[^/]+)((/(?\u003cLibrary\u003e[^/]+))*)/(?\u003cModel\u003e[^/]+)/(?\u003cModelId\u003e[^/]+)/(?\u003cSynonymId\u003e[^/]+)$\",\"isContainer\":false,\"qualifiedNameSample\":\"erwin://localhost:18170/MartServer/MyCatalog/PublicationSystemSample/{799A0437-D91A-4CC5-998A-7C23E2130F39}+00000001/{61CCB561-10BE-417E-B89C-A3138C8F9A49}+00000000\",\"friendlyName\":\"Erwin Synonym\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "comment",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "physicalName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "generate",
+                              "typeName":  "boolean",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset",
+                       "erwin_synonym_source"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "synonym",
+                                          "typeName":  "array\u003cerwin_synonym\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "erwinschema",
+                                          "typeName":  "erwin_schema",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_schema_synonyms",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "synonym_source",
+                                          "typeName":  "erwin_synonym_source",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_synonym_source_synonym",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

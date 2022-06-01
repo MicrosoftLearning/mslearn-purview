@@ -1,0 +1,82 @@
+{
+    "name":  "policy_r76hx3",
+    "id":  "96e54406-11ab-465a-bdb7-a8211b7831ee",
+    "version":  1,
+    "properties":  {
+                       "description":  "",
+                       "decisionRules":  [
+                                             {
+                                                 "kind":  "decisionrule",
+                                                 "effect":  "Permit",
+                                                 "dnfCondition":  [
+                                                                      [
+                                                                          {
+                                                                              "attributeName":  "resource.purview.collection",
+                                                                              "attributeValueIncludes":  "r76hx3"
+                                                                          },
+                                                                          {
+                                                                              "fromRule":  "permission:r76hx3",
+                                                                              "attributeName":  "derived.purview.permission",
+                                                                              "attributeValueIncludes":  "permission:r76hx3"
+                                                                          }
+                                                                      ]
+                                                                  ]
+                                             }
+                                         ],
+                       "attributeRules":  [
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "purviewmetadatarole_builtin_collection-administrator:r76hx3",
+                                                  "name":  "purviewmetadatarole_builtin_collection-administrator:r76hx3",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "attributeName":  "principal.microsoft.id",
+                                                                               "attributeValueIncludedIn":  [
+                                                                                                                "c1c8abcf-aa1f-443b-aa47-93df8879d9b2"
+                                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator",
+                                                                               "attributeName":  "derived.purview.role",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator"
+                                                                           }
+                                                                       ],
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator:main-otijt"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              },
+                                              {
+                                                  "kind":  "attributerule",
+                                                  "id":  "permission:r76hx3",
+                                                  "name":  "permission:r76hx3",
+                                                  "dnfCondition":  [
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator:r76hx3",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator:r76hx3"
+                                                                           }
+                                                                       ],
+                                                                       [
+                                                                           {
+                                                                               "fromRule":  "permission:main-otijt",
+                                                                               "attributeName":  "derived.purview.permission",
+                                                                               "attributeValueIncludes":  "permission:main-otijt"
+                                                                           }
+                                                                       ]
+                                                                   ]
+                                              }
+                                          ],
+                       "collection":  {
+                                          "type":  "CollectionReference",
+                                          "referenceName":  "r76hx3"
+                                      },
+                       "parentCollectionName":  "main-otijt"
+                   }
+}

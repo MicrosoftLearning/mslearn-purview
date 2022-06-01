@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "189f72bf-ab45-1902-be4e-b30d81a66b14",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679251,
+    "updateTime":  1652152679251,
+    "version":  1,
+    "name":  "oracle_view_query",
+    "description":  "oracle_view_query",
+    "typeVersion":  "1.0",
+    "serviceType":  "Oracle",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"oracle://(?\u003cServer\u003e[^/]+)/(?\u003cSchema\u003e[^/]+)/(?\u003cView\u003e[^/]+)/query$\",\"qualifiedNameSample\":\"oracle://192.168.56.51/SCOTT/EMP_DETAILS_VIEW/query\",\"isContainer\":false,\"friendlyName\":\"Oracle View Query\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"oracle_view_view_query\"],\"relevantAttributes\":[\"query\"]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "oracle_query"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "view",
+                                          "typeName":  "oracle_view",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_view_view_query",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

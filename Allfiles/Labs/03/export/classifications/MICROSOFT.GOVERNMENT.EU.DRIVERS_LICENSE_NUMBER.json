@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5e8ad98a-9e0e-af44-d5b2-189319f208a7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666912,
+    "updateTime":  1652152666912,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.EU.DRIVERS_LICENSE_NUMBER",
+    "description":  "EU Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

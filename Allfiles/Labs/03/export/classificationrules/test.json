@@ -1,0 +1,28 @@
+{
+    "properties":  {
+                       "minimumDistinctMatchCount":  null,
+                       "minimumPercentageMatch":  null,
+                       "classificationAction":  "Keep",
+                       "dataPatterns":  [
+
+                                        ],
+                       "columnPatterns":  [
+                                              {
+                                                  "pattern":  "^*$",
+                                                  "kind":  "Regex"
+                                              }
+                                          ],
+                       "classificationRuleBloomFilter":  null,
+                       "description":  "test",
+                       "version":  1,
+                       "classificationName":  "MICROSOFT.FINANCIAL.US.ABA_ROUTING_NUMBER",
+                       "owner":  "c1c8abcf-aa1f-443b-aa47-93df8879d9b2",
+                       "ruleStatus":  "Enabled",
+                       "createdAt":  "2022-05-11T11:41:17.2460871Z",
+                       "lastModifiedAt":  "2022-05-11T11:41:17.2460894Z",
+                       "collection":  null
+                   },
+    "kind":  "Custom",
+    "id":  "classificationrules/test",
+    "name":  "test"
+}

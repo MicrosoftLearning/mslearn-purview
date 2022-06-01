@@ -1,0 +1,101 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f5bbe375-279e-9f25-6862-bee5175d9888",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682883,
+    "updateTime":  1652152682883,
+    "version":  1,
+    "name":  "azure_sql_stored_procedure",
+    "description":  "Definition of a stored procedure",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure SQL Database",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"mssql://(?\u003cServer\u003e[^/]+)/(?\u003cDatabase\u003e[^/]+)/(?\u003cSchema\u003e[^/]+)/(?\u003cStoredProcedure\u003e[^/]+)$\",\"qualifiedNameSample\":\"mssql://oneprovenancedemo.database.windows.net/AdventureWorks/dbo/uspGetManagerEmployees\",\"isContainer\":false,\"friendlyName\":\"Azure SQL Stored Procedure\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"],\"customizeTaxonomyFields\":{\"Server\":\"Azure_SQL_Server\",\"Database\":\"Azure_SQL/Azure_SQL_Database\",\"Schema\":\"Azure_SQL/Azure_SQL_Schema\"}},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"azure_sql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"azure_sql_db\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"},{\"entityTypeName\":\"azure_sql_schema\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Schema\"},{\"entityTypeName\":\"azure_sql_stored_procedure\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"StoredProcedure\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Process"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "dbSchema",
+                                          "typeName":  "azure_sql_schema",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "azure_sql_schema_stored_procedures",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "runs",
+                                          "typeName":  "array\u003cazure_sql_stored_procedure_run\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_sql_stored_procedure_stored_procedure_runs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

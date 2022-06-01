@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "a9e62928-84db-49d0-8ede-1f2ea3ca7245",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152700283,
+    "updateTime":  1652152700283,
+    "version":  1,
+    "name":  "sap_hana_server",
+    "description":  "sap_hana_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "SAP HANA",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"sap_hana://(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"sap_hana://168.63.253.59\",\"isContainer\":true,\"friendlyName\":\"SapHana Server\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"sap_hana_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "databases",
+                                          "typeName":  "array\u003csap_hana_database\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "sap_hana_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,47 @@
+{
+    "category":  "ENTITY",
+    "guid":  "2066c32d-b05d-4ed3-6487-0d49fd4d5314",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152688125,
+    "updateTime":  1652152688125,
+    "version":  1,
+    "name":  "aws_s3_v2_container",
+    "description":  "Atlas Type representing a Container Types in an S3 Object Store",
+    "typeVersion":  "1.0",
+    "serviceType":  "aws",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "aws_s3_v2_bucket",
+                     "aws_s3_v2_directory"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "contained",
+                                          "typeName":  "array\u003caws_s3_v2_contained\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "aws_s3_v2_container_contained",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

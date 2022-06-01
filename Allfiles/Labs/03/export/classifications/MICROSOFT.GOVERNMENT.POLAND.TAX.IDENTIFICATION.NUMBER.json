@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b3d5e1f9-e3de-2132-b853-189b79e1b33a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667094,
+    "updateTime":  1652152667094,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.POLAND.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Poland Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Poland Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

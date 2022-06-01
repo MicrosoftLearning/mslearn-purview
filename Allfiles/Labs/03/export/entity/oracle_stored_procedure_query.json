@@ -1,0 +1,84 @@
+{
+    "category":  "ENTITY",
+    "guid":  "f6965233-08f2-5896-4ae9-37ae2d1b1277",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679250,
+    "updateTime":  1652152679250,
+    "version":  1,
+    "name":  "oracle_stored_procedure_query",
+    "description":  "oracle_stored_procedure_query",
+    "typeVersion":  "1.0",
+    "serviceType":  "Oracle",
+    "options":  {
+                    "defaultRenderedLineage":  "stored_procedure",
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"oracle://(?\u003cServer\u003e[^/]+)/(?\u003cSchema\u003e[^/]+)/((?\u003cPackage\u003e[^/]+)/)?(?\u003cStoredProcedure\u003e[^/]+)/[a-z0-9]+$\",\"qualifiedNameSample\":\"oracle://192.168.56.51/HR/ADD_JOB_HISTORY/a1dc517009cc20770340cb02c90f27f6\",\"isContainer\":false,\"friendlyName\":\"Oracle Stored Procedure Query\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"oracle_stored_procedure_stored_procedure_queries\"],\"relevantAttributes\":[]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "oracle_query"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "stored_procedure",
+                                          "typeName":  "oracle_stored_procedure",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "oracle_stored_procedure_stored_procedure_queries",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

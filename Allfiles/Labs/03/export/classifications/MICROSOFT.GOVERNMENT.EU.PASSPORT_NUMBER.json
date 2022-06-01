@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "310c6dc8-e760-ceb1-265e-717b66687a7f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666914,
+    "updateTime":  1652152666914,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.EU.PASSPORT_NUMBER",
+    "description":  "EU Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "EU Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

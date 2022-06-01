@@ -1,0 +1,24 @@
+{
+    "name":  "main000",
+    "id":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-000/providers/Microsoft.DataFactory/factories/main000",
+    "type":  "Microsoft.DataFactory/factories",
+    "properties":  {
+                       "provisioningState":  "Succeeded",
+                       "createTime":  "2022-05-10T11:56:58.6284914Z",
+                       "version":  "2018-06-01",
+                       "publicNetworkAccess":  "Enabled",
+                       "purviewConfiguration":  {
+                                                    "pruviewResourceId":  "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/msftpurview-001/providers/Microsoft.Purview/accounts/mainacdt33qj4bc4k"
+                                                }
+                   },
+    "eTag":  "\"04004d38-0000-0100-0000-6282d96a0000\"",
+    "location":  "eastus",
+    "identity":  {
+                     "type":  "SystemAssigned",
+                     "principalId":  "366cbd90-ec3e-433a-8f03-c89de85e6ad5",
+                     "tenantId":  "d280491c-b27a-41bf-9623-21b60cf430b3"
+                 },
+    "tags":  {
+                 "catalogUri":  "https://mainacdt33qj4bc4k.purview.azure.com/catalog"
+             }
+}

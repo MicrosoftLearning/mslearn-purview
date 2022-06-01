@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e4e399f6-eff8-04cb-b318-47bf6595742b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667084,
+    "updateTime":  1652152667084,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Austria Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

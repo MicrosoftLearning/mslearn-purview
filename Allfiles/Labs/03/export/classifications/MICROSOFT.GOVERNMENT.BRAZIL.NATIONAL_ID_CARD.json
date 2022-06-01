@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "295d12c0-1b13-7cc4-5f83-c3139fe1af83",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667060,
+    "updateTime":  1652152667060,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BRAZIL.NATIONAL_ID_CARD",
+    "description":  "Brazil National ID Card (RG)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Brazil National ID Card (RG)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

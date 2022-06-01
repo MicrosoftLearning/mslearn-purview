@@ -1,0 +1,102 @@
+{
+    "category":  "ENTITY",
+    "guid":  "b613f685-7134-5d37-0477-1fe937b087ca",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682211,
+    "updateTime":  1652152682211,
+    "version":  1,
+    "name":  "azure_resource",
+    "description":  "azure_resource",
+    "typeVersion":  "1.0",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "subscriptionId",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "resourceGroupName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "location",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "createTime",
+                              "typeName":  "date",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+                     "azure_sql_server",
+                     "ads_share",
+                     "azure_synapse_dedicated_sql_db",
+                     "ads_account",
+                     "azure_mysql_server",
+                     "azure_datalake_gen1_account",
+                     "azure_synapse_workspace",
+                     "azure_data_explorer_database",
+                     "azure_sql_dw",
+                     "azure_storage_service",
+                     "azure_cognitive_search_service",
+                     "azure_data_factory",
+                     "azure_postgresql_server",
+                     "azure_cosmosdb_account",
+                     "ads_share_subscription",
+                     "azure_sql_mi",
+                     "azure_data_explorer_cluster",
+                     "azure_storage_account",
+                     "azure_sql_db",
+                     "azure_mariadb_server"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b638c20d-65e6-da27-c52e-a179885d9df5",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667061,
+    "updateTime":  1652152667061,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BRAZIL.CPF_NUMBER",
+    "description":  "Brazil Individual Taxpayer Identification Number (CPF)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Brazil Individual Taxpayer Identification Number (CPF)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

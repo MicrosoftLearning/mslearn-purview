@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "ccf66deb-207d-e723-6eab-76be1f9ae32a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667168,
+    "updateTime":  1652152667168,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ITALY.PASSPORT.NUMBER",
+    "description":  "Italy Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Italy Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

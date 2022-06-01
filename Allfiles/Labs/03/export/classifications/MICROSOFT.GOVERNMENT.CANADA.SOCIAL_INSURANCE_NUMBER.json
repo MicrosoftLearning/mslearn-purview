@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "de6a0b5b-47a0-23e2-4f39-21083c254682",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666917,
+    "updateTime":  1652152666917,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CANADA.SOCIAL_INSURANCE_NUMBER",
+    "description":  "Canada Social Insurance Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Canada Social Insurance Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

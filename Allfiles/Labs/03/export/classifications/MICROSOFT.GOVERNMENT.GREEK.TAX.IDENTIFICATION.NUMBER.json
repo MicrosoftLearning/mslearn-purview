@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e108932f-4aa6-fa82-8709-a2d2825bf00c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667088,
+    "updateTime":  1652152667088,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GREEK.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Greek Tax identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Greek Tax identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "47c85e28-7758-ac45-e7c0-f43a1e3a80ee",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667096,
+    "updateTime":  1652152667096,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVAKIA.PERSONAL.NUMBER",
+    "description":  "Slovakia Personal Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovakia Personal Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

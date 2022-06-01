@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "612a5985-7490-3fb2-3aa7-697f43bf712d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667056,
+    "updateTime":  1652152667056,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FINLAND.PASSPORT_NUMBER",
+    "description":  "Finland Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Finland Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

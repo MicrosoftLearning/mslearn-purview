@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "38f8d14b-ffa6-2890-d9e6-06eee69ee55a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667163,
+    "updateTime":  1652152667163,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CROATIA.PASSPORT.NUMBER",
+    "description":  "Croatia Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Croatia Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "4ce293ec-37ed-a2f2-8679-83d75ac7e9e7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667023,
+    "updateTime":  1652152667023,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CANADA.PASSPORT_NUMBER",
+    "description":  "Canada Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Canada Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

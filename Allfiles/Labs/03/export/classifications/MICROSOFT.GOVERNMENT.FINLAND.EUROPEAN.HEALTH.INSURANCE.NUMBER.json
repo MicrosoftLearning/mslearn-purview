@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "5b592f54-8927-fdda-2abb-184245e8af7a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667154,
+    "updateTime":  1652152667154,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FINLAND.EUROPEAN.HEALTH.INSURANCE.NUMBER",
+    "description":  "Finland European Health Insurance Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Finland European Health Insurance Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

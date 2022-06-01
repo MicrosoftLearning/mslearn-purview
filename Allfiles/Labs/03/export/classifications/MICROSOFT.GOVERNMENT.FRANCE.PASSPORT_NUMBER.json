@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "471d1911-1697-7729-bcdb-726079d7d91c",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667019,
+    "updateTime":  1652152667019,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.PASSPORT_NUMBER",
+    "description":  "France Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

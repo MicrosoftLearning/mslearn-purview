@@ -1,0 +1,67 @@
+{
+    "category":  "ENTITY",
+    "guid":  "da5bf4e2-7c3e-b260-ce02-47bc325465f8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152702275,
+    "updateTime":  1652152702275,
+    "version":  1,
+    "name":  "looker_text",
+    "description":  "looker_text",
+    "typeVersion":  "1.0",
+    "serviceType":  "Looker",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"relevantSearch\":{\"relevantRelationships\":[\"looker_layout_elements_texts\"]},\"searchBehavior\":\"RelevantSearch\"},\"qualifiedNamePattern\":\"looker://(?\u003cServer\u003e[^/]+)/(?\u003cBoardType\u003e[^/]+)/(?\u003cBoard\u003e[^/]+)/(?\u003cLayout\u003e(layouts/)?[^/]+)/(?\u003celement\u003e.+)$\",\"isContainer\":false,\"qualifiedNameSample\":\"looker://azurepurviewinternal.cloud.looker.com/dashboards/mlprojectbydi::dashboard_product/layouts/mlprojectbydi::dashboard_product/458ce4436d623b0d4f5c7f8d55a8c87b\",\"friendlyName\":\"Looker Text\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "value",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "layout",
+                                          "typeName":  "looker_layout",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "looker_layout_elements_texts",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

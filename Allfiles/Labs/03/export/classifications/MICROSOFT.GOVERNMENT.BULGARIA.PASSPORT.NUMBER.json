@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b44dbbb5-a077-b44d-e366-79347f8afb72",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667162,
+    "updateTime":  1652152667162,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BULGARIA.PASSPORT.NUMBER",
+    "description":  "Bulgaria Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Bulgaria Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

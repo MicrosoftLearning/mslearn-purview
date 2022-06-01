@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "72a642b9-7306-8d5d-c48e-50d066f4604a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667049,
+    "updateTime":  1652152667049,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.UK.DRIVERS_LICENSE_NUMBER",
+    "description":  "U.K. Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

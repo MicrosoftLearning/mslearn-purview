@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "222065aa-6e49-ddf2-6f45-98f1bc487614",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667171,
+    "updateTime":  1652152667171,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.NETHERLANDS.PASSPORT.NUMBER",
+    "description":  "Netherlands Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Netherlands Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

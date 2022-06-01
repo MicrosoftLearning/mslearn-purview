@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "44f51a39-b3c4-2707-7c6d-5913434382b0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667097,
+    "updateTime":  1652152667097,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVENIA.UNIQUE.MASTER.CITIZEN.NUMBER",
+    "description":  "Slovenia Unique Master Citizen Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovenia Unique Master Citizen Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

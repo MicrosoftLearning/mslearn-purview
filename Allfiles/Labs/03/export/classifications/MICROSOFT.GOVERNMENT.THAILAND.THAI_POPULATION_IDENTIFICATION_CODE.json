@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "34dae4d3-79e5-cace-bdf4-5e6cca061b52",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667078,
+    "updateTime":  1652152667078,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.THAILAND.THAI_POPULATION_IDENTIFICATION_CODE",
+    "description":  "Thai Citizen ID",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Thai Citizen ID"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

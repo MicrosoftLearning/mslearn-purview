@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "2cee54af-4b38-abd2-8a8f-ae0fe05ec02f",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667101,
+    "updateTime":  1652152667101,
+    "version":  1,
+    "name":  "MICROSOFT.FINANCIAL.NEW.ZEALAND.BANK.ACCOUNT.NUMBER",
+    "description":  "New Zealand Bank Account Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "New Zealand Bank Account Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "cdac63ff-2593-384e-e2da-3912fca4bebe",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667059,
+    "updateTime":  1652152667059,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.CROATIA.PERSONAL_IDENTIFICATION_NUMBER",
+    "description":  "Croatia Personal Identification (OIB) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Croatia Personal Identification (OIB) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

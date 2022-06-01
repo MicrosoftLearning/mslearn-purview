@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "da3e4839-93cd-0c16-cd50-771d3b64618d",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667176,
+    "updateTime":  1652152667176,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.AUSTRIA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Austria Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Austria Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

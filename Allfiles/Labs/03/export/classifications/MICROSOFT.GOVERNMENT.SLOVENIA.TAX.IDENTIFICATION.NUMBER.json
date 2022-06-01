@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "afad56c1-3509-d9d9-9de9-dbd63693a574",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667097,
+    "updateTime":  1652152667097,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SLOVENIA.TAX.IDENTIFICATION.NUMBER",
+    "description":  "Slovenia Tax Identification Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Slovenia Tax Identification Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

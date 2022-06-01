@@ -1,0 +1,163 @@
+{
+    "category":  "ENTITY",
+    "guid":  "2deebaf3-6545-2ec3-8da7-ca89b590df40",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152702269,
+    "updateTime":  1652152702269,
+    "version":  1,
+    "name":  "looker_layout",
+    "description":  "looker_layout",
+    "typeVersion":  "1.0",
+    "serviceType":  "Looker",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Server\",\"Folder\",\"Dashboard\",\"Project\",\"Model\",\"Look\"],\"customizeTaxonomyMapping\":{\"Server\":\"looker_server\",\"Folder\":\"looker_folder\",\"Dashboard\":\"looker_dashboard\",\"Project\":\"looker_project\",\"Model\":\"looker_model\",\"Look\":\"looker_look\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"looker_server\",\"componentName\":\"Server\"},{\"isRequired\":true,\"isPath\":true,\"entityTypeName\":\"looker_folder\",\"componentName\":\"Folder\"},{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"looker_dashboard\",\"componentName\":\"Dashboard\"},{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"looker_look\",\"componentName\":\"Look\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"looker_layout\",\"componentName\":\"Layout\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"looker://(?\u003cServer\u003e[^/]+)/(?\u003cBoardType\u003e[^/]+)/(?\u003cBoard\u003e[^/]+)/(?\u003cLayout\u003e(layouts/)?[^/]+)$\",\"compact\":{\"isHostForCompact\":true,\"relationshipsToCompact\":[\"looker_layout_elements_table_layouts\",\"looker_chart_layout_childrens\",\"looker_table_layout_childrens\",\"looker_layout_elements_chart_layouts\",\"looker_layout_elements_fields\",\"looker_layout_elements_texts\"]},\"isContainer\":false,\"qualifiedNameSample\":\"looker://azurepurviewinternal.cloud.looker.com/dashboards/dashboardname/layouts/layoutname\",\"friendlyName\":\"Looker Layout\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "nativeId",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "nativeType",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "elements_chart_layouts",
+                                          "typeName":  "array\u003clooker_chart_layout\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_layout_elements_chart_layouts",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "elements_table_layouts",
+                                          "typeName":  "array\u003clooker_table_layout\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_layout_elements_table_layouts",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "elements_texts",
+                                          "typeName":  "array\u003clooker_text\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_layout_elements_texts",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "look",
+                                          "typeName":  "looker_look",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "looker_look_layout",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "dashboard",
+                                          "typeName":  "looker_dashboard",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "looker_dashboard_layouts",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "elements_fields",
+                                          "typeName":  "array\u003clooker_field\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "looker_layout_elements_fields",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

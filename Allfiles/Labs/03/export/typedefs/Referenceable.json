@@ -1,0 +1,86 @@
+{
+    "category":  "ENTITY",
+    "guid":  "2754034c-862f-2f09-87d3-083934e18247",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666284,
+    "updateTime":  1652152669338,
+    "version":  4,
+    "name":  "Referenceable",
+    "description":  "Referenceable",
+    "typeVersion":  "1.3",
+    "serviceType":  "atlas_core",
+    "lastModifiedTS":  "4",
+    "attributeDefs":  [
+                          {
+                              "name":  "qualifiedName",
+                              "typeName":  "string",
+                              "isOptional":  false,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  1,
+                              "valuesMaxCount":  1,
+                              "isUnique":  true,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "replicatedFrom",
+                              "typeName":  "array\u003cAtlasServer\u003e",
+                              "isOptional":  true,
+                              "cardinality":  "SET",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  2147483647,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false,
+                              "options":  {
+                                              "isSoftReference":  "true"
+                                          }
+                          },
+                          {
+                              "name":  "replicatedTo",
+                              "typeName":  "array\u003cAtlasServer\u003e",
+                              "isOptional":  true,
+                              "cardinality":  "SET",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  2147483647,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false,
+                              "options":  {
+                                              "isSoftReference":  "true"
+                                          }
+                          }
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "spark_storagedesc",
+                     "powerbi_tenant",
+                     "hive_storagedesc",
+                     "xml_simple_type_content",
+                     "xml_type",
+                     "xml_compositor",
+                     "Asset",
+                     "ddl"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

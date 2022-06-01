@@ -1,0 +1,47 @@
+{
+    "category":  "ENTITY",
+    "guid":  "e996742b-de77-032b-49c8-33815a7b173e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152690289,
+    "updateTime":  1652152690289,
+    "version":  1,
+    "name":  "gcp_storage_parent",
+    "description":  "Atlas entity-type representing parent types (bucket, vitual directory) that can hold other objects in Google Cloud Storage",
+    "typeVersion":  "1.0",
+    "serviceType":  "gcp",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+
+                   ],
+    "subTypes":  [
+                     "gcp_storage_virtual_directory",
+                     "gcp_storage_bucket"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "children",
+                                          "typeName":  "array\u003cgcp_storage_child\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "gcp_storage_parent_children",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

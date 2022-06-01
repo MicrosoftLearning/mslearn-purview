@@ -1,0 +1,74 @@
+{
+    "category":  "ENTITY",
+    "guid":  "4c875c10-4f3b-a52d-0e3a-31b9a2d25ea6",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152696168,
+    "updateTime":  1652152696168,
+    "version":  1,
+    "name":  "powerbi_resource",
+    "description":  "powerbi_resource",
+    "typeVersion":  "1.0",
+    "serviceType":  "Power BI",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "tenantId",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "displayName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+                     "powerbi_report",
+                     "powerbi_dashboard",
+                     "powerbi_dataset",
+                     "powerbi_report_process",
+                     "powerbi_workspace",
+                     "powerbi_capacity",
+                     "powerbi_table",
+                     "powerbi_dashboard_process",
+                     "powerbi_dataflow_process",
+                     "powerbi_dataflow",
+                     "powerbi_column",
+                     "powerbi_table_process",
+                     "powerbi_dataset_process"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

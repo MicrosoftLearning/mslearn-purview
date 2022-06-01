@@ -1,0 +1,104 @@
+{
+    "category":  "ENTITY",
+    "guid":  "7acab517-3945-1085-9924-accf554dfdc4",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152703093,
+    "updateTime":  1652152703093,
+    "version":  1,
+    "name":  "erwin_view_relationship",
+    "description":  "erwin_view_relationship",
+    "typeVersion":  "1.0",
+    "serviceType":  "Erwin",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"search\":{\"standardSearch\":{\"taxonomy\":{\"source\":\"Hierarchy\",\"assetTaxonomy\":[\"Mart\",\"Library\",\"Model\"],\"customizeTaxonomyMapping\":{\"Mart\":\"erwin_mart\",\"Library\":\"erwin_library\",\"Model\":\"erwin_model\"}},\"browse\":{\"source\":\"Hierarchy\",\"browseHierarchy\":[{\"isRequired\":false,\"isPath\":false,\"entityTypeName\":\"erwin_mart\",\"componentName\":\"Mart\"},{\"isRequired\":false,\"isPath\":true,\"entityTypeName\":\"erwin_library\",\"componentName\":\"Library\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_model\",\"componentName\":\"Model\"},{\"isRequired\":true,\"isPath\":false,\"entityTypeName\":\"erwin_view_relationship\",\"componentName\":\"ViewRelationship\"}]}},\"searchBehavior\":\"StandardSearch\"},\"qualifiedNamePattern\":\"erwin://(?\u003cMartServer\u003e[^/]+)/(?\u003cApplication\u003e[^/]+)/(?\u003cCatalog\u003e[^/]+)((/(?\u003cLibrary\u003e[^/]+))*)/(?\u003cModel\u003e[^/]+)/(?\u003cModelId\u003e[^/]+)/(?\u003cViewRelationship\u003e[^/]+)$\",\"parallel\":{\"splitByRelationships\":[\"erwin_model_view_relationships\"],\"enableParallel\":true},\"isContainer\":false,\"qualifiedNameSample\":\"erwin://localhost:18170/MartServer/MyCatalog/PublicationSystemSample/{799A0437-D91A-4CC5-998A-7C23E2130F39}+00000001/{2F4243CE-98C3-4223-A735-8AF5603D7C5D}+00000000\",\"friendlyName\":\"Erwin View Relationship\"}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "physicalName",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "sequence",
+                              "typeName":  "short",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "model",
+                                          "typeName":  "erwin_model",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_model_view_relationships",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "source_view",
+                                          "typeName":  "erwin_view",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_view_relationship_source_view",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "source_entity",
+                                          "typeName":  "erwin_entity",
+                                          "isOptional":  true,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "erwin_view_relationship_source_entity",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

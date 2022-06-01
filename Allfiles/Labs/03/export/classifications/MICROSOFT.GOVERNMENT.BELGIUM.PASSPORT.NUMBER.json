@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "fd093692-0a35-48f8-bee5-ae3c07e69271",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667161,
+    "updateTime":  1652152667161,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.BELGIUM.PASSPORT.NUMBER",
+    "description":  "Belgium Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Belgium Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

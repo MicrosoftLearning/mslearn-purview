@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "1dab37e2-213f-a88d-7e13-064af9561e51",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152666917,
+    "updateTime":  1652152666917,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.EMAIL",
+    "description":  "Email Address",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Email Address"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

@@ -1,0 +1,96 @@
+{
+    "category":  "ENTITY",
+    "guid":  "109e4b44-55f4-88eb-93e7-d0d4776d48b8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152689911,
+    "updateTime":  1652152689911,
+    "version":  1,
+    "name":  "aws_rds_postgresql_db",
+    "description":  "aws_rds_postgresql_db",
+    "typeVersion":  "1.0",
+    "serviceType":  "Amazon RDS Database (PostgreSQL)",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"postgresql://(?\u003cServer\u003e[^/]+)/(?\u003cDatabase\u003e[^/]+)$\",\"qualifiedNameSample\":\"postgresql://testdb-postgresql.aaaaaaaaaaaa.us-east-2.rds.amazonaws.com/AdventureWork\",\"isContainer\":true,\"friendlyName\":\"Amazon RDS Database (PostgreSQL)\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Database\",\"Schema\"],\"customizeTaxonomyFields\":{\"Server\":\"AWS_RDS_PostgreSQL/Server\",\"Database\":\"AWS_RDS_PostgreSQL/Database\",\"Schema\":\"AWS_RDS_PostgreSQL/Schema\"}},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"aws_rds_postgresql_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"},{\"entityTypeName\":\"aws_rds_postgresql_db\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Database\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "collation",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          },
+                          {
+                              "name":  "ownerId",
+                              "typeName":  "int",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "aws_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "server",
+                                          "typeName":  "aws_rds_postgresql_server",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "aws_rds_postgresql_server_databases",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "schemas",
+                                          "typeName":  "array\u003caws_rds_postgresql_schema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "aws_rds_postgresql_db_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "4ecb032e-1886-480d-ec02-ecc3f1258ad0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667019,
+    "updateTime":  1652152667019,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.FRANCE.SOCIAL_SECURITY_NUMBER",
+    "description":  "France Social Security Number (INSEE)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "France Social Security Number (INSEE)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

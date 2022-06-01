@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b66792d0-dd75-3279-2665-d57f8f3252d0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667082,
+    "updateTime":  1652152667082,
+    "version":  1,
+    "name":  "MICROSOFT.SYSTEM.TEMP_FILE",
+    "description":  "Temporary File",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Temporary File"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

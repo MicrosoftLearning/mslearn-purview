@@ -1,0 +1,103 @@
+{
+    "category":  "ENTITY",
+    "guid":  "9b3d8dbc-77cd-d212-8ede-f44dafb8306b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671300,
+    "updateTime":  1652152671300,
+    "version":  1,
+    "name":  "cassandra_keyspace",
+    "description":  "cassandra_keyspace",
+    "typeVersion":  "1.0",
+    "serviceType":  "Cassandra",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"cassandra://(?\u003cCluster\u003e[^/]+)/(?\u003cKeyspace\u003e[^/]+)$\",\"qualifiedNameSample\":\"cassandra://192.168.56.51/myKeyspace\",\"isContainer\":true,\"friendlyName\":\"Cassandra Keyspace\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Cluster\",\"Keyspace\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"cassandra_cluster\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Cluster\"},{\"entityTypeName\":\"cassandra_keyspace\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Keyspace\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "comment",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "cluster",
+                                          "typeName":  "cassandra_cluster",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "cassandra_cluster_keyspaces",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "tables",
+                                          "typeName":  "array\u003ccassandra_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "cassandra_keyspace_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "materialized_views",
+                                          "typeName":  "array\u003ccassandra_materialized_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "cassandra_keyspace_materialized_views",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

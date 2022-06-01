@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "21b5cdb9-4c52-bec0-3f04-4f01c7508aad",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667072,
+    "updateTime":  1652152667072,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.JAPAN.RESIDENCE_CARD_NUMBER",
+    "description":  "Japan Residence Card Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Japan Residence Card Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

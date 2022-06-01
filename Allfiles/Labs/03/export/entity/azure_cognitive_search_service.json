@@ -1,0 +1,59 @@
+{
+    "category":  "ENTITY",
+    "guid":  "d7b5e417-6ba2-2e9e-cb55-7164629d6946",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152684925,
+    "updateTime":  1652152684925,
+    "version":  1,
+    "name":  "azure_cognitive_search_service",
+    "description":  "azure_cognitive_search_service",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure Cognitive Search",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "azure_resource"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "indexes",
+                                          "typeName":  "array\u003cazure_cognitive_search_index\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "azure_cognitive_search_indexes",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b1b67737-15f8-9411-755c-efaba1016b38",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667068,
+    "updateTime":  1652152667068,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ISRAEL.NATIONAL_ID_NUMBER",
+    "description":  "Israel National ID",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Israel National ID"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

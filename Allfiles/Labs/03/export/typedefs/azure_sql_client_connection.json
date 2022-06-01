@@ -1,0 +1,105 @@
+{
+    "category":  "ENTITY",
+    "guid":  "da266cd0-43d8-86e8-479d-b1033c1a665a",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152682882,
+    "updateTime":  1652152682882,
+    "version":  1,
+    "name":  "azure_sql_client_connection",
+    "description":  "Client connection of an Azure SQL DB: Represents the connection of an application with the backend Azure SQL database. Through each connection, applications send queries to the backend database.",
+    "typeVersion":  "1.0",
+    "serviceType":  "Azure SQL Database",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"isContainer\":false,\"friendlyName\":\"Azure SQL Client Connection\",\"search\":{\"searchBehavior\":\"NoSearch\"}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+                          {
+                              "name":  "application",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false,
+                              "defaultValue":  "",
+                              "description":  "Application name that client used"
+                          },
+                          {
+                              "name":  "hostname",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  true,
+                              "includeInNotification":  false,
+                              "description":  "Hostname from where the application the client used connected to SQL DB"
+                          },
+                          {
+                              "name":  "connectionId",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false,
+                              "description":  "Optional identifier provided at a connection time by a client."
+                          },
+                          {
+                              "name":  "PID",
+                              "typeName":  "string",
+                              "isOptional":  true,
+                              "cardinality":  "SINGLE",
+                              "valuesMinCount":  0,
+                              "valuesMaxCount":  1,
+                              "isUnique":  false,
+                              "isIndexable":  false,
+                              "includeInNotification":  false,
+                              "description":  "Process id on client."
+                          }
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "query_runs",
+                                          "typeName":  "array\u003cazure_sql_query_run\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "azure_client_connection_sql_query_runs",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

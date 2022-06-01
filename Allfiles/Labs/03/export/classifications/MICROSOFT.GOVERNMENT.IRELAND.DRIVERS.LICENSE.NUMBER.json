@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "276b819c-4373-2989-62c8-97c85df1a7b2",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667185,
+    "updateTime":  1652152667185,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.IRELAND.DRIVERS.LICENSE.NUMBER",
+    "description":  "Ireland Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ireland Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

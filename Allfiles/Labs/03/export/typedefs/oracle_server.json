@@ -1,0 +1,62 @@
+{
+    "category":  "ENTITY",
+    "guid":  "4fea6232-2d58-e17a-0522-15d8c94c1e54",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152679249,
+    "updateTime":  1652152679249,
+    "version":  1,
+    "name":  "oracle_server",
+    "description":  "oracle_server",
+    "typeVersion":  "1.0",
+    "serviceType":  "Oracle",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"oracle://(?\u003cServer\u003e[^/]+)$\",\"qualifiedNameSample\":\"oracle://192.168.56.51\",\"isContainer\":true,\"friendlyName\":\"Oracle Server\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Server\",\"Schema\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"oracle_server\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Server\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "schemas",
+                                          "typeName":  "array\u003coracle_schema\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "oracle_server_schemas",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

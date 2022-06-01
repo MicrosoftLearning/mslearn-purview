@@ -1,0 +1,83 @@
+{
+    "category":  "ENTITY",
+    "guid":  "c230b7c1-2f29-1f78-313e-d3461c9352ac",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152671304,
+    "updateTime":  1652152671304,
+    "version":  1,
+    "name":  "cassandra_view_query",
+    "description":  "cassandra_view_query",
+    "typeVersion":  "1.0",
+    "serviceType":  "Cassandra",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"cassandra://(?\u003cCluster\u003e[^/]+)/(?\u003cKeyspace\u003e[^/]+)/(?\u003cView\u003e[^/]+)/query$\",\"qualifiedNameSample\":\"cassandra://192.168.56.51/myKeyspace/myView/query\",\"isContainer\":false,\"friendlyName\":\"Cassandra View Query\",\"search\":{\"searchBehavior\":\"RelevantSearch\",\"relevantSearch\":{\"relevantRelationships\":[\"cassandra_materialized_view_view_query\"],\"relevantAttributes\":[\"query\"]}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "cassandra_query"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "outputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "process_dataset_outputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "materialized_view",
+                                          "typeName":  "cassandra_materialized_view",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "cassandra_materialized_view_view_query",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "inputs",
+                                          "typeName":  "array\u003cDataSet\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  0,
+                                          "valuesMaxCount":  2147483647,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "dataset_process_inputs",
+                                          "isLegacyAttribute":  true
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

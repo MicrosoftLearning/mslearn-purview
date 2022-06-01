@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "70c3f1b5-8125-0a3f-51f8-63c2bf0b3df7",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667027,
+    "updateTime":  1652152667027,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.GREECE.ID_CARD_NUMBER",
+    "description":  "Greece National ID Card",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Greece National ID Card"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

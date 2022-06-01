@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "a92f39d6-c226-5153-9d63-6ea2793708b3",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667188,
+    "updateTime":  1652152667188,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.MALTA.DRIVERS.LICENSE.NUMBER",
+    "description":  "Malta Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Malta Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

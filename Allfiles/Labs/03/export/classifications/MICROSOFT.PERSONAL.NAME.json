@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "130b2237-a9d7-3fa8-29dc-b9251717b117",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667053,
+    "updateTime":  1652152667053,
+    "version":  1,
+    "name":  "MICROSOFT.PERSONAL.NAME",
+    "description":  "Person\u0027s Name",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Person\u0027s Name"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

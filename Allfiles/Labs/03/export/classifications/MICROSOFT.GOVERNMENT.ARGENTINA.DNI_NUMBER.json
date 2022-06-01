@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "d08bd947-3a3f-ea28-d5b3-c8f1a6f26c8e",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667065,
+    "updateTime":  1652152667065,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ARGENTINA.DNI_NUMBER",
+    "description":  "Argentina National Identity (DNI) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Argentina National Identity (DNI) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

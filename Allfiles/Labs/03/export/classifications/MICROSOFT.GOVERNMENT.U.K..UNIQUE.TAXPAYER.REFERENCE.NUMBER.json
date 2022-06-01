@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b9903a7a-8de9-ccef-19a8-483bfa705cd0",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667100,
+    "updateTime":  1652152667100,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.U.K..UNIQUE.TAXPAYER.REFERENCE.NUMBER",
+    "description":  "U.K. Unique Taxpayer Reference Number (UTR)",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "U.K. Unique Taxpayer Reference Number (UTR)"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

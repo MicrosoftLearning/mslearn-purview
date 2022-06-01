@@ -1,0 +1,54 @@
+{
+    "category":  "ENTITY",
+    "guid":  "5f5d8662-956f-72d7-26d7-9d9164e05e3b",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152697118,
+    "updateTime":  1652152697118,
+    "version":  1,
+    "name":  "xml_type",
+    "description":  "xml_type",
+    "typeVersion":  "1.0",
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Referenceable"
+                   ],
+    "subTypes":  [
+                     "xml_simple_type",
+                     "xml_complex_type"
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "definedElement",
+                                          "typeName":  "xml_element",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "xml_element_type",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

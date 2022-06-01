@@ -1,0 +1,93 @@
+{
+    "category":  "ENTITY",
+    "guid":  "254d9716-8f58-d8a0-e157-38cba6e2bd20",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152701673,
+    "updateTime":  1652152701673,
+    "version":  1,
+    "name":  "bigquery_dataset",
+    "description":  "bigquery_dataset",
+    "typeVersion":  "1.0",
+    "serviceType":  "Google BigQuery",
+    "options":  {
+                    "purviewEntityExtDef":  "{\"qualifiedNamePattern\":\"bigquery://(?\u003cProject\u003e[^/]+)/(?\u003cDataset\u003e[^/]+)$\",\"qualifiedNameSample\":\"bigquery://sampleproject/sampledataset\",\"isContainer\":true,\"friendlyName\":\"Google BigQuery Dataset\",\"search\":{\"searchBehavior\":\"StandardSearch\",\"standardSearch\":{\"taxonomy\":{\"source\":\"QualifiedName\",\"assetTaxonomy\":[\"Project\",\"Dataset\"]},\"browse\":{\"source\":\"QualifiedName\",\"browseHierarchy\":[{\"entityTypeName\":\"bigquery_project\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Project\"},{\"entityTypeName\":\"bigquery_dataset\",\"isPath\":false,\"isRequired\":true,\"componentName\":\"Dataset\"}]}}}}"
+                },
+    "lastModifiedTS":  "1",
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "Asset"
+                   ],
+    "subTypes":  [
+
+                 ],
+    "relationshipAttributeDefs":  [
+                                      {
+                                          "name":  "tables",
+                                          "typeName":  "array\u003cbigquery_table\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "bigquery_dataset_tables",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "project",
+                                          "typeName":  "bigquery_project",
+                                          "isOptional":  false,
+                                          "cardinality":  "SINGLE",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "bigquery_project_datasets",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "meanings",
+                                          "typeName":  "array\u003cAtlasGlossaryTerm\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "relationshipTypeName":  "AtlasGlossarySemanticAssignment",
+                                          "isLegacyAttribute":  false
+                                      },
+                                      {
+                                          "name":  "views",
+                                          "typeName":  "array\u003cbigquery_view\u003e",
+                                          "isOptional":  true,
+                                          "cardinality":  "SET",
+                                          "valuesMinCount":  -1,
+                                          "valuesMaxCount":  -1,
+                                          "isUnique":  false,
+                                          "isIndexable":  false,
+                                          "includeInNotification":  false,
+                                          "constraints":  [
+                                                              {
+                                                                  "type":  "ownedRef"
+                                                              }
+                                                          ],
+                                          "relationshipTypeName":  "bigquery_dataset_views",
+                                          "isLegacyAttribute":  false
+                                      }
+                                  ],
+    "businessAttributeDefs":  {
+
+                              }
+}

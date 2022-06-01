@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "b136eddd-5417-9171-ad41-6cc31795ccf8",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667176,
+    "updateTime":  1652152667176,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.SPAIN.PASSPORT.NUMBER",
+    "description":  "Spain Passport Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Spain Passport Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

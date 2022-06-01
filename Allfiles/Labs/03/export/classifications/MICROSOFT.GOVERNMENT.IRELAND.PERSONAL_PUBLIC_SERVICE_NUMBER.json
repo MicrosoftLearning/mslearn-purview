@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "f2094e90-a993-f171-348e-15980f797ca1",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667067,
+    "updateTime":  1652152667067,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.IRELAND.PERSONAL_PUBLIC_SERVICE_NUMBER",
+    "description":  "Ireland Personal Public Service (PPS) Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Ireland Personal Public Service (PPS) Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}

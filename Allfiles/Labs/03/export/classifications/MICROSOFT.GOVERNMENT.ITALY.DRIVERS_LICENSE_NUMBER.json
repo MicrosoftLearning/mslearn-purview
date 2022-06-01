@@ -1,0 +1,27 @@
+{
+    "category":  "CLASSIFICATION",
+    "guid":  "e2fcb966-cf78-ab46-bc0f-2aaaf51fad74",
+    "createdBy":  "admin",
+    "updatedBy":  "admin",
+    "createTime":  1652152667028,
+    "updateTime":  1652152667028,
+    "version":  1,
+    "name":  "MICROSOFT.GOVERNMENT.ITALY.DRIVERS_LICENSE_NUMBER",
+    "description":  "Italy Driver\u0027s License Number",
+    "typeVersion":  "1.0",
+    "options":  {
+                    "displayName":  "Italy Driver\u0027s License Number"
+                },
+    "attributeDefs":  [
+
+                      ],
+    "superTypes":  [
+                       "MICROSOFT.BASE.CLASSIFICATION"
+                   ],
+    "entityTypes":  [
+
+                    ],
+    "subTypes":  [
+
+                 ]
+}
