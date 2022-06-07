@@ -9,8 +9,6 @@ $suffix = GetSuffix;
 $accountName = "main$suffix";
 $rsGroupName = "msftpurview-$suffix";
 
-Connect-AzAccount -UseDeviceAuthentication
-
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
 $global:logindomain = (Get-AzContext).Tenant.Id;
@@ -104,6 +102,3 @@ $global:token = GetToken "https://purview.azure.net" "purview";
 
 #ensure collection admin present
 AddRootCollectionAdmin $objectId;
-
-#import all the exported objects
-ImportObjects;

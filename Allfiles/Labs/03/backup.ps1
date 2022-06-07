@@ -9,9 +9,6 @@ $suffix = GetSuffix;
 $accountName = "main$suffix";
 $resourceGroupName = "msftpurview-$suffix";
 
-
-Connect-AzAccount -UseDeviceAuthentication
-
 $purviewName = "main$suffix";
 $apiVersion = "2022-02-01-preview";
 

@@ -6,10 +6,6 @@ $exportPath = "$labPath/export";
 
 $suffix = GetSuffix;
 
-Connect-AzAccount -UseDeviceAuthentication;
-
-Select-AzSubscription "{SUBSCRIPTION_NAME}"
-
 $purviewName = "main$suffix";
 $apiVersion = "2022-02-01-preview";
 $resourceGroupName = "msftpurview-$suffix";
