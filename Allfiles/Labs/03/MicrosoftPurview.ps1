@@ -1001,7 +1001,7 @@ function AddRootCollectionAdmin($objectId)
     $post = @{};
     $post.objectid = $objectId;
 
-    $data = Invoke-RestMethod -Method POST -Uri $url -Headers $mgmtheaders -Body $(ConvertTo-Json $post);
+    $data = Invoke-RestMethod -Method POST -Uri $url -Headers $mgmtheaders  -Body $(ConvertTo-Json $post);
 }
 
 function GetSuffix()

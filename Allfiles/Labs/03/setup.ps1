@@ -114,6 +114,11 @@ $objectId = $user.id;
 $global:mgmtToken = GetToken "https://management.azure.com" "mgmt";
 $global:token = GetToken "https://purview.azure.net" "purview";
 
+$global:mgmtheaders = @{
+        Authorization="Bearer $mgmttoken"
+        "Content-Type"="application/json"
+    }
+
 #ensure collection admin present
 AddRootCollectionAdmin $objectId;
 
