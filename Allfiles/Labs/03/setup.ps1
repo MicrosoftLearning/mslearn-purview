@@ -28,8 +28,8 @@ $rooturl = "https://$purviewName.purview.azure.com";
 New-AzResourceGroup -Name $resourceGroupName -Location $location -force;
 
 #run the deployment...
-$templatesFile = "template.json"
-$parametersFile = "parameters.json"
+$templatesFile = "$labPath/template.json"
+$parametersFile = "$labPath/parameters.json"
 
 $content = Get-Content -Path $parametersFile -raw;
 $content = $content.Replace("GET-SUFFIX",$suffix);
@@ -113,6 +113,11 @@ $objectId = $user.id;
 #get tokens
 $global:mgmtToken = GetToken "https://management.azure.com" "mgmt";
 $global:token = GetToken "https://purview.azure.net" "purview";
+
+$global:mgmtheaders = @{
+        Authorization="Bearer $mgmttoken"
+        "Content-Type"="application/json"
+    }
 
 #ensure collection admin present
 AddRootCollectionAdmin $objectId;
