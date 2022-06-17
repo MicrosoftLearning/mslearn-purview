@@ -1,6 +1,10 @@
 #include common
 . ./MicrosoftPurview.ps1
 
+Connect-AzAccount -UseDeviceAuthentication;
+
+SelectSubscription;
+
 $labPath = "$home/msftpurview/Allfiles/Labs/03";
 $exportPath = "$labPath/export";
 

@@ -1015,7 +1015,7 @@
         {
             "type": "Microsoft.Purview/accounts/privateEndpointConnections",
             "apiVersion": "2021-07-01",
-            "name": "[concat('main', variables('uniqueSuffix'), '/account-c2774400-8195-4938-9f33-3e37589455ad')]",
+            "name": "[concat('main', variables('uniqueSuffix'), '/account')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Purview/accounts', concat('main', variables('uniqueSuffix')))]",
                 "[resourceId('Microsoft.Network/privateEndpoints', 'account')]"
@@ -1033,7 +1033,7 @@
         {
             "type": "Microsoft.Purview/accounts/privateEndpointConnections",
             "apiVersion": "2021-07-01",
-            "name": "[concat('main', variables('uniqueSuffix'), '/portal-db1549b8-bfd6-48ac-b593-b05e0f39ab7c')]",
+            "name": "[concat('main', variables('uniqueSuffix'), '/portal')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Purview/accounts', concat('main', variables('uniqueSuffix')))]",
                 "[resourceId('Microsoft.Network/privateEndpoints', 'portal')]"

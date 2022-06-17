@@ -39,10 +39,6 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     ```powershell
     cd msftpurview/Allfiles/Labs/03
 
-    Connect-AzAccount
-
-    Select-AzSubscription "SubscriptionID"
-
     ./setup.ps1
     ```
 
