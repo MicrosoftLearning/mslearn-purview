@@ -2,6 +2,44 @@
 
 #https://atlas.apache.org/api/v2/index.html
 
+function SelectSubscription()
+{
+    #select a subscription
+    $subs = Get-AzSubscription | Select-Object
+    if($subs.GetType().IsArray -and $subs.length -gt 1){
+            Write-Host "You have multiple Azure subscriptions - please select the one you want to use:"
+            for($i = 0; $i -lt $subs.length; $i++)
+            {
+                    Write-Host "[$($i)]: $($subs[$i].Name) (ID = $($subs[$i].Id))"
+            }
+            $selectedIndex = -1
+            $selectedValidIndex = 0
+            while ($selectedValidIndex -ne 1)
+            {
+                    $enteredValue = Read-Host("Enter 0 to $($subs.Length - 1)")
+                    if (-not ([string]::IsNullOrEmpty($enteredValue)))
+                    {
+                        if ([int]$enteredValue -in (0..$($subs.Length - 1)))
+                        {
+                            $selectedIndex = [int]$enteredValue
+                            $selectedValidIndex = 1
+                        }
+                        else
+                        {
+                            Write-Output "Please enter a valid subscription number."
+                        }
+                    }
+                    else
+                    {
+                        Write-Output "Please enter a valid subscription number."
+                    }
+            }
+            $selectedSub = $subs[$selectedIndex].Id
+            Select-AzSubscription -SubscriptionId $selectedSub
+            az account set --subscription $selectedSub
+    }
+}
+
 function Check-HttpRedirect($uri)
 {
     $httpReq = [system.net.HttpWebRequest]::Create($uri)
@@ -545,8 +583,6 @@ function GetToken($res, $tokenType)
     if (!$item -or $item.ExpiresOn -lt [datetime]::utcNow)
     {
         #login
-        Connect-AzAccount;
-
         $context = Get-AzContext;
         $global:loginDomain = $context.Tenant.Id;
 
@@ -960,7 +996,7 @@ function ImportRootCollectionAdmins()
 #unless this works via import of metadatapolicy?
 function AddRootCollectionAdmin($objectId)
 {
-    $url = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Purview/accounts/$purviewName/addRootCollectionAdmin?api-version=2021-07-01"
+    $url = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Purview/accounts/$purviewName/addRootCollectionAdmin?api-version=2021-12-01"
 
     $post = @{};
     $post.objectid = $objectId;
@@ -980,3 +1016,138 @@ function GetSuffix()
     return $suffix.tolower();
 }
 
+function Create-DataLakeLinkedService {
+    
+    param(
+    [parameter(Mandatory=$true)]
+    [String]
+    $TemplatesPath,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $WorkspaceName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Name,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Key
+    )
+
+    $itemTemplate = Get-Content -Path "$($TemplatesPath)/data_lake_linked_service.json"
+    $item = $itemTemplate.Replace("#LINKED_SERVICE_NAME#", $Name).Replace("#STORAGE_ACCOUNT_NAME#", $Name).Replace("#STORAGE_ACCOUNT_KEY#", $Key)
+
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/${"main$suffix"}/linkedservices/$($name)?api-version=2018-06-01";
+    
+    $result = Invoke-RestMethod  -Uri $uri -Method PUT -Body $item -Headers @{ Authorization="Bearer $mgmtToken" } -ContentType "application/json"
+    
+    return $result
+}
+
+function Create-BlobStorageLinkedService {
+    
+    param(
+    [parameter(Mandatory=$true)]
+    [String]
+    $TemplatesPath,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $WorkspaceName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Name,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Key
+    )
+
+    $itemTemplate = Get-Content -Path "$($TemplatesPath)/blob_storage_linked_service.json"
+    $item = $itemTemplate.Replace("#LINKED_SERVICE_NAME#", $Name).Replace("#STORAGE_ACCOUNT_NAME#", $Name).Replace("#STORAGE_ACCOUNT_KEY#", $Key)
+
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/$workspaceName/linkedservices/$($name)?api-version=2018-06-01";
+    
+    $result = Invoke-RestMethod  -Uri $uri -Method PUT -Body $item -Headers @{ Authorization="Bearer $mgmtToken" } -ContentType "application/json"
+    
+    return $result
+}
+
+function Create-Dataset {
+    
+    param(
+    [parameter(Mandatory=$true)]
+    [String]
+    $DatasetsPath,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $WorkspaceName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $FileName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $TemplateFileName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Name,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $LinkedServiceName
+    )
+
+    $itemTemplate = Get-Content -Path "$($DatasetsPath)/$($TemplateFileName).json"
+    $item = $itemTemplate.Replace("#LINKED_SERVICE_NAME#", $LinkedServiceName).Replace("#FILE_NAME#", $filename).Replace("#DATASET_NAME#", $name)
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/$workspaceName/datasets/$($Name)?api-version=2018-06-01"
+
+    $result = Invoke-RestMethod  -Uri $uri -Method PUT -Body $item -Headers @{ Authorization="Bearer $mgmtToken" } -ContentType "application/json"
+    
+    return $result
+}
+
+function Create-Pipeline {
+    
+    param(
+    [parameter(Mandatory=$true)]
+    [String]
+    $PipelinesPath,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $WorkspaceName,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $Name,
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $FileName,
+
+    [parameter(Mandatory=$false)]
+    [Hashtable]
+    $Parameters = $null
+    )
+
+    $item = Get-Content -Path "$($PipelinesPath)/$($FileName).json"
+    
+    if ($Parameters -ne $null) {
+        foreach ($key in $Parameters.Keys) {
+            $item = $item.Replace("#$($key)#", $Parameters[$key])
+        }
+    }
+
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/$workspaceName/pipelines/$($Name)?api-version=2018-06-01"
+
+    $result = Invoke-RestMethod  -Uri $uri -Method PUT -Body $item -Headers @{ Authorization="Bearer $mgmtToken" } -ContentType "application/json"
+    
+    return $result
+}

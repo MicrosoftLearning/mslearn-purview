@@ -32,17 +32,14 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     ```powershell
     rm -r msftpurview -f
     git clone https://github.com/MicrosoftLearning/mslearn-purview msftpurview
-
-    git clone https://github.com/solliancenet/LP_AZ_microsoft-purview-public msftpurview
     ```
-
-    > TODO - change to MS repo.
 
 5. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.ps1** script it contains:
 
     ```powershell
     cd msftpurview/Allfiles/Labs/03
-    ./Setup.ps1
+
+    ./setup.ps1
     ```
 
 6. Wait for the script to complete - this typically takes around 15 minutes, but in some cases may take longer.

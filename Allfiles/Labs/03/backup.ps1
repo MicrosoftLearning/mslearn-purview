@@ -1,6 +1,10 @@
 #include common
 . ./MicrosoftPurview.ps1
 
+Connect-AzAccount -UseDeviceAuthentication;
+
+SelectSubscription
+
 $labPath = "$home/msftpurview/Allfiles/Labs/03";
 $exportPath = "$labPath/export";
 
@@ -8,9 +12,6 @@ $location = "eastus";
 $suffix = GetSuffix;
 $accountName = "main$suffix";
 $resourceGroupName = "msftpurview-$suffix";
-
-
-Connect-AzAccount -UseDeviceAuthentication
 
 $purviewName = "main$suffix";
 $apiVersion = "2022-02-01-preview";

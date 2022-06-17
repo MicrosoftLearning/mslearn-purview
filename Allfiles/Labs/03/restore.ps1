@@ -1,14 +1,14 @@
 #include common
 . ./MicrosoftPurview.ps1
 
+Connect-AzAccount -UseDeviceAuthentication;
+
+SelectSubscription;
+
 $labPath = "$home/msftpurview/Allfiles/Labs/03";
 $exportPath = "$labPath/export";
 
 $suffix = GetSuffix;
-
-Connect-AzAccount -UseDeviceAuthentication;
-
-Select-AzSubscription "{SUBSCRIPTION_NAME}"
 
 $purviewName = "main$suffix";
 $apiVersion = "2022-02-01-preview";
