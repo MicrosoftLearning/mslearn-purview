@@ -79,7 +79,6 @@ else
 
 #upload some files
 #$publicDataUrl = "https://solliancepublicdata.blob.core.windows.net/"
-
 $publicDataUrl = $filesPath;
 $dataLakeAccountName = "storage$suffix";
 $dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/"
@@ -125,3 +124,17 @@ $global:mgmtheaders = @{
 
 #ensure collection admin present
 AddRootCollectionAdmin $objectId;
+
+#add the linked service
+Create-BlobStorageLinkedService -templatesPath $templatesPath -workspaceName "main$suffix" -name $dataLakeStorageAccountName -key $dataLakeStorageAccountKey
+
+#add the data sets
+$LinkedServiceName = $dataLakeStorageAccountName;
+#input
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -templateName "wwi02_poc_customer_adls.json" -filename "customerinfo.csv" -name "customer_in" -linkedservicename $LinkedServiceName
+
+#output
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -templateName "wwi02_poc_customer_adls.json" -filename "customerinfo-modified.csv" -name "customer_out" -linkedservicename $LinkedServiceName
+
+#add the pipeline
+Create-Pipeline -pipelinespath $PipelinesPath -workspaceName "main$suffix" -Name "customer_pipeline" -filename "import_poc_customer_data" -parameters $null
