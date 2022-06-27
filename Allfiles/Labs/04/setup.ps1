@@ -1,12 +1,14 @@
 . .\automation.ps1
 
+Select-Subscription
+
 $location = "eastus";
 $suffix = GetRandomString -Length 10
 $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
 
 $resourceGroupName = "msftpurview-$suffix"
-$aadUserName = (Get-AzContext).Account.Id
-$aadUserId = (Get-AzADUser -UserPrincipalName (Get-AzContext).Account).Id
+$aadUserName = (az ad signed-in-user show --query userPrincipalName -o tsv)
+$aadUserId = (az ad signed-in-user show --query id -o tsv)
 
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
@@ -18,6 +20,7 @@ $datasetsPath = ".\datasets"
 $dataflowsPath = ".\dataflows"
 $pipelinesPath = ".\pipelines"
 $sqlScriptsPath = ".\sql"
+$dataPath = ".\data"
 
 #create the resource group
 New-AzResourceGroup -Name $resourceGroupName -Location $location;
@@ -35,39 +38,7 @@ $parametersContent = Get-Content -Path $parametersFileTemplate -Raw
 $parametersContent = $parametersContent.Replace("##UNIQUE_SUFFIX##", $suffix).Replace("##SQL_ADMINISTRATOR_LOGIN_PASSWORD##", $sqlAdminPassword)
 Set-Content -Path $parametersFile -Value $parametersContent
 
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFile -TemplateParameterFile "$parametersFile";
-
-if ([System.Environment]::OSVersion.Platform -eq "Unix")
-{
-        $azCopyLink = Check-HttpRedirect "https://aka.ms/downloadazcopy-v10-linux"
-
-        if (!$azCopyLink)
-        {
-                $azCopyLink = "https://azcopyvnext.azureedge.net/release20200709/azcopy_linux_amd64_10.5.0.tar.gz"
-        }
-
-        Invoke-WebRequest $azCopyLink -OutFile "azCopy.tar.gz"
-        tar -xf "azCopy.tar.gz"
-        $azCopyCommand = (Get-ChildItem -Path ".\" -Recurse azcopy).Directory.FullName
-        cd $azCopyCommand
-        chmod +x azcopy
-        cd ..
-        $azCopyCommand += "\azcopy"
-}
-else
-{
-        $azCopyLink = Check-HttpRedirect "https://aka.ms/downloadazcopy-v10-windows"
-
-        if (!$azCopyLink)
-        {
-                $azCopyLink = "https://azcopyvnext.azureedge.net/release20200501/azcopy_windows_amd64_10.4.3.zip"
-        }
-
-        Invoke-WebRequest $azCopyLink -OutFile "azCopy.zip"
-        Expand-Archive "azCopy.zip" -DestinationPath ".\" -Force
-        $azCopyCommand = (Get-ChildItem -Path ".\" -Recurse azcopy.exe).Directory.FullName
-        $azCopyCommand += "\azcopy"
-}
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFile -TemplateParameterFile "$parametersFile"
 
 # Get authentication tokens for Azure Management and Microsoft Purview REST APIs
 $global:managementToken = GetToken "https://management.azure.com" "mgmt"

@@ -169,7 +169,7 @@
       "properties": {
           "cloudConnectors": {},
           "publicNetworkAccess": "Enabled",
-          "managedResourceGroupName": "[concat(resourceGroup().location, '-purview-internal')]"
+          "managedResourceGroupName": "[concat(resourceGroup().name, '-purview-internal')]"
       }
     },
     {
@@ -194,7 +194,7 @@
         },
         "sqlAdministratorLogin": "[variables('sqlAdministratorLogin')]",
         "sqlAdministratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
-        "managedResourceGroupName": "[concat(resourceGroup().location, '-synapse-internal')]",
+        "managedResourceGroupName": "[concat(resourceGroup().name, '-synapse-internal')]",
         "purviewConfiguration": {
           "purviewResourceId": "[resourceId('Microsoft.Purview/accounts', variables('purviewAccountName'))]"
       }

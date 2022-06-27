@@ -1,12 +1,14 @@
 . .\automation.ps1
 
+Select-Subscription
+
 $location = "eastus";
 $suffix = GetRandomString -Length 10
 $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
 
 $resourceGroupName = "msftpurview-$suffix"
-$aadUserName = (Get-AzContext).Account.Id
-$aadUserId = (Get-AzADUser -UserPrincipalName (Get-AzContext).Account).Id
+$aadUserName = (az ad signed-in-user show --query userPrincipalName -o tsv)
+$aadUserId = (az ad signed-in-user show --query objectId -o tsv)
 
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
@@ -18,9 +20,10 @@ $datasetsPath = ".\datasets"
 $dataflowsPath = ".\dataflows"
 $pipelinesPath = ".\pipelines"
 $sqlScriptsPath = ".\sql"
+$dataPath = ".\data"
 
 #create the resource group
-New-AzResourceGroup -Name $resourceGroupName -Location $location;
+New-AzResourceGroup -Name $resourceGroupName -Location $location
 
 #run the deployment...
 $templateFileTemplate = "template.json"
@@ -35,39 +38,9 @@ $parametersContent = Get-Content -Path $parametersFileTemplate -Raw
 $parametersContent = $parametersContent.Replace("##UNIQUE_SUFFIX##", $suffix).Replace("##SQL_ADMINISTRATOR_LOGIN_PASSWORD##", $sqlAdminPassword)
 Set-Content -Path $parametersFile -Value $parametersContent
 
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFile -TemplateParameterFile "$parametersFile";
-
-if ([System.Environment]::OSVersion.Platform -eq "Unix")
-{
-        $azCopyLink = Check-HttpRedirect "https://aka.ms/downloadazcopy-v10-linux"
-
-        if (!$azCopyLink)
-        {
-                $azCopyLink = "https://azcopyvnext.azureedge.net/release20200709/azcopy_linux_amd64_10.5.0.tar.gz"
-        }
-
-        Invoke-WebRequest $azCopyLink -OutFile "azCopy.tar.gz"
-        tar -xf "azCopy.tar.gz"
-        $azCopyCommand = (Get-ChildItem -Path ".\" -Recurse azcopy).Directory.FullName
-        cd $azCopyCommand
-        chmod +x azcopy
-        cd ..
-        $azCopyCommand += "\azcopy"
-}
-else
-{
-        $azCopyLink = Check-HttpRedirect "https://aka.ms/downloadazcopy-v10-windows"
-
-        if (!$azCopyLink)
-        {
-                $azCopyLink = "https://azcopyvnext.azureedge.net/release20200501/azcopy_windows_amd64_10.4.3.zip"
-        }
-
-        Invoke-WebRequest $azCopyLink -OutFile "azCopy.zip"
-        Expand-Archive "azCopy.zip" -DestinationPath ".\" -Force
-        $azCopyCommand = (Get-ChildItem -Path ".\" -Recurse azcopy.exe).Directory.FullName
-        $azCopyCommand += "\azcopy"
-}
+Write-Information "Deploying ARM template..."
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFile -TemplateParameterFile "$parametersFile"
+Write-Information "Deployment complete."
 
 # Get authentication tokens for Azure Management and Microsoft Purview REST APIs
 $global:managementToken = GetToken "https://management.azure.com" "mgmt"
@@ -92,48 +65,34 @@ $keyVaultSQLUserSecretName = "SQL-USER-ASA"
 $sqlPoolName = "SQLPool01"
 $integrationRuntimeName = "AzureIntegrationRuntime01"
 
-$publicDataUrl = "https://solliancepublicdata.blob.core.windows.net/"
-$dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/"
-$dataLakeStorageBlobUrl = "https://"+ $dataLakeAccountName + ".blob.core.windows.net/"
-$dataLakeStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $dataLakeAccountName)[0].Value
-$dataLakeContext = New-AzStorageContext -StorageAccountName $dataLakeAccountName -StorageAccountKey $dataLakeStorageAccountKey
-$destinationSasKey = New-AzStorageContainerSASToken -Container "wwi-02" -Context $dataLakeContext -Permission rwdl
-$blobStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $blobStorageAccountName)[0].Value
+# Upload files
+Write-Information "Copying data..."
+$storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $dataLakeAccountName
+$storageContext = $storageAccount.Context
 
-Write-Information "Copying single files from the public data account..."
-$singleFiles = @{
-        customer_info = "wwi-02/customer-info/customerinfo.csv"
-        products = "wwi-02/data-generators/generator-product/generator-product.csv"
-        dates = "wwi-02/data-generators/generator-date.csv"
-        customer = "wwi-02/data-generators/generator-customer.csv"
+Get-ChildItem "./data/generator-date.csv" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "data-generators/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
 
-foreach ($singleFile in $singleFiles.Keys) {
-        $source = $publicDataUrl + $singleFiles[$singleFile]
-        $destination = $dataLakeStorageBlobUrl + $singleFiles[$singleFile] + $destinationSasKey
-        Write-Information "Copying file $($source) to $($destination)"
-        & $azCopyCommand copy $source $destination 
+Get-ChildItem "./data/generator-product.csv" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "data-generators/generator-product/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
 
-Write-Information "Copying sample sales raw data directories from the public data account..."
-
-$dataDirectories = @{
-        salesmall = "wwi-02/sale-small/Year=2019,wwi-02/sale-small/Year=2019/Quarter=Q4"
+Get-ChildItem "./data/sale-small-20191201-snappy.parquet" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "sale-small/Year=2019/Quarter=Q4/Month=12/Day=20191201/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
-
-foreach ($dataDirectory in $dataDirectories.Keys) {
-
-        $vals = $dataDirectories[$dataDirectory].tostring().split(",");
-
-        $source = $publicDataUrl + $vals[1];
-
-        $path = $vals[0];
-
-        $destination = $dataLakeStorageBlobUrl + $path + $destinationSasKey
-        Write-Information "Copying directory $($source) to $($destination)"
-        & $azCopyCommand copy $source $destination --recursive=true
-}
-
 
 Write-Information "Start the $($sqlPoolName) SQL pool if needed."
 
