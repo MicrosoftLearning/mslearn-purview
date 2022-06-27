@@ -55,9 +55,6 @@ $resourceGroupLocation = (Get-AzResourceGroup -Name $resourceGroupName).Location
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
 $global:logindomain = (Get-AzContext).Tenant.Id;
-$global:sqlEndpoint = "$($synapseWorkspaceName).sql.azuresynapse.net"
-$global:sqlUser = "asa.sql.admin"
-$global:sqlPassword = $sqlAdminPassword
 
 $synapseWorkspaceName = "asaworkspace$($uniqueId)"
 $purviewAccountName = "asapurview$($uniqueId)"
@@ -67,6 +64,10 @@ $keyVaultName = "asakeyvault$($uniqueId)"
 $keyVaultSQLUserSecretName = "SQL-USER-ASA"
 $sqlPoolName = "SQLPool01"
 $integrationRuntimeName = "AzureIntegrationRuntime01"
+
+$global:sqlEndpoint = "$($synapseWorkspaceName).sql.azuresynapse.net"
+$global:sqlUser = "asa.sql.admin"
+$global:sqlPassword = $sqlAdminPassword
 
 $dataLakeStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $dataLakeAccountName)[0].Value
 $blobStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $blobStorageAccountName)[0].Value
