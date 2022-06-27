@@ -5,8 +5,8 @@ Connect-AzAccount -UseDeviceAuthentication;
 
 SelectSubscription;
 
-$allFilesPath = "/home/msftpurview/Allfiles";
-$labPath = "/home/msftpurview/Allfiles/Labs";
+$allFilesPath = "$home/msftpurview/Allfiles";
+$labPath = "$allFilesPath/Labs";
 $modulePath = "$labPath/03";
 $exportPath = "$modulePath/export";
 $templatesPath = "$allFilesPath/templates";
@@ -59,7 +59,7 @@ if ([System.Environment]::OSVersion.Platform -eq "Unix")
         
         cd $azCopyCommand;
         chmod +x azcopy;
-        cd $labPath;
+        cd $modulePath;
         $azCopyCommand += "\azcopy";
 }
 else
@@ -97,9 +97,8 @@ Write-Information "Copying single files from the public data account..."
 
 $singleFiles = @{
         customer_info = "wwi-02/customer-info/customerinfo.csv"
-        products = "wwi-02/data-generators/generator-product/generator-product.csv"
+        products = "wwi-02/data-generators/generator-product.csv"
         dates = "wwi-02/data-generators/generator-date.csv"
-        customer = "wwi-02/data-generators/generator-customer.csv"
 }
 
 foreach ($singleFile in $singleFiles.Keys) {

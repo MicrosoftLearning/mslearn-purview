@@ -578,7 +578,10 @@ function GetToken($res, $tokenType)
 {
     $curToken = get-content "$exportPath\token-$($tokenType).json" -Raw -ea SilentlyContinue;
 
-    $item = ConvertFrom-Json $curToken;
+    if ($curToken)
+    {
+        $item = ConvertFrom-Json $curToken -ea SilentlyContinue;
+    }
 
     if (!$item -or $item.ExpiresOn -lt [datetime]::utcNow)
     {
@@ -609,26 +612,37 @@ function ImportObjects($path)
         "Content-Type"="application/json"
     }
 
+    write-host "Importing classification rules"
     ImportClassificationRules;
 
+    write-host "Importing collections"
     ImportCollections;
 
+    write-host "Importing Rule sets"
     ImportRuleSets;
 
+    write-host "Importing key vaults"
     ImportKeyVaultConnections;
 
+    write-host "Importing metadata policy"
     ImportMetadataPolicy;
 
-    ImportTypes;
+    write-host "Importing types"
+    #ImportTypes;
 
+    write-host "Importing resource sets"
     ImportResourceSets;
 
+    write-host "Importing data sources"
     ImportDataSources;
 
+    write-host "Importing glossaries"
     ImportGlossaries;
 
+    write-host "Importing SHIR"
     ImportSHIR;
 
+    write-host "Importing ADF"
     ImportADF;
 }
 
@@ -673,7 +687,7 @@ function ImportCollections
 {
     $items = [System.Io.Directory]::GetFiles("$exportPath/collection");
 
-    $parentColleciton = GetRootCollection;
+    $parentCollection = GetRootCollection;
 
     foreach($item in $items)
     {
@@ -777,7 +791,7 @@ function ImportKeyVaultConnections
 
         $url = "$rootUrl/scan/azureKeyVaults/$($json.Name)?api-version=2022-02-01-preview";
 
-        $data = Invoke-RestMethod -Method PUT -Uri $url -Headers $headers -Body $body;
+        $data = Invoke-RestMethod -Method PUT -Uri $url -Headers $headers -Body $body -ea SilentlyContinue;
 
     }
 
@@ -801,7 +815,7 @@ function ImportMetadataPolicy
 
         $url = "$rootUrl/policyStore/metadataPolicies/$($json.id)?api-version=2021-07-01-preview";
         
-        $data = Invoke-RestMethod -Method PUT -Uri $url -Headers $headers -Body $body;
+        $data = Invoke-RestMethod -Method PUT -Uri $url -Headers $headers -Body $body -ea SilentlyContinue;
 
         #for each policy, ensure that the root collection admin has been added..
         foreach($ar in $json.properties.attributeRules)
@@ -820,6 +834,8 @@ function ImportTypes
 
     foreach($item in $items)
     {
+        write-host "importing $item"
+
         $body = get-content $item -raw;
         
         $json = ConvertFrom-Json $body;
@@ -942,11 +958,15 @@ function ImportADF
         $json = ConvertFrom-Json $body;
 
         $datafactoryname = $json.name;
+
+        write-host $json.id;
+
+        $resourcePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/main$suffix";
         
-        $url = "https://management.azure.com/$($json.id)?api-version=2018-06-01";
+        $url = "https://management.azure.com/$($resourcePath)?api-version=2018-06-01";
 
         $post = @{};
-        $post.id = $json.id;
+        $post.id = $resourcePath;
         $post.tags = @{};
         $post.tags.catalogUri = "https://$purviewName.purview.azure.com/catalog";
         $post.properties = @{};
@@ -1006,11 +1026,13 @@ function AddRootCollectionAdmin($objectId)
 
 function GetSuffix()
 {
-    $suffix = get-content "$exportPath\purviewsuffix.txt";
+    $suffix = get-content "$labPath\purviewsuffix.txt" -ea SilentlyContinue;
 
     if (!$suffix)
     {
         $suffix = -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_});
+
+        add-content "$labPath\purviewsuffix.txt" $suffix;
     }
 
     return $suffix.tolower();
@@ -1150,4 +1172,31 @@ function Create-Pipeline {
     $result = Invoke-RestMethod  -Uri $uri -Method PUT -Body $item -Headers @{ Authorization="Bearer $mgmtToken" } -ContentType "application/json"
     
     return $result
+}
+
+function ParseValue($line, $startToken, $endToken)
+{
+    if ($startToken -eq $null)
+    {
+        return "";
+    }
+
+    if ($startToken -eq "")
+    {
+        return $line.substring(0, $line.indexof($endtoken));
+    }
+    else
+    {
+        try
+        {
+            $rtn = $line.substring($line.indexof($starttoken));
+            return $rtn.substring($startToken.length, $rtn.indexof($endToken, $startToken.length) - $startToken.length).replace("`n","").replace("`t","");
+        }
+        catch [System.Exception]
+        {
+            $message = "Could not find $starttoken"
+            #write-host $message -ForegroundColor Yellow
+        }
+    }
+
 }

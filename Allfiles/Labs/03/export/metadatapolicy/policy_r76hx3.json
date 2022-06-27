@@ -1,7 +1,7 @@
 {
     "name":  "policy_r76hx3",
-    "id":  "96e54406-11ab-465a-bdb7-a8211b7831ee",
-    "version":  1,
+    "id":  "604157e8-a064-45b9-a0aa-c3551bac1f74",
+    "version":  17,
     "properties":  {
                        "description":  "",
                        "decisionRules":  [
@@ -44,9 +44,9 @@
                                                                        ],
                                                                        [
                                                                            {
-                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator:main-otijt",
+                                                                               "fromRule":  "purviewmetadatarole_builtin_collection-administrator:mainacdt33qj4bc4k",
                                                                                "attributeName":  "derived.purview.permission",
-                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator:main-otijt"
+                                                                               "attributeValueIncludes":  "purviewmetadatarole_builtin_collection-administrator:mainacdt33qj4bc4k"
                                                                            }
                                                                        ]
                                                                    ]
@@ -65,9 +65,9 @@
                                                                        ],
                                                                        [
                                                                            {
-                                                                               "fromRule":  "permission:main-otijt",
+                                                                               "fromRule":  "permission:mainacdt33qj4bc4k",
                                                                                "attributeName":  "derived.purview.permission",
-                                                                               "attributeValueIncludes":  "permission:main-otijt"
+                                                                               "attributeValueIncludes":  "permission:mainacdt33qj4bc4k"
                                                                            }
                                                                        ]
                                                                    ]
@@ -77,6 +77,6 @@
                                           "type":  "CollectionReference",
                                           "referenceName":  "r76hx3"
                                       },
-                       "parentCollectionName":  "main-otijt"
+                       "parentCollectionName":  "mainacdt33qj4bc4k"
                    }
 }
