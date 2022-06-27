@@ -1031,6 +1031,8 @@ function GetSuffix()
     if (!$suffix)
     {
         $suffix = -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_});
+
+        add-content "$labPath\purviewsuffix.txt" $suffix;
     }
 
     return $suffix.tolower();
