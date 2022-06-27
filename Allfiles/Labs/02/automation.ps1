@@ -111,12 +111,8 @@ function GetRandomString() {
 
 function GetToken($res, $tokenType)
 {
-    $context = Get-AzContext;
-    $global:loginDomain = $context.Tenant.Id;
-    $clientId = "1950a258-227b-4e31-a9cf-717495945fc2";
-    $item = Get-AzAccessToken -ResourceUrl $res;
-    
-    return $item.token;
+    $token = (az account get-access-token --resource=$res --query accessToken --output tsv)
+    return $token;
 }
 
 function Wait-ForOperation {
