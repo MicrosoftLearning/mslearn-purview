@@ -136,3 +136,6 @@ Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -Templat
 
 #add the pipeline
 Create-Pipeline -pipelinespath $PipelinesPath -workspaceName "main$suffix" -Name "customer_pipeline" -filename "import_poc_customer_data" -parameters $null
+
+#create the linkage with ADF
+ImportADF_DoWork $resourceGroupName "main$suffix";
