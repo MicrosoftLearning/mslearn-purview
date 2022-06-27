@@ -1,5 +1,7 @@
 . .\automation.ps1
 
+$InformationPreference = "Continue"
+
 Select-Subscription
 
 $location = "eastus";
@@ -9,6 +11,7 @@ $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
 $resourceGroupName = "msftpurview-$suffix"
 $aadUserName = (az ad signed-in-user show --query userPrincipalName -o tsv)
 $aadUserId = (az ad signed-in-user show --query objectId -o tsv)
+Write-Information "AAD User: $aadUserName"
 
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
