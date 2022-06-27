@@ -319,6 +319,7 @@ function Execute-SQLScriptFile {
     if ($UseAPI) {
         Execute-SQLQuery -WorkspaceName $WorkspaceName -SQLPoolName $SQLPoolName -SQLQuery $sqlQuery -ForceReturn $ForceReturn
     } else {
+        Write-Information "Executing SQL script file $($FileName) on server $($global:sqlEndpoint), database $($SQLPoolName), user $($global:sqlUser)..."
         if ($ForceReturn) {
             Invoke-SqlCmd -Query $sqlQuery -ServerInstance $global:sqlEndpoint -Database $SQLPoolName -Username $global:sqlUser -Password $global:sqlPassword
             #& sqlcmd -S $sqlEndpoint -d $sqlPoolName -U $userName -P $password -G -I -Q $sqlQuery
@@ -677,7 +678,7 @@ function Add-PurviewRoleMember()
         "Workflow admins" = "purviewmetadatarole_builtin_workflow-administrator:$($purviewAccountName)"
     }
 
-    $purviewPolicy = Get-MetadataPolicy -AccountName $AccountName
+    $purviewPolicy = Get-PurviewMetadataPolicy -AccountName $AccountName
     
     foreach ($attributeRule in $purviewPolicy.properties.attributeRules) {
         if ($attributeRule.name -eq $purviewRoles[$RoleName]) {
