@@ -78,8 +78,6 @@ else
 }
 
 #upload some files
-#$publicDataUrl = "https://solliancepublicdata.blob.core.windows.net/"
-
 $publicDataUrl = $filesPath;
 $dataLakeAccountName = "storage$suffix";
 $dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/"
