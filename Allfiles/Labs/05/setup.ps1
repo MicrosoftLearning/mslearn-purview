@@ -1,18 +1,18 @@
-#include common
-. ./MicrosoftPurview.ps1
-
 Connect-AzAccount -UseDeviceAuthentication;
 
 SelectSubscription;
 
-$allFilesPath = "/home/msftpurview/Allfiles";
-$labPath = "/home/msftpurview/Allfiles/Labs";
-$modulePath = "$labPath/03";
+$allFilesPath = "$home/msftpurview/Allfiles";
+$labPath = "$home/msftpurview/Allfiles/Labs";
+$modulePath = "$labPath/05";
 $exportPath = "$modulePath/export";
-$templatesPath = "$allFilesPath/templates";
-$dataSetsPath = "$allFilesPath/datasets";
-$pipelinesPath = "$allFilesPath/pipelines";
+$templatesPath = "$labPath/templates";
+$dataSetsPath = "$labPath/datasets";
+$pipelinesPath = "$labPath/pipelines";
 $filesPath = "$labPath/files/";
+
+#include common functions
+. $labPath/common/MicrosoftPurview.ps1
 
 $location = "eastus";
 $suffix = GetSuffix;
@@ -59,7 +59,7 @@ if ([System.Environment]::OSVersion.Platform -eq "Unix")
         
         cd $azCopyCommand;
         chmod +x azcopy;
-        cd $labPath;
+        cd $modulePath;
         $azCopyCommand += "\azcopy";
 }
 else
@@ -78,7 +78,6 @@ else
 }
 
 #upload some files
-#$publicDataUrl = "https://solliancepublicdata.blob.core.windows.net/"
 $publicDataUrl = $filesPath;
 $dataLakeAccountName = "storage$suffix";
 $dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/"
@@ -96,9 +95,8 @@ Write-Information "Copying single files from the public data account..."
 
 $singleFiles = @{
         customer_info = "wwi-02/customer-info/customerinfo.csv"
-        products = "wwi-02/data-generators/generator-product/generator-product.csv"
+        products = "wwi-02/data-generators/generator-product.csv"
         dates = "wwi-02/data-generators/generator-date.csv"
-        customer = "wwi-02/data-generators/generator-customer.csv"
 }
 
 foreach ($singleFile in $singleFiles.Keys) {
@@ -126,15 +124,15 @@ $global:mgmtheaders = @{
 AddRootCollectionAdmin $objectId;
 
 #add the linked service
-Create-BlobStorageLinkedService -templatesPath $templatesPath -workspaceName "main$suffix" -name $dataLakeStorageAccountName -key $dataLakeStorageAccountKey
+Create-BlobStorageLinkedService -templatesPath $templatesPath -workspaceName "main$suffix" -name $dataLakeAccountName -key $dataLakeStorageAccountKey
 
 #add the data sets
-$LinkedServiceName = $dataLakeStorageAccountName;
+$LinkedServiceName = $dataLakeAccountName;
 #input
-Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -templateName "wwi02_poc_customer_adls.json" -filename "customerinfo.csv" -name "customer_in" -linkedservicename $LinkedServiceName
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls" -filename "customerinfo.csv" -name "customer_in" -linkedservicename $LinkedServiceName
 
 #output
-Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -templateName "wwi02_poc_customer_adls.json" -filename "customerinfo-modified.csv" -name "customer_out" -linkedservicename $LinkedServiceName
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls" -filename "customerinfo-modified.csv" -name "customer_out" -linkedservicename $LinkedServiceName
 
 #add the pipeline
 Create-Pipeline -pipelinespath $PipelinesPath -workspaceName "main$suffix" -Name "customer_pipeline" -filename "import_poc_customer_data" -parameters $null
