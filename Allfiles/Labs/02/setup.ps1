@@ -10,7 +10,7 @@ $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
 
 $resourceGroupName = "msftpurview-$suffix"
 $aadUserName = (az ad signed-in-user show --query userPrincipalName -o tsv)
-$aadUserId = (az ad signed-in-user show --query objectId -o tsv)
+$aadUserId = (az ad signed-in-user show --query id -o tsv)
 Write-Information "AAD User: $aadUserId"
 
 $subscriptionId = (Get-AzContext).Subscription.Id
