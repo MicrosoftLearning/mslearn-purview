@@ -5,8 +5,8 @@ Connect-AzAccount -UseDeviceAuthentication;
 
 SelectSubscription;
 
-$allFilesPath = "/home/msftpurview/Allfiles";
-$labPath = "/home/msftpurview/Allfiles/Labs";
+$allFilesPath = "$home/msftpurview/Allfiles";
+$labPath = "$allFilesPath/Labs";
 $modulePath = "$labPath/03";
 $exportPath = "$modulePath/export";
 $templatesPath = "$allFilesPath/templates";

@@ -1026,7 +1026,7 @@ function AddRootCollectionAdmin($objectId)
 
 function GetSuffix()
 {
-    $suffix = get-content "$exportPath\purviewsuffix.txt" -ea SilentlyContinue;
+    $suffix = get-content "$labPath\purviewsuffix.txt" -ea SilentlyContinue;
 
     if (!$suffix)
     {
