@@ -576,7 +576,7 @@ function ExportObject($type, $obj, $id)
 
 function GetToken($res, $tokenType, $refresh)
 {
-    $curToken = get-content "$exportPath\token-$($tokenType).json" -Raw -ea SilentlyContinue;
+    $curToken = get-content "$modulePath\token-$($tokenType).json" -Raw -ea SilentlyContinue;
 
     if ($curToken)
     {
@@ -592,9 +592,9 @@ function GetToken($res, $tokenType, $refresh)
         $clientId = "1950a258-227b-4e31-a9cf-717495945fc2";
         $item = Get-AzAccessToken -ResourceUrl $res;
 
-        remove-item "$exportPath\token-$($tokenType).json" -ea SilentlyContinue;
+        remove-item "$modulePath\token-$($tokenType).json" -ea SilentlyContinue;
 
-        Add-Content "$exportPath\token-$($tokenType).json" $(ConvertTo-Json $item);
+        Add-Content "$modulePath\token-$($tokenType).json" $(ConvertTo-Json $item);
     }
     
     return $item.token;
