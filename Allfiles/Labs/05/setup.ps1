@@ -1,6 +1,3 @@
-#include common
-. ./MicrosoftPurview.ps1
-
 Connect-AzAccount -UseDeviceAuthentication;
 
 SelectSubscription;
@@ -13,6 +10,9 @@ $templatesPath = "$allFilesPath/templates";
 $dataSetsPath = "$allFilesPath/datasets";
 $pipelinesPath = "$allFilesPath/pipelines";
 $filesPath = "$labPath/files/";
+
+#include common functions
+. $labPath/common/MicrosoftPurview.ps1
 
 $location = "eastus";
 $suffix = GetSuffix;
