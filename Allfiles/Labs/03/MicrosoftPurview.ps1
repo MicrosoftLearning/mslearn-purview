@@ -574,7 +574,7 @@ function ExportObject($type, $obj, $id)
     add-content "$exportPath/$type/$($id).json" $json;
 }
 
-function GetToken($res, $tokenType)
+function GetToken($res, $tokenType, $refresh)
 {
     $curToken = get-content "$exportPath\token-$($tokenType).json" -Raw -ea SilentlyContinue;
 
@@ -583,7 +583,7 @@ function GetToken($res, $tokenType)
         $item = ConvertFrom-Json $curToken -ea SilentlyContinue;
     }
 
-    if (!$item -or $item.ExpiresOn -lt [datetime]::utcNow)
+    if (!$item -or $item.ExpiresOn -lt [datetime]::utcNow -or $refresh)
     {
         #login
         $context = Get-AzContext;
@@ -960,14 +960,16 @@ function ImportADF
 
         $datafactoryname = $json.name;
 
-        ImportADF_DoWork $datafactoryname;
+        $datafactoryResourceGroupName = ParseValue $body "resourceGroups/" "/";
+
+        ImportADF_DoWork $datafactoryResourceGroupName $datafactoryname;
     }
 
     #import the one from the deployment...
-    ImportADF_DoWork "main$suffix";
+    ImportADF_DoWork $resourceGroupName "main$suffix";
 }
 
-function ImportADF_DoWork($datafactoryname)
+function ImportADF_DoWork($resourceGroupName, $datafactoryname)
 {
     $resourcePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/$datafactoryname";
     

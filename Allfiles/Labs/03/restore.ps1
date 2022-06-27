@@ -26,8 +26,8 @@ $global:logindomain = (Get-AzContext).Tenant.Id;
 $rooturl = "https://$purviewName.purview.azure.com";
 
 #get tokens
-$global:mgmtToken = GetToken "https://management.azure.com" "mgmt";
-$global:token = GetToken "https://purview.azure.net" "purview";
+$global:mgmtToken = GetToken "https://management.azure.com" "mgmt" $true;
+$global:token = GetToken "https://purview.azure.net" "purview" $true;
 
 #import the objects
 ImportObjects "$exportPath";
