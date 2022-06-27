@@ -129,10 +129,10 @@ Create-BlobStorageLinkedService -templatesPath $templatesPath -workspaceName "ma
 #add the data sets
 $LinkedServiceName = $dataLakeAccountName;
 #input
-Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls.json" -filename "customerinfo.csv" -name "customer_in" -linkedservicename $LinkedServiceName
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls" -filename "customerinfo.csv" -name "customer_in" -linkedservicename $LinkedServiceName
 
 #output
-Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls.json" -filename "customerinfo-modified.csv" -name "customer_out" -linkedservicename $LinkedServiceName
+Create-Dataset -datasetspath $DatasetsPath -workspacename "main$suffix" -TemplateFileName "wwi02_poc_customer_adls" -filename "customerinfo-modified.csv" -name "customer_out" -linkedservicename $LinkedServiceName
 
 #add the pipeline
 Create-Pipeline -pipelinespath $PipelinesPath -workspaceName "main$suffix" -Name "customer_pipeline" -filename "import_poc_customer_data" -parameters $null
