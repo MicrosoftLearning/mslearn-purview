@@ -59,7 +59,7 @@ if ([System.Environment]::OSVersion.Platform -eq "Unix")
         
         cd $azCopyCommand;
         chmod +x azcopy;
-        cd $labPath;
+        cd $modulePath;
         $azCopyCommand += "\azcopy";
 }
 else

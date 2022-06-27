@@ -5,8 +5,14 @@ Connect-AzAccount -UseDeviceAuthentication;
 
 SelectSubscription;
 
-$labPath = "$home/msftpurview/Allfiles/Labs/03";
-$exportPath = "$labPath/export";
+$allFilesPath = "$home/msftpurview/Allfiles";
+$labPath = "$allFilesPath/Labs";
+$modulePath = "$labPath/03";
+$exportPath = "$modulePath/export";
+$templatesPath = "$allFilesPath/templates";
+$dataSetsPath = "$allFilesPath/datasets";
+$pipelinesPath = "$allFilesPath/pipelines";
+$filesPath = "$labPath/files/";
 
 $suffix = GetSuffix;
 
