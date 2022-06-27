@@ -1,9 +1,9 @@
 #include common
 . ./MicrosoftPurview.ps1
 
-Connect-AzAccount -UseDeviceAuthentication;
+#Connect-AzAccount -UseDeviceAuthentication;
 
-SelectSubscription;
+#SelectSubscription;
 
 $allFilesPath = "$home/msftpurview/Allfiles";
 $labPath = "$allFilesPath/Labs";

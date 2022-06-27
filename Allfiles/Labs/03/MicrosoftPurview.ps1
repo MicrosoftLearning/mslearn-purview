@@ -565,7 +565,7 @@ function ExportCollections()
 
 function ExportObject($type, $obj, $id)
 {
-    mkdir "$exportPath\$type" -ea SilentlyContinue;
+    New-Item -path "$exportPath\$type" -ItemType Directory -ea SilentlyContinue;
 
     $json = ConvertTo-Json $obj -Depth 20;
 
@@ -697,6 +697,8 @@ function ImportCollections
         #skip creating the root collection
         if ($json.parentcollection)
         {
+            $oldRootCollection = $json.parentCollection.referenceName;
+
             #replace the root collection
             #send the collection to be created...
             $body = $body.replace("$oldRootCollection",$parentCollection.name);
@@ -811,7 +813,6 @@ function ImportMetadataPolicy
         $json = ConvertFrom-Json $body;
 
         #get the current collection policies
-
 
         $url = "$rootUrl/policyStore/metadataPolicies/$($json.id)?api-version=2021-07-01-preview";
         
@@ -959,22 +960,29 @@ function ImportADF
 
         $datafactoryname = $json.name;
 
-        write-host $json.id;
-
-        $resourcePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/main$suffix";
-        
-        $url = "https://management.azure.com/$($resourcePath)?api-version=2018-06-01";
-
-        $post = @{};
-        $post.id = $resourcePath;
-        $post.tags = @{};
-        $post.tags.catalogUri = "https://$purviewName.purview.azure.com/catalog";
-        $post.properties = @{};
-        $post.properties.purviewConfiguration = @{};
-        $post.properties.purviewConfiguration.pruviewResourceId = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Purview/accounts/$purviewName";
-
-        $data = Invoke-RestMethod -Method PATCH -Uri $url -Headers $mgmtheaders -Body $(ConvertTo-Json $post);
+        ImportADF_DoWork $datafactoryname;
     }
+
+    #import the one from the deployment...
+    ImportADF_DoWork "main$suffix";
+}
+
+function ImportADF_DoWork($datafactoryname)
+{
+    $resourcePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.DataFactory/factories/$datafactoryname";
+    
+    $url = "https://management.azure.com/$($resourcePath)?api-version=2018-06-01";
+
+    $post = @{};
+    $post.id = $resourcePath;
+    $post.tags = @{};
+    $post.tags.catalogUri = "https://$purviewName.purview.azure.com/catalog";
+    $post.properties = @{};
+    $post.properties.purviewConfiguration = @{};
+    $post.properties.purviewConfiguration.pruviewResourceId = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Purview/accounts/$purviewName";
+
+    $data = Invoke-RestMethod -Method PATCH -Uri $url -Headers $mgmtheaders -Body $(ConvertTo-Json $post);
+
 }
 
 function ImportRootCollectionAdmins()
