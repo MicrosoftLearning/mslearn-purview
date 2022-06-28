@@ -686,6 +686,7 @@ function Add-PurviewRoleMember()
         }
     }
 
+    $rootUrl = "https://$AccountName.purview.azure.com";
     $url = "$rootUrl/policyStore/metadataPolicies/$($purviewPolicy.id)?api-version=2021-07-01-preview"
         
     Invoke-RestMethod -Method PUT -Uri $url -Headers @{"Authorization"="Bearer $global:purviewToken"} -Body (ConvertTo-Json $purviewPolicy -Depth 20) -ContentType "application/json"
