@@ -1,13 +1,13 @@
 Connect-AzAccount -UseDeviceAuthentication;
 
-SelectSubscription
-
 $labPath = "$home/msftpurview/Allfiles/Labs";
 $modulePath = "$labPath/03";
 $exportPath = "$modulePath/export";
 
 #include common functions
 . $labPath/common/MicrosoftPurview.ps1
+
+SelectSubscription
 
 $location = "eastus";
 $suffix = GetSuffix;
