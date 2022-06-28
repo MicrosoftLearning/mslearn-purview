@@ -65,6 +65,9 @@ $keyVaultSQLUserSecretName = "SQL-USER-ASA"
 $sqlPoolName = "SQLPool01"
 $integrationRuntimeName = "AzureIntegrationRuntime01"
 
+$purviewAccountManagedIdentity = (Get-AzADServicePrincipal -DisplayName $purviewAccountName).Id
+$synapseWorkspaceManagedIdentity = (Get-AzADServicePrincipal -DisplayName $synapseWorkspaceName).Id
+
 $global:sqlEndpoint = "$($synapseWorkspaceName).sql.azuresynapse.net"
 $global:sqlUser = "asa.sql.admin"
 $global:sqlPassword = $sqlAdminPassword
@@ -204,4 +207,4 @@ $result = Run-Pipeline -WorkspaceName $synapseWorkspaceName -Name $loadingPipeli
 $result = Wait-ForPipelineRun -WorkspaceName $synapseWorkspaceName -RunId $result.runId
 $result
 
-Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId "96fe3d5c-08da-42cc-b36d-c52cc87fcd13"
+Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId $synapseWorkspaceManagedIdentity
