@@ -983,8 +983,12 @@ function ImportADF_DoWork($resourceGroupName, $datafactoryname)
     $post.properties.purviewConfiguration = @{};
     $post.properties.purviewConfiguration.pruviewResourceId = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Purview/accounts/$purviewName";
 
+    write-host $url;
+    write-host $(ConvertTo-Json $post);
+
     $data = Invoke-RestMethod -Method PATCH -Uri $url -Headers $mgmtheaders -Body $(ConvertTo-Json $post);
 
+    Write-Host $data;
 }
 
 function ImportRootCollectionAdmins()

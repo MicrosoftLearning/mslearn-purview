@@ -1,7 +1,5 @@
 #Connect-AzAccount -UseDeviceAuthentication;
 
-#SelectSubscription;
-
 $allFilesPath = "$home/msftpurview/Allfiles";
 $labPath = "$allFilesPath/Labs";
 $modulePath = "$labPath/03";
@@ -13,6 +11,8 @@ $filesPath = "$labPath/files/";
 
 #include common functions
 . $labPath/common/MicrosoftPurview.ps1
+
+SelectSubscription;
 
 $suffix = GetSuffix;
 
