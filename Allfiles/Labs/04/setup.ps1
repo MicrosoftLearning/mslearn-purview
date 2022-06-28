@@ -1,6 +1,8 @@
 . .\automation.ps1
 
-Select-Subscription
+$InformationPreference = "Continue"
+
+Select-Subscription;
 
 $location = "eastus";
 $suffix = GetRandomString -Length 10
@@ -9,6 +11,7 @@ $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
 $resourceGroupName = "msftpurview-$suffix"
 $aadUserName = (az ad signed-in-user show --query userPrincipalName -o tsv)
 $aadUserId = (az ad signed-in-user show --query id -o tsv)
+Write-Information "AAD User: $aadUserId"
 
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
@@ -23,7 +26,7 @@ $sqlScriptsPath = ".\sql"
 $dataPath = ".\data"
 
 #create the resource group
-New-AzResourceGroup -Name $resourceGroupName -Location $location;
+New-AzResourceGroup -Name $resourceGroupName -Location $location
 
 #run the deployment...
 $templateFileTemplate = "template.json"
@@ -38,7 +41,9 @@ $parametersContent = Get-Content -Path $parametersFileTemplate -Raw
 $parametersContent = $parametersContent.Replace("##UNIQUE_SUFFIX##", $suffix).Replace("##SQL_ADMINISTRATOR_LOGIN_PASSWORD##", $sqlAdminPassword)
 Set-Content -Path $parametersFile -Value $parametersContent
 
+Write-Information "Deploying ARM template..."
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFile -TemplateParameterFile "$parametersFile"
+Write-Information "Deployment complete."
 
 # Get authentication tokens for Azure Management and Microsoft Purview REST APIs
 $global:managementToken = GetToken "https://management.azure.com" "mgmt"
@@ -50,9 +55,6 @@ $resourceGroupLocation = (Get-AzResourceGroup -Name $resourceGroupName).Location
 $subscriptionId = (Get-AzContext).Subscription.Id
 $tenantId = (Get-AzContext).Tenant.Id
 $global:logindomain = (Get-AzContext).Tenant.Id;
-$global:sqlEndpoint = "$($synapseWorkspaceName).sql.azuresynapse.net"
-$global:sqlUser = "asa.sql.admin"
-$global:sqlPassword = $sqlAdminPassword
 
 $synapseWorkspaceName = "asaworkspace$($uniqueId)"
 $purviewAccountName = "asapurview$($uniqueId)"
@@ -63,48 +65,44 @@ $keyVaultSQLUserSecretName = "SQL-USER-ASA"
 $sqlPoolName = "SQLPool01"
 $integrationRuntimeName = "AzureIntegrationRuntime01"
 
-$publicDataUrl = "https://solliancepublicdata.blob.core.windows.net/"
-$dataLakeStorageUrl = "https://"+ $dataLakeAccountName + ".dfs.core.windows.net/"
-$dataLakeStorageBlobUrl = "https://"+ $dataLakeAccountName + ".blob.core.windows.net/"
+$purviewAccountManagedIdentity = (Get-AzADServicePrincipal -DisplayName $purviewAccountName).Id
+$synapseWorkspaceManagedIdentity = (Get-AzADServicePrincipal -DisplayName $synapseWorkspaceName).Id
+
+$global:sqlEndpoint = "$($synapseWorkspaceName).sql.azuresynapse.net"
+$global:sqlUser = "asa.sql.admin"
+$global:sqlPassword = $sqlAdminPassword
+
 $dataLakeStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $dataLakeAccountName)[0].Value
-$dataLakeContext = New-AzStorageContext -StorageAccountName $dataLakeAccountName -StorageAccountKey $dataLakeStorageAccountKey
-$destinationSasKey = New-AzStorageContainerSASToken -Container "wwi-02" -Context $dataLakeContext -Permission rwdl
 $blobStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -AccountName $blobStorageAccountName)[0].Value
 
-Write-Information "Copying single files from the public data account..."
-$singleFiles = @{
-        customer_info = "wwi-02/customer-info/customerinfo.csv"
-        products = "wwi-02/data-generators/generator-product/generator-product.csv"
-        dates = "wwi-02/data-generators/generator-date.csv"
-        customer = "wwi-02/data-generators/generator-customer.csv"
+# Upload files
+Write-Information "Copying data..."
+$storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $dataLakeAccountName
+$storageContext = $storageAccount.Context
+
+Get-ChildItem "./data/generator-date.csv" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "data-generators/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
 
-foreach ($singleFile in $singleFiles.Keys) {
-        $source = $publicDataUrl + $singleFiles[$singleFile]
-        $destination = $dataLakeStorageBlobUrl + $singleFiles[$singleFile] + $destinationSasKey
-        Write-Information "Copying file $($source) to $($destination)"
-        & $azCopyCommand copy $source $destination 
+Get-ChildItem "./data/generator-product.csv" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "data-generators/generator-product/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
 
-Write-Information "Copying sample sales raw data directories from the public data account..."
-
-$dataDirectories = @{
-        salesmall = "wwi-02/sale-small/Year=2019,wwi-02/sale-small/Year=2019/Quarter=Q4"
+Get-ChildItem "./data/sale-small-20191201-snappy.parquet" -File | Foreach-Object {
+        Write-Information ""
+        $file = $_.Name
+        Write-Information $file
+        $blobPath = "sale-small/Year=2019/Quarter=Q4/Month=12/Day=20191201/$file"
+        Set-AzStorageBlobContent -File $_.FullName -Container "wwi-02" -Blob $blobPath -Context $storageContext
 }
-
-foreach ($dataDirectory in $dataDirectories.Keys) {
-
-        $vals = $dataDirectories[$dataDirectory].tostring().split(",");
-
-        $source = $publicDataUrl + $vals[1];
-
-        $path = $vals[0];
-
-        $destination = $dataLakeStorageBlobUrl + $path + $destinationSasKey
-        Write-Information "Copying directory $($source) to $($destination)"
-        & $azCopyCommand copy $source $destination --recursive=true
-}
-
 
 Write-Information "Start the $($sqlPoolName) SQL pool if needed."
 
@@ -209,4 +207,4 @@ $result = Run-Pipeline -WorkspaceName $synapseWorkspaceName -Name $loadingPipeli
 $result = Wait-ForPipelineRun -WorkspaceName $synapseWorkspaceName -RunId $result.runId
 $result
 
-Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId "96fe3d5c-08da-42cc-b36d-c52cc87fcd13"
+Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId $synapseWorkspaceManagedIdentity

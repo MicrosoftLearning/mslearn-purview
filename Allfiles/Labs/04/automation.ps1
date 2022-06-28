@@ -111,12 +111,8 @@ function GetRandomString() {
 
 function GetToken($res, $tokenType)
 {
-    $context = Get-AzContext;
-    $global:loginDomain = $context.Tenant.Id;
-    $clientId = "1950a258-227b-4e31-a9cf-717495945fc2";
-    $item = Get-AzAccessToken -ResourceUrl $res;
-    
-    return $item.token;
+    $token = (az account get-access-token --resource=$res --query accessToken --output tsv)
+    return $token;
 }
 
 function Wait-ForOperation {
@@ -323,11 +319,12 @@ function Execute-SQLScriptFile {
     if ($UseAPI) {
         Execute-SQLQuery -WorkspaceName $WorkspaceName -SQLPoolName $SQLPoolName -SQLQuery $sqlQuery -ForceReturn $ForceReturn
     } else {
+        Write-Information "Executing SQL script file $($FileName) on server $($global:sqlEndpoint), database $($SQLPoolName), user $($global:sqlUser)..."
         if ($ForceReturn) {
-            Invoke-SqlCmd -Query $sqlQuery -ServerInstance $sqlEndpoint -Database $sqlPoolName -Username $sqlUser -Password $global:sqlPassword
+            Invoke-SqlCmd -Query $sqlQuery -ServerInstance $global:sqlEndpoint -Database $SQLPoolName -Username $global:sqlUser -Password $global:sqlPassword
             #& sqlcmd -S $sqlEndpoint -d $sqlPoolName -U $userName -P $password -G -I -Q $sqlQuery
         } else {
-            Invoke-SqlCmd -Query $sqlQuery -ServerInstance $sqlEndpoint -Database $sqlPoolName -Username $sqlUser -Password $global:sqlPassword
+            Invoke-SqlCmd -Query $sqlQuery -ServerInstance $global:sqlEndpoint -Database $SQLPoolName -Username $global:sqlUser -Password $global:sqlPassword
             #& sqlcmd -S $sqlEndpoint -d $sqlPoolName -U $userName -P $password -G -I -Q $sqlQuery
         }
     }
@@ -681,7 +678,7 @@ function Add-PurviewRoleMember()
         "Workflow admins" = "purviewmetadatarole_builtin_workflow-administrator:$($purviewAccountName)"
     }
 
-    $purviewPolicy = Get-MetadataPolicy -AccountName $AccountName
+    $purviewPolicy = Get-PurviewMetadataPolicy -AccountName $AccountName
     
     foreach ($attributeRule in $purviewPolicy.properties.attributeRules) {
         if ($attributeRule.name -eq $purviewRoles[$RoleName]) {
@@ -689,6 +686,7 @@ function Add-PurviewRoleMember()
         }
     }
 
+    $rootUrl = "https://$AccountName.purview.azure.com";
     $url = "$rootUrl/policyStore/metadataPolicies/$($purviewPolicy.id)?api-version=2021-07-01-preview"
         
     Invoke-RestMethod -Method PUT -Uri $url -Headers @{"Authorization"="Bearer $global:purviewToken"} -Body (ConvertTo-Json $purviewPolicy -Depth 20) -ContentType "application/json"
