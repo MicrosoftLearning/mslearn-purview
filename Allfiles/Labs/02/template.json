@@ -195,7 +195,6 @@
         "sqlAdministratorLogin": "[variables('sqlAdministratorLogin')]",
         "sqlAdministratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
         "managedResourceGroupName": "[concat(resourceGroup().name, '-synapse-internal')]"
-      }
       },
       "resources": [
         {
