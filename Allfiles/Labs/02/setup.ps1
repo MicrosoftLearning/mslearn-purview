@@ -204,10 +204,10 @@ Write-Information "Creating pipeline $($loadingPipelineName)"
 $result = Create-Pipeline -PipelinesPath $pipelinesPath -WorkspaceName $synapseWorkspaceName -Name $loadingPipelineName -FileName $fileName -Parameters $params
 Wait-ForOperation -WorkspaceName $synapseWorkspaceName -OperationId $result.operationId
 
-Write-Information "Running pipeline $($loadingPipelineName)"
+# Write-Information "Running pipeline $($loadingPipelineName)"
 
-$result = Run-Pipeline -WorkspaceName $synapseWorkspaceName -Name $loadingPipelineName
-$result = Wait-ForPipelineRun -WorkspaceName $synapseWorkspaceName -RunId $result.runId
-$result
+# $result = Run-Pipeline -WorkspaceName $synapseWorkspaceName -Name $loadingPipelineName
+# $result = Wait-ForPipelineRun -WorkspaceName $synapseWorkspaceName -RunId $result.runId
+# $result
 
-Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId $synapseWorkspaceManagedIdentity
+# Add-PurviewRoleMember -AccountName $purviewAccountName -RoleName "Data curators" -ServicePrincipalId $synapseWorkspaceManagedIdentity

@@ -194,9 +194,7 @@
         },
         "sqlAdministratorLogin": "[variables('sqlAdministratorLogin')]",
         "sqlAdministratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
-        "managedResourceGroupName": "[concat(resourceGroup().name, '-synapse-internal')]",
-        "purviewConfiguration": {
-          "purviewResourceId": "[resourceId('Microsoft.Purview/accounts', variables('purviewAccountName'))]"
+        "managedResourceGroupName": "[concat(resourceGroup().name, '-synapse-internal')]"
       }
       },
       "resources": [
