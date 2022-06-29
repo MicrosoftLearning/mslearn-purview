@@ -1214,3 +1214,25 @@ function ParseValue($line, $startToken, $endToken)
     }
 
 }
+
+function Register-ResourceProvider()
+{
+    param(
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $ProviderNamespace
+
+    )
+
+    $result = Register-AzResourceProvider -ProviderNamespace $ProviderNamespace
+
+    while ($result.RegistrationState -eq "Registering") {
+        
+        Write-Information "Waiting for operation to complete (status is $($result.RegistrationState))..."
+        Start-Sleep -Seconds 10
+        $result = Register-AzResourceProvider -ProviderNamespace $ProviderNamespace
+    }
+
+    return $result
+}
