@@ -14,8 +14,8 @@ $filesPath = "$labPath/files/";
 
 SelectSubscription;
 
-Register-AzResourceProvider -ProviderNamespace Microsoft.Purview
-Register-AzResourceProvider -ProviderNamespace Microsoft.Synapse
+Register-ResourceProvider -ProviderNamespace Microsoft.Purview
+Register-ResourceProvider -ProviderNamespace Microsoft.Synapse
 
 $location = "eastus";
 $suffix = GetSuffix;

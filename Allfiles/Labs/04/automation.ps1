@@ -691,3 +691,25 @@ function Add-PurviewRoleMember()
         
     Invoke-RestMethod -Method PUT -Uri $url -Headers @{"Authorization"="Bearer $global:purviewToken"} -Body (ConvertTo-Json $purviewPolicy -Depth 20) -ContentType "application/json"
 }
+
+function Register-ResourceProvider()
+{
+    param(
+
+    [parameter(Mandatory=$true)]
+    [String]
+    $ProviderNamespace
+
+    )
+
+    $result = Register-AzResourceProvider -ProviderNamespace $ProviderNamespace
+
+    while ($result.RegistrationState -eq "Registering") {
+        
+        Write-Information "Waiting for operation to complete (status is $($result.RegistrationState))..."
+        Start-Sleep -Seconds 10
+        $result = Register-AzResourceProvider -ProviderNamespace $ProviderNamespace
+    }
+
+    return $result
+}
