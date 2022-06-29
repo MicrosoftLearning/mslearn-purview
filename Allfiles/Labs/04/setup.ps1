@@ -4,6 +4,9 @@ $InformationPreference = "Continue"
 
 Select-Subscription;
 
+Register-AzResourceProvider -ProviderNamespace Microsoft.Purview
+Register-AzResourceProvider -ProviderNamespace Microsoft.Synapse
+
 $location = "eastus";
 $suffix = GetRandomString -Length 10
 $sqlAdminPassword = (GetRandomString -Length 10) + "!123"
