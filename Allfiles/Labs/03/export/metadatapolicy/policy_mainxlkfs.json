@@ -1,0 +1,148 @@
+{
+  "name": "policy_mainxlkfs",
+  "id": "ebf0a135-a880-4dc1-a71d-80c6ff3d18ce",
+  "version": 0,
+  "properties": {
+    "description": "",
+    "decisionRules": [
+      {
+        "kind": "decisionrule",
+        "effect": "Permit",
+        "dnfCondition": [
+          [
+            {
+              "attributeName": "resource.purview.collection",
+              "attributeValueIncludes": "mainxlkfs"
+            },
+            {
+              "fromRule": "permission:mainxlkfs",
+              "attributeName": "derived.purview.permission",
+              "attributeValueIncludes": "permission:mainxlkfs"
+            }
+          ]
+        ]
+      }
+    ],
+    "attributeRules": [
+      {
+        "kind": "attributerule",
+        "id": "purviewmetadatarole_builtin_collection-administrator:mainxlkfs",
+        "name": "purviewmetadatarole_builtin_collection-administrator:mainxlkfs",
+        "dnfCondition": [
+          [
+            {
+              "attributeName": "principal.microsoft.id",
+              "attributeValueIncludedIn": [
+                "a5d7558d-a166-442b-b3c5-3aa0fb2fbb0b"
+              ]
+            },
+            {
+              "fromRule": "purviewmetadatarole_builtin_collection-administrator",
+              "attributeName": "derived.purview.role",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_collection-administrator"
+            }
+          ]
+        ]
+      },
+      {
+        "kind": "attributerule",
+        "id": "purviewmetadatarole_builtin_purview-reader:mainxlkfs",
+        "name": "purviewmetadatarole_builtin_purview-reader:mainxlkfs",
+        "dnfCondition": [
+          [
+            {
+              "attributeName": "principal.microsoft.id",
+              "attributeValueIncludedIn": [
+                "a5d7558d-a166-442b-b3c5-3aa0fb2fbb0b"
+              ]
+            },
+            {
+              "fromRule": "purviewmetadatarole_builtin_purview-reader",
+              "attributeName": "derived.purview.role",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_purview-reader"
+            }
+          ]
+        ]
+      },
+      {
+        "kind": "attributerule",
+        "id": "purviewmetadatarole_builtin_data-curator:mainxlkfs",
+        "name": "purviewmetadatarole_builtin_data-curator:mainxlkfs",
+        "dnfCondition": [
+          [
+            {
+              "attributeName": "principal.microsoft.id",
+              "attributeValueIncludedIn": [
+                "a5d7558d-a166-442b-b3c5-3aa0fb2fbb0b"
+              ]
+            },
+            {
+              "fromRule": "purviewmetadatarole_builtin_data-curator",
+              "attributeName": "derived.purview.role",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_data-curator"
+            }
+          ]
+        ]
+      },
+      {
+        "kind": "attributerule",
+        "id": "purviewmetadatarole_builtin_data-source-administrator:mainxlkfs",
+        "name": "purviewmetadatarole_builtin_data-source-administrator:mainxlkfs",
+        "dnfCondition": [
+          [
+            {
+              "attributeName": "principal.microsoft.id",
+              "attributeValueIncludedIn": [
+                "a5d7558d-a166-442b-b3c5-3aa0fb2fbb0b"
+              ]
+            },
+            {
+              "fromRule": "purviewmetadatarole_builtin_data-source-administrator",
+              "attributeName": "derived.purview.role",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_data-source-administrator"
+            }
+          ]
+        ]
+      },
+      {
+        "kind": "attributerule",
+        "id": "permission:mainxlkfs",
+        "name": "permission:mainxlkfs",
+        "dnfCondition": [
+          [
+            {
+              "fromRule": "purviewmetadatarole_builtin_collection-administrator:mainxlkfs",
+              "attributeName": "derived.purview.permission",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_collection-administrator:mainxlkfs"
+            }
+          ],
+          [
+            {
+              "fromRule": "purviewmetadatarole_builtin_purview-reader:mainxlkfs",
+              "attributeName": "derived.purview.permission",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_purview-reader:mainxlkfs"
+            }
+          ],
+          [
+            {
+              "fromRule": "purviewmetadatarole_builtin_data-curator:mainxlkfs",
+              "attributeName": "derived.purview.permission",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_data-curator:mainxlkfs"
+            }
+          ],
+          [
+            {
+              "fromRule": "purviewmetadatarole_builtin_data-source-administrator:mainxlkfs",
+              "attributeName": "derived.purview.permission",
+              "attributeValueIncludes": "purviewmetadatarole_builtin_data-source-administrator:mainxlkfs"
+            }
+          ]
+        ]
+      }
+    ],
+    "collection": {
+      "type": "CollectionReference",
+      "referenceName": "mainxlkfs"
+    }
+  }
+}

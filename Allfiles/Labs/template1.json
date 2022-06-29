@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "suffix": {
+            "type": "String"
+          }
+    },
+    "variables": {
+        "uniqueSuffix": "[parameters('suffix')]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Purview/accounts",
+            "apiVersion": "2021-12-01",
+            "name": "[concat('main', variables('uniqueSuffix'))]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "Standard",
+                "capacity": 1
+            },
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {
+                "cloudConnectors": {},
+                "publicNetworkAccess": "Enabled",
+                "managedResourceGroupName": "[concat('managed-rg-', variables('uniqueSuffix'))]"
+            }
+        }
+    ]
+}

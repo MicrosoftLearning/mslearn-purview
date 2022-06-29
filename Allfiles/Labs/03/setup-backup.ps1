@@ -1,5 +1,3 @@
-$InformationPreference = "Continue"
-
 Connect-AzAccount -UseDeviceAuthentication;
 
 $allFilesPath = "$home/msftpurview/Allfiles";
@@ -32,33 +30,14 @@ $rooturl = "https://$purviewName.purview.azure.com";
 New-AzResourceGroup -Name $resourceGroupName -Location $location -force;
 
 #run the deployment...
-$templatesFile1 = "$labPath/template1.json"
-$templatesFile2 = "$labPath/template2.json"
-$templatesFile2Final = "$labPath/template2-final.json"
-
+$templatesFile = "$labPath/template.json"
 $parametersFile = "$labPath/parameters.json"
-$parametersFileFinal = "$labPath/parameters-final.json"
-
 
 $content = Get-Content -Path $parametersFile -raw;
 $content = $content.Replace("GET-SUFFIX",$suffix);
-$content | Set-Content -Path $parametersFileFinal;
+$content | Set-Content -Path "$($parametersFile).json";
 
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templatesFile1 -TemplateParameterFile $parametersFileFinal;
-
-Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-Install-Module Az.Purview
-
-$provisionedPurviewAccount = Get-AzPurviewAccount -Name $purviewName -ResourceGroupName $resourceGroupName
-
-Write-Information "Managed storage account: $($provisionedPurviewAccount.ManagedResourceStorageAccount)"
-Write-Information "Managed Event Hub namespace: $($provisionedPurviewAccount.ManagedResourceEventHubNamespace)"
-
-$content = Get-Content -Path $templatesFile2 -Raw
-$content = $content.Replace("##MANAGED_STORAGE_ACCOUNT_RESOURCE_ID##",$provisionedPurviewAccount.ManagedResourceStorageAccount);
-$content | Set-Content -Path $templatesFile2Final;
-
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templatesFile2Final -TemplateParameterFile $parametersFileFinal;
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templatesFile -TemplateParameterFile "$($parametersFile).json";
 
 if ([System.Environment]::OSVersion.Platform -eq "Unix")
 {
